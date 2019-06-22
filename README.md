@@ -7,6 +7,7 @@ This module provides the following functions:
 
 * Get-ONDefaultSection
 * Get-ONPage
+* Get-ONPages
 * Get-ONPageXML
 * Get-ONNoteBook
 * Get-ONNoteBooks
@@ -15,7 +16,7 @@ This module provides the following functions:
 * Get-ONSection
 * Get-ONSections
 * Get-ONResource
-* Get-ONResourcea
+* Get-ONResources
 * New-ONElement
 * New-ONPage
 * New-ONPageXML
