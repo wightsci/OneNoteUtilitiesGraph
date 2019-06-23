@@ -6,6 +6,7 @@ Following on from OneNoteUtilities this module uses the Microsoft Graph API inst
 This module provides the following functions:
 
 * Get-ONDefaultSection
+* Get-ONElement
 * Get-ONPage
 * Get-ONPages
 * Get-ONPageXML
@@ -25,3 +26,12 @@ This module provides the following functions:
 * New-ONSection
 * Invoke-ONApp
 * Invoke-ONWeb
+* ~Remove-ONNoteBook~
+* ~Remove-ONSectionGroup~
+* ~Remove-ONSection~
+* Remove-ONPage
+* Remove-ONElement
+* Copy-ONPage
+* Set-ONPageLevel
+
+
