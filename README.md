@@ -31,7 +31,7 @@ This module provides the following functions:
 * ~Remove-ONSection~
 * Remove-ONPage
 * Remove-ONElement
-* Copy-ONPage
+* ~Copy-ONPage~
 * Set-ONPageLevel
 * Get-ONRecentNoteBooks
 
