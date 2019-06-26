@@ -1,10 +1,3 @@
----
-external help file: OneNoteUtilitiesGraph-help.xml
-Module Name: OneNoteUtilitiesGraph
-online version:
-schema: 2.0.0
----
-
 # Get-ONDefaultSection
 
 ## SYNOPSIS
