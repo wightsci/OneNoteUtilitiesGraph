@@ -1592,7 +1592,7 @@ TYpically this function is called before any access is attempted to the Graph AP
         Get-AccessToken 
     }
 }
-
+<#
 Function Get-ONPagePreview {
     [CmdletBinding()]
     Param(
@@ -1602,6 +1602,7 @@ Function Get-ONPagePreview {
     $workuri = "{0}pages/{1}/pagepreview" -f $ONuri, $id
     Get-ONItem -uri $workuri
 }
+#>
 
 Function Get-SessionVariables {
     [CmdletBinding()]
