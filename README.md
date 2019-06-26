@@ -35,4 +35,11 @@ This module provides the following functions:
 * Set-ONPageLevel
 * Get-ONRecentNoteBooks
 
+## Installation
 
+Before installing the module, ensure that you have a client ID for the Microsoft Graph service.
+
+Create a config XML file containing your client ID and security scope information, named OneNoteUtilities.config and place it in you .config folder.
+There is a template file on GitHub.
+
+Download the module and use Import-Module. The process of importing will trigger an attempt to connect to Microsoft Graph. *This will fail if you haven't set up the config file*. 
