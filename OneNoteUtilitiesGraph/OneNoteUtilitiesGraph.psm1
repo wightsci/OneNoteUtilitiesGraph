@@ -1594,6 +1594,45 @@ TYpically this function is called before any access is attempted to the Graph AP
 }
 
 Function Get-ONPagePreview {
+<#
+.SYNOPSIS
+
+Gets the Graph-generated preview content for a Page.
+
+.DESCRIPTION
+
+Gets the Graph-generated preview content for a Page, given its ID
+
+.PARAMETER Id
+
+The ID of the Page
+
+.INPUTS
+
+None. You cannot pipe to this cmdlet.
+
+.OUTPUTS
+
+PSCustomObject containing preview text and a link to an image, if available
+
+.EXAMPLE
+
+$page = Get-ONPages -Filter "title eq 'Project Zero Work List'"
+Get-ONPagePreview -id $page.id
+
+@odata.context                                                                previewText
+--------------                                                                -----------
+https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Implementation needs to be completed b...
+
+.LINK
+
+Get-ONPages
+
+.LINK
+
+Get-ONPage
+
+#>
     [CmdletBinding()]
     Param(
         [Parameter(ValueFromPipelineByPropertyName=$true)]
