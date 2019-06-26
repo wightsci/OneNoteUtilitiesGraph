@@ -17,7 +17,6 @@ Gets a the default OneNote Section for new content.
 ### EXAMPLE 1
 ```
 Get-ONDefaultSection
-```
 
 id                               : 0-816F7725BEF00A5F!1079
 self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!1079
@@ -32,7 +31,7 @@ parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#us
 parentNotebook                   : @{id=0-816F7725BEF00A5F!1078; displayName=Main NoteBook; self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!1078}
 parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%211079')/parentSectionGroup/$entity
 parentSectionGroup               :
-
+```
 ## PARAMETERS
 
 ## INPUTS

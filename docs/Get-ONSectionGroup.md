@@ -16,14 +16,13 @@ Get-ONSectionGroup [-Id <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets a OneNote SectionGroup using its uRI or Id.
+Gets a OneNote SectionGroup using its URI or Id.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
 Get-ONSectionGroup -Id 0-816F7725BEF00A5F!731386
-```
 
 @odata.context                   : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups/$entity
 id                               : 0-816F7725BEF00A5F!731386
@@ -40,7 +39,7 @@ parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stu
                                    self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!1273}
 parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
 parentSectionGroup               :
-
+```
 ## PARAMETERS
 
 ### -uri
