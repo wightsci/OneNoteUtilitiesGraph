@@ -1593,6 +1593,16 @@ TYpically this function is called before any access is attempted to the Graph AP
     }
 }
 
+Function Get-ONPagePreview {
+    [CmdletBinding()]
+    Param(
+        [Parameter(ValueFromPipelineByPropertyName=$true)]
+        [string]$id
+    )
+    $workuri = "{0}pages/{1}/pagepreview" -f $ONuri, $id
+    Get-ONItem -uri $workuri
+}
+
 Function Get-SessionVariables {
     [CmdletBinding()]
     Param()
