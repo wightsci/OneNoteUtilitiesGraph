@@ -26,6 +26,18 @@ A typical file would look something like this:
     <setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/>
 </settings>
 
+.EXAMPLE
+
+Get-Config 
+
+This command loads settings from a file at the default location.
+
+.EXAMPLE
+
+Get-Config -Path .\OneNoteUtilities.config
+
+This command loads settings from a file at the specified location.
+
 #>
     Param(
         [string]$path="$HOME\.config\OneNoteUtilities.config"
@@ -60,6 +72,12 @@ Defines the path to save the settings file to. Defaults to;
 .PARAMETER Force
 
 Switch parameter to allow overwriting an existing file.
+
+.EXAMPLE
+
+Save-Config -Force
+
+This command saves the current configuration to the default location, overwriting the existing file, if it exists.
 
 #>
 [CmdletBinding()]

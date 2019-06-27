@@ -32,6 +32,7 @@ This module provides the following functions:
 * [New-ONSection](docs/New-ONSection.md)
 * [New-ONSectionGroup](docs/New-ONSectionGroup.md)
 * [Remove-ONPage](docs/Remove-ONPage.md)
+* [Save-Config ](docs/Save-Config.ms)
 * [Set-ONPageLevel](docs/Set-ONPageLevel.md)
 * [Test-ONUtilities](docs/Test-ONUtilities.md)
 * [Update-ONElement](docs/Update-ONElement.md)
