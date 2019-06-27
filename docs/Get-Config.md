@@ -31,14 +31,12 @@ Default value:
 "$HOME\.config\OneNoteUtilities.config"
 
 A typical file would look something like this:
-```
-<?xml version="1.0"?\>
-<settings\>
-    <setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /\>
-    <setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/\>
-</settings\>
 
-```
+\<?xml version="1.0"?\>
+\<settings\>
+    \<setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /\>
+    \<setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/\>
+\</settings\>
 
 ```yaml
 Type: String

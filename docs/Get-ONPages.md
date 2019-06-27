@@ -26,6 +26,7 @@ The information returned is the standard set of Graph metadata for a Page object
 ### EXAMPLE 1
 ```
 Get-ONPages -Filter "startswith(title,'OneNote')" | Select-Object Id,Title
+```
 
 id                                                            title
 --                                                            -----
@@ -34,13 +35,12 @@ id                                                            title
 0-8d3847e53f7d452aaddc4f63814b8d59!11-816F7725BEF00A5F!1079   OneNote Clipper Installation
 0-bf55e9873b624c5c98d779f0e9f6e6d1!21-816F7725BEF00A5F!665031 OneNote and Learning Styles
 
-```
-
 This command gets a list of pages whose Title starts with 'OneNote'.
 
 ### EXAMPLE 2
 ```
 Get-ONPages -Uri 'https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665031/pages' | Select-Object Id,Title
+```
 
 id                                                            title
 --                                                            -----
@@ -55,7 +55,7 @@ id                                                            title
 0-bf55e9873b624c5c98d779f0e9f6e6d1!21-816F7725BEF00A5F!665031 OneNote and Learning Styles
 0-bf55e9873b624c5c98d779f0e9f6e6d1!46-816F7725BEF00A5F!665031 Variety of Education and Learning Examples
 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031 ePortfolio
-```
+
 This command gets a list of Pages found at a specific URL.
 
 ## PARAMETERS

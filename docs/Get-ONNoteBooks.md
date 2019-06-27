@@ -20,6 +20,7 @@ are returned.
 ### EXAMPLE 1
 ```
 Get-ONNotebooks "displayname eq 'Real World Samples'"
+```
 
 id                   : 0-816F7725BEF00A5F!665025
 self                 : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025
@@ -34,7 +35,7 @@ sectionGroupsUrl     : https://graph.microsoft.com/v1.0/users/me/onenote/noteboo
 createdBy            : @{user=}
 lastModifiedBy       : @{user=}
 links                : @{oneNoteClientUrl=; oneNoteWebUrl=}
-```
+
 ## PARAMETERS
 
 ### -Filter
