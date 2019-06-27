@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -SectionGroup
-Switch to identify that the ID parameter referrs to a SectionGroup, not a NoteBook.
+Switch to identify that the ID parameter referrs to a SectionGroup, not a Section.
 
 ```yaml
 Type: SwitchParameter

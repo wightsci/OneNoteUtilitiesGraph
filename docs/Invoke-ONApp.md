@@ -33,11 +33,11 @@ of a page to load, based on an ID or a Page object.
 PS C:\> Invoke-ONApp -Page (Get-ONPages -Filter "title eq '2 - Life Cycle of Tree Frog'")
 ```
 
-This command uses ```Get-ONPages``` to obtain a Page object matching the filter, and this is passed to ```Invoke-ONApp```
+This command uses Get-ONPages to obtain a Page object matching the filter, and this is passed to Invoke-ONApp
 
 ### Example 2
 ```
-PS C:\> Invoke-ONApp -ID ' 0-634cb14d92da4a1c85ca21fccb057cf7!40-816F7725BEF00A5F!665030'
+PS C:\> Invoke-ONApp -ID '0-634cb14d92da4a1c85ca21fccb057cf7!40-816F7725BEF00A5F!665030'
 ```
 
 This command uses opens a Page based on its ID.
