@@ -5,8 +5,6 @@ Following on from OneNoteUtilities this module uses the Microsoft Graph API inst
 
 This module provides the following functions:
 
-* [Get-AccessToken](docs/Get-AccessToken.md)
-* [Get-AuthCode](docs/Get-AuthCode.md)
 * [Get-Config](docs/Get-Config.md)
 * [Get-ONDefaultSection](docs/Get-ONDefaultSection.md)
 * [Get-ONElement](docs/Get-ONElement.md)
