@@ -14,12 +14,10 @@ Gets an Access Token from the Microsoft Graph API.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
 ```
-
-{{ Add example description here }}
+Get-AccessToken
+```
 
 ## PARAMETERS
 

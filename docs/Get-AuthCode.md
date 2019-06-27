@@ -16,12 +16,10 @@ a web form for the user to authorize access to OneNote
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
 ```
-
-{{ Add example description here }}
+Get-AuthCode
+```
 
 ## PARAMETERS
 

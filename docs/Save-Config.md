@@ -15,21 +15,21 @@ embedding in a script or module.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
+```
+Save-Config -Force
 ```
 
-{{ Add example description here }}
+This command saves the current configuration to the default location, overwriting the existing file, if it exists.
 
 ## PARAMETERS
 
 ### -path
 Defines the path to save the settings file to.
 Defaults to;
-
+```
 "$HOME\.config\OneNoteUtilities.config"
-
+```
 ```yaml
 Type: String
 Parameter Sets: (All)

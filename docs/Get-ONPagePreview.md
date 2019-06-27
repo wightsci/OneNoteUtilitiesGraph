@@ -1,7 +1,7 @@
 # Get-ONPagePreview
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the Graph-generated preview content for a Page.
 
 ## SYNTAX
 
@@ -10,21 +10,24 @@ Get-ONPagePreview [[-id] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Gets the Graph-generated preview content for a Page, given its ID
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
 ```
+$page = Get-ONPages -Filter "title eq 'Project Zero Work List'"
 
-{{ Add example description here }}
+Get-ONPagePreview -id $page.id
 
+@odata.context                                                                previewText
+--------------                                                                -----------
+https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Implementation needs to be completed b...
+```
 ## PARAMETERS
 
 ### -id
-{{ Fill id Description }}
+The ID of the Page
 
 ```yaml
 Type: String
@@ -32,7 +35,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -43,11 +46,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
-
+### None. You cannot pipe to this cmdlet.
 ## OUTPUTS
 
-### System.Object
+### PSCustomObject containing preview text and a link to an image, if available
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ONPages]()
+
+[Get-ONPage]()
+

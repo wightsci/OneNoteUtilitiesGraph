@@ -15,28 +15,36 @@ The results are store in the global $settings variable.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
+```
+Get-Config
 ```
 
-{{ Add example description here }}
+This command loads settings from a file at the default location.
+
+### EXAMPLE 2
+```
+Get-Config -Path .\OneNoteUtilities.config
+```
+
+This command loads settings from a file at the specified location.
 
 ## PARAMETERS
 
 ### -path
 The path to the file.
 Default value:
-
+```
 "$HOME\.config\OneNoteUtilities.config"
-
+```
 A typical file would look something like this:
-
-\<?xml version="1.0"?\>
-\<settings\>
-    \<setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /\>
-    \<setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/\>
-\</settings\>
+```
+<?xml version="1.0"?>
+<settings\>
+    <setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
+    <setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/>
+</settings>
+```
 
 ```yaml
 Type: String
