@@ -13,7 +13,7 @@ Gets a list of OneNote Section Groups matching the supplied filter.
 ## SYNTAX
 
 ```
-Get-ONSectionGroups [[-Filter] <String>] [<CommonParameters>]
+Get-ONSectionGroups [-Filter] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,6 +41,7 @@ parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stu
 parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('stuart_squibb%40hotmail.co.uk')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
 parentSectionGroup               :
 ```
+
 This command gets the SectionGroup whose name is 'Work'.
 
 ## PARAMETERS
@@ -53,7 +54,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False

@@ -23,7 +23,7 @@ Get-ONSectionGroup [-Id <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets a OneNote SectionGroup using its uRI or Id.
+Gets a OneNote SectionGroup using its URI or ID.
 
 ## EXAMPLES
 

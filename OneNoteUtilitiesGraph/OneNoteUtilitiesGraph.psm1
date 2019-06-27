@@ -287,9 +287,9 @@ Function Get-ONItems {
 #Gets a OneNote Section Group
 Function Get-ONSectionGroup {    
     Param(
-        [Parameter(ParameterSetName='uri')]
+        [Parameter(ParameterSetName='uri',Mandatory=$true)]
         [string]$uri,
-        [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true)]
+        [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
         [string]$Id
         )
 
@@ -329,6 +329,7 @@ Get-ONSections -filter "isDefault eq true"
 # Get an element on a page - returned as an XML element
 Function Get-ONElement {
     Param(
+        [Parameter(Mandatory=$true)]
         [string]$id,
         [Parameter(Mandatory=$true,ValueFromPipeline=$true)]
         [object]$page
@@ -409,9 +410,9 @@ Function New-ONPage {
     [Parameter(ParameterSetName='html')]
     [Parameter(ParameterSetName='page')]    
     [string]$URI=(Get-ONDefaultSection).pagesUrl,
-    [Parameter(ParameterSetName='html')]
+    [Parameter(ParameterSetName='html',Mandatory=$true)]
     [string]$html,
-    [Parameter(ParameterSetName='page')]
+    [Parameter(ParameterSetName='page',Mandatory=$true)]
     [object]$Page
     )
 
@@ -544,6 +545,7 @@ Function Remove-ONSection {
 # Delete a OneNote Page
 Function Remove-ONPage {
     Param (
+        [Parameter(Mandatory=$true)]
         [string]$Id
     )
     $uri = "{0}{1}/{2}" -f $ONuri, 'pages', $Id
@@ -610,7 +612,9 @@ Function Copy-ONSectionGroup {
 # Set the level of a NoneNote Page
 Function Set-ONPageLevel {
     Param(
+        [Parameter(Mandatory=$true)]
         [string]$Id,
+        [Parameter(Mandatory=$true)]
         [ValidateSet(0,1,2)]
         $Level
     )
@@ -630,11 +634,14 @@ Function Get-ONRecentNoteBooks {
 
 Function Update-ONElement {
     Param(
+        [Parameter(Mandatory=$true)]
         [string]$Id,
+        [Parameter(Mandatory=$true)]
         [string]$targetId,
-        [Parameter()]
+        [Parameter(Mandatory=$true)]
         [ValidateSet('replace','append','delete','prepend')]
         [string]$action,
+        [Parameter(Mandatory=$true)]
         [string]$content,
         [Parameter(Mandatory=$false)]
         [ValidateSet('after','before')]

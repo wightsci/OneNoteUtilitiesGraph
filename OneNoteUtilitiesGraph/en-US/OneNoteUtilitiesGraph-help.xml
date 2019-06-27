@@ -790,10 +790,14 @@ parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other 
     <command:examples>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
-        <dev:code>$page = Get-ONPages -Filter "title eq 'Project Zero Work List'"</dev:code>
+        <dev:code>$page = Get-ONPages -Filter "title eq 'Project Zero Work List'"
+Get-ONPagePreview -id $page.id
+
+@odata.context                                                                previewText 
+--------------                                                                ----------- 
+https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Implementation needs to be completed b...</dev:code>
         <dev:remarks>
-          <maml:para>Get-ONPagePreview -id $page.id</maml:para>
-          <maml:para>@odata.context                                                                previewText --------------                                                                ----------- https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Implementation needs to be completed b...</maml:para>
+          <maml:para></maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -922,10 +926,6 @@ id                                                            title
         <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
         <dev:code>Get-ONPages -Uri 'https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665031/pages' | Select-Object Id,Title
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-id                                                            title --                                                            ----- 0-bf55e9873b624c5c98d779f0e9f6e6d1!44-816F7725BEF00A5F!665031 Other Learning Activities 0-bf55e9873b624c5c98d779f0e9f6e6d1!60-816F7725BEF00A5F!665031 Facilitator Guides 0-bf55e9873b624c5c98d779f0e9f6e6d1!54-816F7725BEF00A5F!665031 Self-Paced Teacher Development 0-bf55e9873b624c5c98d779f0e9f6e6d1!49-816F7725BEF00A5F!665031 Courses Delivered in OneNote 0-bf55e9873b624c5c98d779f0e9f6e6d1!57-816F7725BEF00A5F!665031 New Teacher Orientation 0-bf55e9873b624c5c98d779f0e9f6e6d1!28-816F7725BEF00A5F!665031 Teacher Workbooks 0-bf55e9873b624c5c98d779f0e9f6e6d1!17-816F7725BEF00A5F!665031 Example Lesson Plans 0-bf55e9873b624c5c98d779f0e9f6e6d1!63-816F7725BEF00A5F!665031 How OneNote Enhances Different Learning Styles 0-bf55e9873b624c5c98d779f0e9f6e6d1!21-816F7725BEF00A5F!665031 OneNote and Learning Styles 0-bf55e9873b624c5c98d779f0e9f6e6d1!46-816F7725BEF00A5F!665031 Variety of Education and Learning Examples 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031 ePortfolio
-
-=======
 id                                                            title
 --                                                            -----
 0-bf55e9873b624c5c98d779f0e9f6e6d1!44-816F7725BEF00A5F!665031 Other Learning Activities
@@ -940,7 +940,7 @@ id                                                            title
 0-bf55e9873b624c5c98d779f0e9f6e6d1!46-816F7725BEF00A5F!665031 Variety of Education and Learning Examples
 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031 ePortfolio</dev:code>
         <dev:remarks>
-          <maml:para>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 28aea29324a50223c7cecce35a7cd02beb6a1c9b This command gets a list of Pages found at a specific URL.</maml:para>
+          <maml:para>This command gets a list of Pages found at a specific URL.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -1049,8 +1049,11 @@ You can even keep copies of the student's completed quizzes or tests in case you
         <dev:code>$page = Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML
 $page.GetElementsByTagName('p')
 
-id                                           style                            #text --                                           -----                            ----- p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{34} margin-top:0pt;margin-bottom:0pt {OneNote makes it easy to ,  in one notebook.
-You can easily track items like , , , , and ...} p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35} margin-top:0pt;margin-bottom:0pt For quizzes and tests, you can track the items that students either get consistently wrong or consistently correct.
+id                                           style                            #text
+--                                           -----                            ----- 
+p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{34} margin-top:0pt;margin-bottom:0pt {OneNote makes it easy to ,  in one notebook.
+You can easily track items like , , , , and ...} 
+p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35} margin-top:0pt;margin-bottom:0pt For quizzes and tests, you can track the items that students either get consistently wrong or consistently correct.
 You can eve...</dev:code>
         <dev:remarks>
           <maml:para>This command pipes a Page object to Get-ONPageXML and stores the result in the variable $page. $page can then be accessed as an XMLDocument object.</maml:para>
@@ -1231,7 +1234,7 @@ You can eve...</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ONSection</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>uri</maml:name>
           <maml:Description>
             <maml:para>The Uri of the section to be retreived.</maml:para>
@@ -1246,7 +1249,7 @@ You can eve...</dev:code>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Get-ONSection</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
             <maml:para>The Id of the section to be retreived.</maml:para>
@@ -1261,7 +1264,7 @@ You can eve...</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>uri</maml:name>
         <maml:Description>
           <maml:para>The Uri of the section to be retreived.</maml:para>
@@ -1273,7 +1276,7 @@ You can eve...</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
           <maml:para>The Id of the section to be retreived.</maml:para>
@@ -1464,10 +1467,10 @@ parentSectionGroup               :</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ONSectionGroups</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Filter</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill Filter Description }}</maml:para>
+            <maml:para>The filter to be used. Must be valid OData</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1479,10 +1482,10 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Filter</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill Filter Description }}</maml:para>
+          <maml:para>The filter to be used. Must be valid OData</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1520,9 +1523,23 @@ parentSectionGroup               :</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; Get-ONSectiongroups -Filter "displayname eq 'Work'"
+
+id                               : 0-816F7725BEF00A5F!731386
+self                             : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386
+createdDateTime                  : 2019-02-28T10:50:52.52Z
+displayName                      : Work
+lastModifiedDateTime             : 2019-06-27T10:14:26.947Z
+sectionsUrl                      : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sections
+sectionGroupsUrl                 : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sectionGroups
+createdBy                        : @{user=}
+lastModifiedBy                   : @{user=}
+parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('stuart_squibb%40hotmail.co.uk')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentNotebook/$entity
+parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stuart's Notebook; self=https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/notebooks/0-816F7725BEF00A5F!1273}
+parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('stuart_squibb%40hotmail.co.uk')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
+parentSectionGroup               :</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>This command gets the SectionGroup whose name is 'Work'.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -1559,7 +1576,7 @@ parentSectionGroup               :</dev:code>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Filter</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill Filter Description }}</maml:para>
+            <maml:para>The filter to be used. OData.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1574,7 +1591,7 @@ parentSectionGroup               :</dev:code>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Filter</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill Filter Description }}</maml:para>
+          <maml:para>The filter to be used. OData.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1637,11 +1654,11 @@ parentSectionGroup               :</dev:code>
       <command:verb>Get</command:verb>
       <command:noun>SessionVariables</command:noun>
       <maml:description>
-        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+        <maml:para>Gets a set of useful variable values.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>{{ Fill in the Description }}</maml:para>
+      <maml:para>Gets some useful variable value. Useful in monitoring/debugging.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -1674,15 +1691,7 @@ parentSectionGroup               :</dev:code>
         <maml:para></maml:para>
       </maml:alert>
     </maml:alertSet>
-    <command:examples>
-      <command:example>
-        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
-        <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
-        </dev:remarks>
-      </command:example>
-    </command:examples>
+    <command:examples />
     <command:relatedLinks />
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
@@ -1696,7 +1705,7 @@ parentSectionGroup               :</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>This function maintains a valid set of Graph credntials, comprising an Authorization Code and an Access Token.</maml:para>
+      <maml:para>This function maintains a valid set of Graph credentials, comprising an Authorization Code and an Access Token.</maml:para>
       <maml:para>TYpically this function is called before any access is attempted to the Graph API itself.</maml:para>
     </maml:description>
     <command:syntax>
@@ -1715,9 +1724,9 @@ parentSectionGroup               :</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; Get-TokenStatus</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para></maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>

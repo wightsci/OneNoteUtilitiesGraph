@@ -19,6 +19,8 @@ Get-SessionVariables [<CommonParameters>]
 ## DESCRIPTION
 Gets some useful variable value. Useful in monitoring/debugging.
 
+## EXAMPLES
+
 ## PARAMETERS
 
 ### CommonParameters

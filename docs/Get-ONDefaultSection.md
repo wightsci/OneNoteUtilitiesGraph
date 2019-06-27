@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-ONDefaultSection
 
 ## SYNOPSIS
-Gets a the default OneNote Section for new content.
+Gets the default OneNote Section for new content.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-ONDefaultSection [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets a the default OneNote Section for new content.
+Gets the default OneNote Section for new content.
 
 ## EXAMPLES
 

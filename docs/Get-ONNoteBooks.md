@@ -9,7 +9,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Gets a list of OneNote NoteBooks.
-are returned.
 
 ## SYNTAX
 

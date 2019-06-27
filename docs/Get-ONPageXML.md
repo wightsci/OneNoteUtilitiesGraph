@@ -58,9 +58,9 @@ $page = Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/page
 $page.GetElementsByTagName('p')
 
 id                                           style                            #text
---                                           -----                            ----- 
+--                                           -----                            -----
 p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{34} margin-top:0pt;margin-bottom:0pt {OneNote makes it easy to ,  in one notebook.
-You can easily track items like , , , , and ...} 
+You can easily track items like , , , , and ...}
 p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35} margin-top:0pt;margin-bottom:0pt For quizzes and tests, you can track the items that students either get consistently wrong or consistently correct.
 You can eve...
 ```

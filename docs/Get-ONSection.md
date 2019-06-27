@@ -14,12 +14,12 @@ Gets a OneNote Section.
 
 ### uri
 ```
-Get-ONSection [-uri <String>] [<CommonParameters>]
+Get-ONSection -uri <String> [<CommonParameters>]
 ```
 
 ### id
 ```
-Get-ONSection [-Id <String>] [<CommonParameters>]
+Get-ONSection -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,12 +39,16 @@ PS C:\> {{ Add example code here }}
 ### -uri
 The Uri of the section to be retreived.
 
+### -Id
+The ID of the section to be retrieved.
+
+
 ```yaml
 Type: String
 Parameter Sets: uri
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -59,7 +63,7 @@ Type: String
 Parameter Sets: id
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

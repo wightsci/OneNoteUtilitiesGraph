@@ -26,10 +26,11 @@ Gets the Graph-generated preview content for a Page, given its ID
 $page = Get-ONPages -Filter "title eq 'Project Zero Work List'"
 Get-ONPagePreview -id $page.id
 
-@odata.context                                                                previewText 
---------------                                                                ----------- 
+@odata.context                                                                previewText
+--------------                                                                -----------
 https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Implementation needs to be completed b...
 ```
+
 ## PARAMETERS
 
 ### -id

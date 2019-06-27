@@ -95,8 +95,7 @@ Accept wildcard characters: False
 
 ### -action
 The action to be undertaked.
-Possible values:
-
+Possible values: 
 replace, append, delete, insert, or prepend
 
 ```yaml
@@ -129,7 +128,6 @@ Accept wildcard characters: False
 ### -position
 The location of the content in relation to the target.
 Possible values:
-
 after (default) or before
 
 ```yaml
