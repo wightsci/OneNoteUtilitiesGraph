@@ -157,6 +157,10 @@ Gets an Authorization code from the Microsoft Graph API
 Gets an Authorization code from the Microsoft Graph API. If necessary, displays
 a web form for the user to authorize access to OneNote
 
+.EXAMPLE
+
+Get-AuthCode
+
 #>
 [cmdletbinding()]
 Param()
@@ -192,6 +196,10 @@ Gets an Access Token from the Microsoft Graph API
 .DESCRIPTION
 
 Gets an Access Token from the Microsoft Graph API.
+
+.EXAMPLE
+
+Get-AccessToken
 
 #>
 [cmdletbinding()]
