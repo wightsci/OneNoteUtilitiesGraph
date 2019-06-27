@@ -44,8 +44,6 @@ The path to the file. Default value:
 "$HOME\.config\OneNoteUtilities.config"
 
 A typical file would look something like this:
-
-
 ```
 <?xml version="1.0"?\> 
     <settings>     
