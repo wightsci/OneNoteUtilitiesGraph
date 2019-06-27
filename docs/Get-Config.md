@@ -45,7 +45,8 @@ The path to the file. Default value:
 
 A typical file would look something like this:
 
-```<?xml version="1.0"?\> 
+```
+<?xml version="1.0"?\> 
     <settings>     
         <setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
         <setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/> 
