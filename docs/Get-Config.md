@@ -45,6 +45,7 @@ The path to the file. Default value:
 
 A typical file would look something like this:
 
+
 ```
 <?xml version="1.0"?\> 
     <settings>     

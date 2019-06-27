@@ -99,11 +99,9 @@
             <maml:para>"$HOME\.config\OneNoteUtilities.config"</maml:para>
             <maml:para>A typical file would look something like this:</maml:para>
             <maml:para></maml:para>
-            <maml:para>&lt;?xml version="1.0"?\&gt; </maml:para>
-            <maml:para>    &lt;settings&gt;     </maml:para>
-            <maml:para>        &lt;setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /&gt;</maml:para>
-            <maml:para>        &lt;setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/&gt; </maml:para>
-            <maml:para>    &lt;/settings&gt;</maml:para>
+            <maml:para></maml:para>
+            <maml:para>&lt;?xml version="1.0"?&gt;      &lt;settings&gt;
+&lt;setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /&gt;         &lt;setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/&gt;      &lt;/settings&gt;</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -122,11 +120,9 @@
           <maml:para>"$HOME\.config\OneNoteUtilities.config"</maml:para>
           <maml:para>A typical file would look something like this:</maml:para>
           <maml:para></maml:para>
-          <maml:para>&lt;?xml version="1.0"?\&gt; </maml:para>
-          <maml:para>    &lt;settings&gt;     </maml:para>
-          <maml:para>        &lt;setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /&gt;</maml:para>
-          <maml:para>        &lt;setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/&gt; </maml:para>
-          <maml:para>    &lt;/settings&gt;</maml:para>
+          <maml:para></maml:para>
+          <maml:para>&lt;?xml version="1.0"?&gt;      &lt;settings&gt;
+&lt;setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /&gt;         &lt;setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/&gt;      &lt;/settings&gt;</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1807,7 +1803,7 @@ parentSectionGroup               :</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Invoke-ONApp</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>page</maml:name>
           <maml:Description>
             <maml:para>A OneNote Page object.</maml:para>
@@ -1822,7 +1818,7 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Invoke-ONApp</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
             <maml:para>The Id of a OneNote Page.</maml:para>
@@ -1837,7 +1833,7 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>page</maml:name>
         <maml:Description>
           <maml:para>A OneNote Page object.</maml:para>
@@ -1849,7 +1845,7 @@ parentSectionGroup               :</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
           <maml:para>The Id of a OneNote Page.</maml:para>
@@ -1902,7 +1898,7 @@ parentSectionGroup               :</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Invoke-ONApp</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>page</maml:name>
           <maml:Description>
             <maml:para>A OneNote Page object.</maml:para>
@@ -1917,7 +1913,7 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Invoke-ONApp</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
             <maml:para>The Id of a OneNote Page.</maml:para>
@@ -1932,7 +1928,7 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>page</maml:name>
         <maml:Description>
           <maml:para>A OneNote Page object.</maml:para>
@@ -1944,7 +1940,7 @@ parentSectionGroup               :</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
           <maml:para>The Id of a OneNote Page.</maml:para>
@@ -2084,7 +2080,7 @@ parentSectionGroup               :</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-ONNoteBook</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>DisplayName</maml:name>
           <maml:Description>
             <maml:para>The name for the new NoteBook.</maml:para>
@@ -2099,7 +2095,7 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>DisplayName</maml:name>
         <maml:Description>
           <maml:para>The name for the new NoteBook.</maml:para>
@@ -2282,13 +2278,33 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; $p = New-ONPageXML -Title 'Lesson 1'
+PS C:\&gt; New-ONPage -URI 'https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!731583/pages' -page $p
+
+@odata.context       : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21731583')/pages/$entity
+id                   : 0-b9b9988092b24ac0bb14d4953f88ca2f!61-816F7725BEF00A5F!731583
+self                 : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-b9b9988092b24ac0bb14d4953f88ca2f!61-816F7725BEF00A5F!731583
+createdDateTime      : 2019-06-27T15:17:35.9924696Z
+title                : Lesson 1
+createdByAppId       : WLID-00000000441C65F3
+contentUrl           : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-b9b9988092b24ac0bb14d4953f88ca2f!61-816F7725BEF00A5F!731583/content
+lastModifiedDateTime : 2019-06-27T15:17:35.9924696Z
+links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>This example shows the creation of an XHTML page using New-ONPageXML that is then passed to New-ONPage for creation in the Graph service.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-ONDefaultSection</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-ONPageXML</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
@@ -2352,9 +2368,13 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; New-ONPageXML -Title 'Timetable'
+
+html
+----
+html</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>This command outputs an XHTML object for an empty page with the title 'Timetable'</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -2429,7 +2449,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>SectionGroup</maml:name>
           <maml:Description>
-            <maml:para>Switch to identify that the ID parameter referrs to a SectionGroup, not a NoteBook.</maml:para>
+            <maml:para>Switch to identify that the ID parameter referrs to a SectionGroup, not a Section.</maml:para>
           </maml:Description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
@@ -2479,7 +2499,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>SectionGroup</maml:name>
         <maml:Description>
-          <maml:para>Switch to identify that the ID parameter referrs to a SectionGroup, not a NoteBook.</maml:para>
+          <maml:para>Switch to identify that the ID parameter referrs to a SectionGroup, not a Section.</maml:para>
         </maml:Description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>

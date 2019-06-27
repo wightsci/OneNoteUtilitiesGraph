@@ -13,7 +13,7 @@ Creates a new OneNote NoteBook.
 ## SYNTAX
 
 ```
-New-ONNoteBook [[-DisplayName] <String>] [<CommonParameters>]
+New-ONNoteBook [-DisplayName] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +53,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False

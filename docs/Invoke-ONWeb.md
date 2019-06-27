@@ -14,12 +14,12 @@ Invokes the default OneNote application and loads a page.
 
 ### page
 ```
-Invoke-ONApp [-page <Object>] [<CommonParameters>]
+Invoke-ONApp -page <Object> [<CommonParameters>]
 ```
 
 ### id
 ```
-Invoke-ONApp [-Id <String>] [<CommonParameters>]
+Invoke-ONApp -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,7 +52,7 @@ Type: Object
 Parameter Sets: page
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -67,7 +67,7 @@ Type: String
 Parameter Sets: id
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
