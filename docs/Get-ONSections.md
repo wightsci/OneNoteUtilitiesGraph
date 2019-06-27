@@ -20,7 +20,6 @@ The filter must be valid OData syntax.
 ### EXAMPLE 1
 ```
 Get-ONSections "displayname eq 'Other Education Examples'"
-```
 
 id                               : 0-816F7725BEF00A5F!665031
 self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665031
@@ -36,7 +35,7 @@ parentNotebook                   : @{id=0-816F7725BEF00A5F!665025; displayName=R
                                    self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025}
 parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665031')/parentSectionGroup/$entity
 parentSectionGroup               :
-
+```
 ## PARAMETERS
 
 ### -Filter
