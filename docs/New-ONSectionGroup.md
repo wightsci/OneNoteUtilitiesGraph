@@ -29,10 +29,21 @@ Creates a new OneNote SectionGroup.
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-ONSectionGroup -DisplayName 'Week 1' -Id '0-816F7725BEF00A5F!731579'
+
+@odata.context       : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/notebooks('0-816F7725BEF00A5F%21731579')/sectionGroups/$entity
+id                   : 0-816F7725BEF00A5F!731581
+self                 : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731581
+createdDateTime      : 2019-06-27T13:59:25.327Z
+displayName          : Week 1
+lastModifiedDateTime : 2019-06-27T13:59:25.327Z
+sectionsUrl          : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731581/sections
+sectionGroupsUrl     : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731581/sectionGroups
+createdBy            : @{user=}
+lastModifiedBy       : @{user=}
 ```
 
-{{ Add example description here }}
+This command creates a new SectionGroup in the NoteBook identified by the given ID.
 
 ## PARAMETERS
 
@@ -52,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -uri
-{{ Fill uri Description }}
+The URL at which the new SectionGroup will be created.
 
 ```yaml
 Type: String
@@ -67,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+The ID of the container in which the SectionGroup will be created.
 
 ```yaml
 Type: String
