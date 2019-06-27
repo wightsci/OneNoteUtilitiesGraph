@@ -1,3 +1,10 @@
+---
+external help file: OneNoteUtilitiesGraph-help.xml
+Module Name: OneNoteUtilitiesGraph
+online version:
+schema: 2.0.0
+---
+
 # Get-AuthCode
 
 ## SYNOPSIS
@@ -11,8 +18,7 @@ Get-AuthCode [<CommonParameters>]
 
 ## DESCRIPTION
 Gets an Authorization code from the Microsoft Graph API.
-If necessary, displays
-a web form for the user to authorize access to OneNote
+If necessary, displays a web form for the user to authorize access to OneNote
 
 ## EXAMPLES
 

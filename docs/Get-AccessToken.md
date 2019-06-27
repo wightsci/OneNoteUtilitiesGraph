@@ -1,3 +1,10 @@
+---
+external help file: OneNoteUtilitiesGraph-help.xml
+Module Name: OneNoteUtilitiesGraph
+online version:
+schema: 2.0.0
+---
+
 # Get-AccessToken
 
 ## SYNOPSIS
@@ -31,3 +38,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AuthCode]()
+

@@ -1,3 +1,10 @@
+---
+external help file: OneNoteUtilitiesGraph-help.xml
+Module Name: OneNoteUtilitiesGraph
+online version:
+schema: 2.0.0
+---
+
 # Get-ONSectionGroup
 
 ## SYNOPSIS
@@ -25,21 +32,7 @@ Gets a OneNote SectionGroup using its uRI or Id.
 Get-ONSectionGroup -Id 0-816F7725BEF00A5F!731386
 ```
 
-@odata.context                   : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups/$entity
-id                               : 0-816F7725BEF00A5F!731386
-self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386
-createdDateTime                  : 2019-02-28T10:50:52.52Z
-displayName                      : Work
-lastModifiedDateTime             : 2019-06-19T15:19:45.667Z
-sectionsUrl                      : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sections
-sectionGroupsUrl                 : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sectionGroups
-createdBy                        : @{user=}
-lastModifiedBy                   : @{user=}
-parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentNotebook/$entity
-parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stuart's Notebook;
-                                   self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!1273}
-parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
-parentSectionGroup               :
+@odata.context                   : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups/$entity id                               : 0-816F7725BEF00A5F!731386 self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386 createdDateTime                  : 2019-02-28T10:50:52.52Z displayName                      : Work lastModifiedDateTime             : 2019-06-19T15:19:45.667Z sectionsUrl                      : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sections sectionGroupsUrl                 : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sectionGroups createdBy                        : @{user=} lastModifiedBy                   : @{user=} parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentNotebook/$entity parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stuart's Notebook;                                    self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!1273} parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity parentSectionGroup               :
 
 ## PARAMETERS
 

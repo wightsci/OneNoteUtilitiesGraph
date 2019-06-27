@@ -1,3 +1,10 @@
+---
+external help file: OneNoteUtilitiesGraph-help.xml
+Module Name: OneNoteUtilitiesGraph
+online version:
+schema: 2.0.0
+---
+
 # Save-Config
 
 ## SYNOPSIS
@@ -10,8 +17,7 @@ Save-Config [[-path] <String>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Saves the settings object to an XML file, allowing storage of information not suitable for
-embedding in a script or module.
+Saves the settings object to an XML file, allowing storage of information not suitable for embedding in a script or module.
 
 ## EXAMPLES
 
@@ -27,9 +33,9 @@ This command saves the current configuration to the default location, overwritin
 ### -path
 Defines the path to save the settings file to.
 Defaults to;
-```
+
 "$HOME\.config\OneNoteUtilities.config"
-```
+
 ```yaml
 Type: String
 Parameter Sets: (All)

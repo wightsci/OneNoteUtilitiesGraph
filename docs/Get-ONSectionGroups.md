@@ -1,3 +1,10 @@
+---
+external help file: OneNoteUtilitiesGraph-help.xml
+Module Name: OneNoteUtilitiesGraph
+online version:
+schema: 2.0.0
+---
+
 # Get-ONSectionGroups
 
 ## SYNOPSIS
@@ -6,20 +13,18 @@ Gets a list of OneNote Section Groups matching the supplied filter.
 ## SYNTAX
 
 ```
-Get-ONSectionGroups [[-Filter] <String>]
+Get-ONSectionGroups [[-Filter] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Gets a list of OneNote Section Groups matching the supplied filter.
-If no
-filter is supplied, all SectionGroups will be returned.
-The filter must be 
-vaild OData.
+If no filter is supplied, all SectionGroups will be returned.
+The filter must be  vaild OData.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```
 PS C:\> {{ Add example code here }}
 ```
 
@@ -41,6 +46,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

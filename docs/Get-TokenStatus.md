@@ -1,3 +1,10 @@
+---
+external help file: OneNoteUtilitiesGraph-help.xml
+Module Name: OneNoteUtilitiesGraph
+online version:
+schema: 2.0.0
+---
+
 # Get-TokenStatus
 
 ## SYNOPSIS
@@ -12,15 +19,14 @@ Get-TokenStatus [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This function maintains a valid set of Graph credntials, comprising an
-Authorization Code and an Access Token.
+This function maintains a valid set of Graph credntials, comprising an Authorization Code and an Access Token.
 
 TYpically this function is called before any access is attempted to the Graph API itself.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```
 PS C:\> {{ Add example code here }}
 ```
 
