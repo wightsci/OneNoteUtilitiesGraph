@@ -23,7 +23,6 @@ Gets a OneNote Page.
 ### EXAMPLE 1
 ```
 Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031'
-```
 
 @odata.context              : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/pages/$entity
 id                          : 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031
@@ -57,7 +56,7 @@ parentSection@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('
                               /$entity
 parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other Education Examples;
                               self=https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665031}
-
+```
 This command gets a specific page by its Id.
 
 ## PARAMETERS
