@@ -53,6 +53,7 @@ A typical file would look something like this:
         <setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
         <setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/> 
     </settings>
+```
 
 ```yaml
 Type: String
