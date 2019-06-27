@@ -85,15 +85,14 @@ $defaultstyles = @{
 Function Get-AuthCode {
 [cmdletbinding()]
 Param()
-    Add-Type -AssemblyName System.Windows.Forms
-    Write-Verbose $authURI
-    
+    Add-Type -AssemblyName System.Windows.Forms  
     $form = New-Object -TypeName System.Windows.Forms.Form -Property @{Width=440;Height=640}
     $web  = New-Object -TypeName System.Windows.Forms.WebBrowser -Property @{Width=420;Height=600;Url=$authURI}
     
     $DocComp  = {
-        $Global:authURI = $web.Url.AbsoluteUri        
+        $Global:authURI = $web.Url.AbsoluteUri  
         if ($Global:authURI -match "error=[^&]*|code=[^&]*") {
+            Write-Verbose "Closing. URL: $($Global:AuthURI)"
             $form.Close() 
         }
     }
