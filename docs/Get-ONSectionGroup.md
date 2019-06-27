@@ -14,12 +14,12 @@ Gets a OneNote SectionGroup.
 
 ### uri
 ```
-Get-ONSectionGroup [-uri <String>] [<CommonParameters>]
+Get-ONSectionGroup -uri <String> [<CommonParameters>]
 ```
 
 ### id
 ```
-Get-ONSectionGroup [-Id <String>] [<CommonParameters>]
+Get-ONSectionGroup -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +58,7 @@ Type: String
 Parameter Sets: uri
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -73,7 +73,7 @@ Type: String
 Parameter Sets: id
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

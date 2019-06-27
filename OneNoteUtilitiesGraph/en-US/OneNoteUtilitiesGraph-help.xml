@@ -163,11 +163,11 @@
       <command:verb>Get</command:verb>
       <command:noun>ONDefaultSection</command:noun>
       <maml:description>
-        <maml:para>Gets a the default OneNote Section for new content.</maml:para>
+        <maml:para>Gets the default OneNote Section for new content.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Gets a the default OneNote Section for new content.</maml:para>
+      <maml:para>Gets the default OneNote Section for new content.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -249,7 +249,7 @@ parentSectionGroup               :</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ONElement</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>id</maml:name>
           <maml:Description>
             <maml:para>The Id of the page element.</maml:para>
@@ -276,7 +276,7 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>id</maml:name>
         <maml:Description>
           <maml:para>The Id of the page element.</maml:para>
@@ -330,7 +330,6 @@ parentSectionGroup               :</dev:code>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
         <dev:code>$page = Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML
-
 Get-ONElement -page $page -id 'p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35}'
 
 id                                           style                            #text
@@ -489,7 +488,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
       <command:verb>Get</command:verb>
       <command:noun>ONNoteBooks</command:noun>
       <maml:description>
-        <maml:para>Gets a list of OneNote NoteBooks. are returned.</maml:para>
+        <maml:para>Gets a list of OneNote NoteBooks.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
@@ -681,7 +680,17 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
         <dev:code>Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031'
 
-@odata.context              : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/pages/$entity id                          : 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031 self                        : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031 createdDateTime             : 2008-05-27T22:37:57Z title                       : ePortfolio createdByAppId              : contentUrl                  : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031/content lastModifiedDateTime        : 2014-04-04T22:19:15Z links                       : @{oneNoteClientUrl=; oneNoteWebUrl=} parentSection@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/pages('0-bf55e9873b624c5c98d779f0e9f6e6d1%2151-816F7725BEF00A5F%21665031')/parentSection/$entity parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other Education Examples; self=https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665031}</dev:code>
+@odata.context              : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/pages/$entity
+id                          : 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031 
+self                        : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031
+createdDateTime             : 2008-05-27T22:37:57Z 
+title                       : ePortfolio 
+createdByAppId              : 
+contentUrl                  : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031/content
+lastModifiedDateTime        : 2014-04-04T22:19:15Z 
+links                       : @{oneNoteClientUrl=; oneNoteWebUrl=} 
+parentSection@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/pages('0-bf55e9873b624c5c98d779f0e9f6e6d1%2151-816F7725BEF00A5F%21665031')/parentSection/$entity 
+parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other Education Examples; self=https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665031}</dev:code>
         <dev:remarks>
           <maml:para>This command gets a specific page by its URL.</maml:para>
         </dev:remarks>
@@ -699,10 +708,8 @@ createdByAppId              :
 contentUrl                  : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!49-816F7725BEF00A5F!665031/content
 lastModifiedDateTime        : 2014-10-24T02:57:51Z
 links                       : @{oneNoteClientUrl=; oneNoteWebUrl=}
-parentSection@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/pages('0-bf55e9873b624c5c98d779f0e9f6e6d1%2149-816F7725BEF00A5F%21665031')/parentSection
-                              /$entity
-parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other Education Examples;
-                              self=https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665031}</dev:code>
+parentSection@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/pages('0-bf55e9873b624c5c98d779f0e9f6e6d1%2149-816F7725BEF00A5F%21665031')/parentSection/$entity
+parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other Education Examples; self=https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665031}</dev:code>
         <dev:remarks>
           <maml:para>This command gets a specific page by its Id.</maml:para>
         </dev:remarks>
@@ -793,8 +800,8 @@ parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other 
         <dev:code>$page = Get-ONPages -Filter "title eq 'Project Zero Work List'"
 Get-ONPagePreview -id $page.id
 
-@odata.context                                                                previewText 
---------------                                                                ----------- 
+@odata.context                                                                previewText
+--------------                                                                -----------
 https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Implementation needs to be completed b...</dev:code>
         <dev:remarks>
           <maml:para></maml:para>
@@ -1050,9 +1057,9 @@ You can even keep copies of the student's completed quizzes or tests in case you
 $page.GetElementsByTagName('p')
 
 id                                           style                            #text
---                                           -----                            ----- 
+--                                           -----                            -----
 p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{34} margin-top:0pt;margin-bottom:0pt {OneNote makes it easy to ,  in one notebook.
-You can easily track items like , , , , and ...} 
+You can easily track items like , , , , and ...}
 p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35} margin-top:0pt;margin-bottom:0pt For quizzes and tests, you can track the items that students either get consistently wrong or consistently correct.
 You can eve...</dev:code>
         <dev:remarks>
@@ -1252,7 +1259,7 @@ You can eve...</dev:code>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
-            <maml:para>The Id of the section to be retreived.</maml:para>
+            <maml:para>The ID of the section to be retrieved.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1279,7 +1286,7 @@ You can eve...</dev:code>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
-          <maml:para>The Id of the section to be retreived.</maml:para>
+          <maml:para>The ID of the section to be retrieved.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1335,12 +1342,12 @@ You can eve...</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Gets a OneNote SectionGroup using its uRI or Id.</maml:para>
+      <maml:para>Gets a OneNote SectionGroup using its URI or ID.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ONSectionGroup</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>uri</maml:name>
           <maml:Description>
             <maml:para>The Uri of the SectionGroup to be retreived.</maml:para>
@@ -1355,7 +1362,7 @@ You can eve...</dev:code>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Get-ONSectionGroup</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
             <maml:para>The Id of the SectionGroup to be retreived.</maml:para>
@@ -1370,7 +1377,7 @@ You can eve...</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>uri</maml:name>
         <maml:Description>
           <maml:para>The Uri of the SectionGroup to be retreived.</maml:para>
@@ -1382,7 +1389,7 @@ You can eve...</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
           <maml:para>The Id of the SectionGroup to be retreived.</maml:para>
@@ -2102,7 +2109,7 @@ parentSectionGroup               :</dev:code>
           </dev:type>
           <dev:defaultValue>(Get-ONDefaultSection).pagesUrl</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>html</maml:name>
           <maml:Description>
             <maml:para>The page content as valid XHTML.</maml:para>
@@ -2130,7 +2137,7 @@ parentSectionGroup               :</dev:code>
           </dev:type>
           <dev:defaultValue>(Get-ONDefaultSection).pagesUrl</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Page</maml:name>
           <maml:Description>
             <maml:para>A Page object.</maml:para>
@@ -2158,7 +2165,7 @@ parentSectionGroup               :</dev:code>
         </dev:type>
         <dev:defaultValue>(Get-ONDefaultSection).pagesUrl</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>html</maml:name>
         <maml:Description>
           <maml:para>The page content as valid XHTML.</maml:para>
@@ -2170,7 +2177,7 @@ parentSectionGroup               :</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Page</maml:name>
         <maml:Description>
           <maml:para>A Page object.</maml:para>
@@ -2245,7 +2252,16 @@ parentSectionGroup               :</dev:code>
       </command:parameter>
     </command:parameters>
     <command:inputTypes />
-    <command:returnValues />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>XMLDocument object.</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
     <maml:alertSet>
       <maml:alert>
         <maml:para></maml:para>
@@ -2670,7 +2686,7 @@ parentSectionGroup               :</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Set-ONPageLevel</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
             <maml:para>The Id of the OneNotePage.</maml:para>
@@ -2682,7 +2698,7 @@ parentSectionGroup               :</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
           <maml:name>Level</maml:name>
           <maml:Description>
             <maml:para>The level for the page. Possible values:</maml:para>
@@ -2698,7 +2714,7 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
           <maml:para>The Id of the OneNotePage.</maml:para>
@@ -2710,7 +2726,7 @@ parentSectionGroup               :</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
         <maml:name>Level</maml:name>
         <maml:Description>
           <maml:para>The level for the page. Possible values:</maml:para>
@@ -2811,7 +2827,7 @@ parentSectionGroup               :</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Update-ONElement</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
             <maml:para>The ID of the page to be modified.</maml:para>
@@ -2823,7 +2839,7 @@ parentSectionGroup               :</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
           <maml:name>targetId</maml:name>
           <maml:Description>
             <maml:para>The ID of the Page element to be updated, or the 'body' or 'title' keyword.</maml:para>
@@ -2835,11 +2851,10 @@ parentSectionGroup               :</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
           <maml:name>action</maml:name>
           <maml:Description>
-            <maml:para>The action to be undertaked. Possible values:</maml:para>
-            <maml:para>replace, append, delete, insert, or prepend</maml:para>
+            <maml:para>The action to be undertaked. Possible values:  replace, append, delete, insert, or prepend</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -2848,7 +2863,7 @@ parentSectionGroup               :</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
           <maml:name>content</maml:name>
           <maml:Description>
             <maml:para>The XHTML content for the Action.</maml:para>
@@ -2863,8 +2878,7 @@ parentSectionGroup               :</dev:code>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="5" aliases="none">
           <maml:name>position</maml:name>
           <maml:Description>
-            <maml:para>The location of the content in relation to the target. Possible values:</maml:para>
-            <maml:para>after (default) or before</maml:para>
+            <maml:para>The location of the content in relation to the target. Possible values: after (default) or before</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -2876,7 +2890,7 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
           <maml:para>The ID of the page to be modified.</maml:para>
@@ -2888,7 +2902,7 @@ parentSectionGroup               :</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
         <maml:name>targetId</maml:name>
         <maml:Description>
           <maml:para>The ID of the Page element to be updated, or the 'body' or 'title' keyword.</maml:para>
@@ -2900,11 +2914,10 @@ parentSectionGroup               :</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
         <maml:name>action</maml:name>
         <maml:Description>
-          <maml:para>The action to be undertaked. Possible values:</maml:para>
-          <maml:para>replace, append, delete, insert, or prepend</maml:para>
+          <maml:para>The action to be undertaked. Possible values:  replace, append, delete, insert, or prepend</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -2913,7 +2926,7 @@ parentSectionGroup               :</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="4" aliases="none">
         <maml:name>content</maml:name>
         <maml:Description>
           <maml:para>The XHTML content for the Action.</maml:para>
@@ -2928,8 +2941,7 @@ parentSectionGroup               :</dev:code>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="5" aliases="none">
         <maml:name>position</maml:name>
         <maml:Description>
-          <maml:para>The location of the content in relation to the target. Possible values:</maml:para>
-          <maml:para>after (default) or before</maml:para>
+          <maml:para>The location of the content in relation to the target. Possible values: after (default) or before</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>

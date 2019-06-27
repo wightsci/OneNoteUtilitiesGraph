@@ -13,7 +13,7 @@ Sets the page indentation level of a OneNote Page.
 ## SYNTAX
 
 ```
-Set-ONPageLevel [[-Id] <String>] [[-Level] <Object>] [<CommonParameters>]
+Set-ONPageLevel [-Id] <String> [-Level] <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +39,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -57,7 +57,7 @@ Type: Object
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 2
 Default value: None
 Accept pipeline input: False

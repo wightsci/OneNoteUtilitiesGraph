@@ -13,7 +13,7 @@ Gets an element from a OneNote Page.
 ## SYNTAX
 
 ```
-Get-ONElement [[-id] <String>] [-page] <Object> [<CommonParameters>]
+Get-ONElement [-id] <String> [-page] <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +46,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False

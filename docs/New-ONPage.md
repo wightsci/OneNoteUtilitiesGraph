@@ -14,12 +14,12 @@ Creates a new OneNote Page.
 
 ### page
 ```
-New-ONPage [-URI <String>] [-Page <Object>] [<CommonParameters>]
+New-ONPage [-URI <String>] -Page <Object> [<CommonParameters>]
 ```
 
 ### html
 ```
-New-ONPage [-URI <String>] [-html <String>] [<CommonParameters>]
+New-ONPage [-URI <String>] -html <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,7 +61,7 @@ Type: String
 Parameter Sets: html
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -76,7 +76,7 @@ Type: Object
 Parameter Sets: page
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

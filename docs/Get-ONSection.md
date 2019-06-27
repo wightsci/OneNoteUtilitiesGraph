@@ -39,10 +39,6 @@ PS C:\> {{ Add example code here }}
 ### -uri
 The Uri of the section to be retreived.
 
-### -Id
-The ID of the section to be retrieved.
-
-
 ```yaml
 Type: String
 Parameter Sets: uri
@@ -56,7 +52,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The Id of the section to be retreived.
+The ID of the section to be retrieved.
+
 
 ```yaml
 Type: String

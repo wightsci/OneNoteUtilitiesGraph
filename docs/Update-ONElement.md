@@ -13,7 +13,7 @@ Updates a specified element on a OneNote Page.
 ## SYNTAX
 
 ```
-Update-ONElement [[-Id] <String>] [[-targetId] <String>] [[-action] <String>] [[-content] <String>]
+Update-ONElement [-Id] <String> [-targetId] <String> [-action] <String> [-content] <String>
  [[-position] <String>] [<CommonParameters>]
 ```
 
@@ -71,7 +71,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -86,7 +86,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 2
 Default value: None
 Accept pipeline input: False
@@ -103,7 +103,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 3
 Default value: None
 Accept pipeline input: False
@@ -118,7 +118,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 4
 Default value: None
 Accept pipeline input: False
