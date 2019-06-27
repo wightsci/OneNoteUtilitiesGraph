@@ -29,10 +29,21 @@ Creates a new OneNote Page.
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> $p = New-ONPageXML -Title 'Lesson 1'
+PS C:\> New-ONPage -URI 'https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!731583/pages' -page $p
+
+@odata.context       : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21731583')/pages/$entity
+id                   : 0-b9b9988092b24ac0bb14d4953f88ca2f!61-816F7725BEF00A5F!731583
+self                 : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-b9b9988092b24ac0bb14d4953f88ca2f!61-816F7725BEF00A5F!731583
+createdDateTime      : 2019-06-27T15:17:35.9924696Z
+title                : Lesson 1
+createdByAppId       : WLID-00000000441C65F3
+contentUrl           : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-b9b9988092b24ac0bb14d4953f88ca2f!61-816F7725BEF00A5F!731583/content
+lastModifiedDateTime : 2019-06-27T15:17:35.9924696Z
+links                : @{oneNoteClientUrl=; oneNoteWebUrl=}
 ```
 
-{{ Add example description here }}
+This example show the creation of an XHTML page using New-ONPageXML that is then passed to New-ONPage for creation in the Graph service.
 
 ## PARAMETERS
 

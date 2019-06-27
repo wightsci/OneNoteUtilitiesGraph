@@ -23,10 +23,14 @@ Creates the XHTML source for a new OneNote Page.
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-ONPageXML -Title 'Timetable'
+
+html
+----
+html
 ```
 
-{{ Add example description here }}
+This command outputs an XHTML object for an empty page with the title 'Timetable'
 
 ## PARAMETERS
 
