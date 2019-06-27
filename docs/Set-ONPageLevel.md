@@ -24,15 +24,15 @@ Not applicable to the first Page in a Section.
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-ONPageLevel -ID '0-b9b9988092b24ac0bb14d4953f88ca2f!61-816F7725BEF00A5F!731583' -Level 1
 ```
 
-{{ Add example description here }}
+This command indents the PageLevel of the given Page to level 1. This will only succeed if the Page is not the first one in the Section.
 
 ## PARAMETERS
 
 ### -Id
-The Id of the OneNotePage.
+The Id of the OneNote Page.
 
 ```yaml
 Type: String

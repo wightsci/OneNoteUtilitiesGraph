@@ -92,28 +92,10 @@
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-Config</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
-          <maml:name>path</maml:name>
-          <maml:Description>
-            <maml:para>The path to the file. Default value:</maml:para>
-            <maml:para></maml:para>
-            <maml:para>"$HOME\.config\OneNoteUtilities.config"</maml:para>
-            <maml:para>A typical file would look something like this:</maml:para>
-            <maml:para></maml:para>
-            <maml:para>&lt;?xml version="1.0"?&gt;      &lt;settings&gt;
-&lt;setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /&gt;         &lt;setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/&gt;      &lt;/settings&gt;</maml:para>
-          </maml:Description>
-          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
-          <dev:type>
-            <maml:name>String</maml:name>
-            <maml:uri />
-          </dev:type>
-          <dev:defaultValue>"$HOME\.config\OneNoteUtilities.config"</dev:defaultValue>
-        </command:parameter>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="false" position="named" aliases="none">
         <maml:name>path</maml:name>
         <maml:Description>
           <maml:para>The path to the file. Default value:</maml:para>
@@ -123,13 +105,33 @@
           <maml:para></maml:para>
           <maml:para>&lt;?xml version="1.0"?&gt;      &lt;settings&gt;
 &lt;setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /&gt;         &lt;setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/&gt;      &lt;/settings&gt;</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para>yaml Type: String Parameter Sets: (All) Aliases:</maml:para>
+          <maml:para>Required: False Position: 1 Default value: "$HOME\.config\OneNoteUtilities.config" Accept pipeline input: False Accept wildcard characters: False</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para>yaml Type: String Parameter Sets: (All) Aliases:</maml:para>
+          <maml:para>Required: False Position: 1 Default value: None Accept pipeline input: False Accept wildcard characters: False</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para>yaml Type: String Parameter Sets: (All) Aliases:</maml:para>
+          <maml:para>Required: False Position: 1 Default value: None Accept pipeline input: False Accept wildcard characters: False</maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para>yaml Type: String Parameter Sets: (All) Aliases:</maml:para>
+          <maml:para>Required: False Position: Named Default value: None Accept pipeline input: False Accept wildcard characters: False ```</maml:para>
         </maml:Description>
-        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false"></command:parameterValue>
         <dev:type>
-          <maml:name>String</maml:name>
+          <maml:name></maml:name>
           <maml:uri />
         </dev:type>
-        <dev:defaultValue>"$HOME\.config\OneNoteUtilities.config"</dev:defaultValue>
+        <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
     </command:parameters>
     <command:inputTypes />
@@ -1110,9 +1112,20 @@ You can eve...</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; Get-ONRecentNoteBooks
+
+displayName         lastAccessedTime     sourceService links
+-----------         ----------------     ------------- -----
+Work Notebook       2019-06-27T11:33:55Z OneDrive      @{oneNoteClientUrl=; oneNoteWebUrl=}
+API NoteBook        2019-06-26T13:50:46Z OneDrive      @{oneNoteClientUrl=; oneNoteWebUrl=}
+Personal            2019-06-26T10:34:08Z OneDrive      @{oneNoteClientUrl=; oneNoteWebUrl=}
+WebNotes            2019-06-22T17:08:12Z OneDrive      @{oneNoteClientUrl=; oneNoteWebUrl=}
+Real World Samples  2018-10-17T14:17:23Z OneDrive      @{oneNoteClientUrl=; oneNoteWebUrl=}
+Holiday             2018-10-17T14:17:10Z OneDrive      @{oneNoteClientUrl=; oneNoteWebUrl=}
+Main Notebook       2017-05-08T13:14:40Z OneDrive      @{oneNoteClientUrl=; oneNoteWebUrl=}
+Class Notebook      2016-01-21T15:15:31Z OneDrive      @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>This command displays the most recently accessed NoteBooks for the logged-on user.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -1236,7 +1249,7 @@ You can eve...</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Gets a OneNote Section.</maml:para>
+      <maml:para>Gets a OneNote Section, based on its ID or URL.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -1244,7 +1257,7 @@ You can eve...</dev:code>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>uri</maml:name>
           <maml:Description>
-            <maml:para>The Uri of the section to be retreived.</maml:para>
+            <maml:para>The Url of the section to be retreived.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1274,7 +1287,7 @@ You can eve...</dev:code>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>uri</maml:name>
         <maml:Description>
-          <maml:para>The Uri of the section to be retreived.</maml:para>
+          <maml:para>The Url of the section to be retreived.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1324,9 +1337,47 @@ You can eve...</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; Get-ONSection -ID '0-816F7725BEF00A5F!665030'
+
+@odata.context                   : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections/$entity
+id                               : 0-816F7725BEF00A5F!665030
+self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030
+createdDateTime                  : 2016-10-29T07:43:06.16Z
+displayName                      : K-4 Japanese Tree Frog
+lastModifiedDateTime             : 2016-10-29T07:43:10.177Z
+isDefault                        : False
+pagesUrl                         : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030/pages
+createdBy                        : @{user=}
+lastModifiedBy                   : @{user=}
+parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665030')/parentNotebook/$entity
+parentNotebook                   : @{id=0-816F7725BEF00A5F!665025; displayName=Real World Samples; self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025}
+parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665030')/parentSectionGroup/$entity
+parentSectionGroup               :</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>This command retrieves a specific Section based on its ID.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-ONSection -uri 'https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030'
+
+
+@odata.context                   : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections/$entity
+id                               : 0-816F7725BEF00A5F!665030
+self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030
+createdDateTime                  : 2016-10-29T07:43:06.16Z
+displayName                      : K-4 Japanese Tree Frog
+lastModifiedDateTime             : 2016-10-29T07:43:10.177Z
+isDefault                        : False
+pagesUrl                         : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030/pages
+createdBy                        : @{user=}
+lastModifiedBy                   : @{user=}
+parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665030')/parentNotebook/$entity
+parentNotebook                   : @{id=0-816F7725BEF00A5F!665025; displayName=Real World Samples; self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025}
+parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665030')/parentSectionGroup/$entity
+parentSectionGroup               :</dev:code>
+        <dev:remarks>
+          <maml:para>This command retrieves a specific Section based on its URL.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>

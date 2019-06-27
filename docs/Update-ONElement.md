@@ -18,7 +18,7 @@ Update-ONElement [-Id] <String> [-targetId] <String> [-action] <String> [-conten
 ```
 
 ## DESCRIPTION
-Updates a specified element on a OneNote Page.
+Updates a specified element on a OneNote Page, identified by its ID.
 
 ## EXAMPLES
 

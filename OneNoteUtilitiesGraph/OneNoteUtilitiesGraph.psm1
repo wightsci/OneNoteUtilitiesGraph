@@ -174,7 +174,7 @@ Function Get-ONSection {
         }
 
         if ($Id) {
-            Get-ONItem -ItemType 'noteBooks' -Id $Id
+            Get-ONItem -ItemType 'sections' -Id $Id
         }
 }
 
@@ -367,6 +367,7 @@ Function Get-ONElement {
 # Create a new OneNote NoteBook
 Function New-ONNoteBook {
     Param (
+        [Parameter(Mandatory=$true)]
         [string]$DisplayName
     )
     $uri = "{0}{1}" -f $ONuri, 'notebooks'
@@ -528,9 +529,9 @@ Function Get-ONPageXML {
 # Invoke the default OneNote application and load a page
 Function Invoke-ONApp {
     Param(
-        [parameter(ParameterSetName="page")]
+        [parameter(ParameterSetName="page",Mandatory=$true)]
         [object]$page,
-        [parameter(ParameterSetName="id")]
+        [parameter(ParameterSetName="id",Mandatory=$true)]
         [string]$Id
     )
     If ($Id) {
@@ -542,9 +543,9 @@ Function Invoke-ONApp {
 # Invoke the OneNote web app and load a page
 Function Invoke-ONWeb {   
     Param(
-    [Parameter(ParameterSetName='page')]
+    [Parameter(ParameterSetName='page',Mandatory=$true)]
     [object]$page,
-    [Parameter(ParameterSetName='Id')]
+    [Parameter(ParameterSetName='Id',Mandatory=$true)]
     [object]$Id
     )
     If ($Id) {

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Invoke-ONWeb
 
 ## SYNOPSIS
-Invokes the OneNote web app and loads a page.
+Invokes the default web browser and loads a page.
 
 ## SYNTAX
 
@@ -23,16 +23,22 @@ Invoke-ONWeb [-Id <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
-
-## EXAMPLES
+Invokes the default application for handling web urls and passes it the URL
+of a page to load, based on an ID or a Page object.
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Invoke-ONWeb -Page (Get-ONPages -Filter "title eq '2 - Life Cycle of Tree Frog'")
 ```
 
-{{ Add example description here }}
+This command uses ```Get-ONPages``` to obtain a Page object matching the filter, and this is passed to ```Invoke-ONApp```
+
+### Example 2
+```
+PS C:\> Invoke-ONWeb-ID ' 0-634cb14d92da4a1c85ca21fccb057cf7!40-816F7725BEF00A5F!665030'
+```
+
+This command uses opens a Page based on its ID.
 
 ## PARAMETERS
 

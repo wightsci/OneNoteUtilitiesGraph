@@ -23,21 +23,59 @@ Get-ONSection -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets a OneNote Section.
+Gets a OneNote Section, based on its ID or URL.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-ONSection -ID '0-816F7725BEF00A5F!665030'
+
+@odata.context                   : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections/$entity
+id                               : 0-816F7725BEF00A5F!665030
+self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030
+createdDateTime                  : 2016-10-29T07:43:06.16Z
+displayName                      : K-4 Japanese Tree Frog
+lastModifiedDateTime             : 2016-10-29T07:43:10.177Z
+isDefault                        : False
+pagesUrl                         : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030/pages
+createdBy                        : @{user=}
+lastModifiedBy                   : @{user=}
+parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665030')/parentNotebook/$entity
+parentNotebook                   : @{id=0-816F7725BEF00A5F!665025; displayName=Real World Samples; self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025}
+parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665030')/parentSectionGroup/$entity
+parentSectionGroup               :
 ```
 
-{{ Add example description here }}
+This command retrieves a specific Section based on its ID.
+
+### Example 2
+```
+PS C:\> Get-ONSection -uri 'https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030'
+
+
+@odata.context                   : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections/$entity
+id                               : 0-816F7725BEF00A5F!665030
+self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030
+createdDateTime                  : 2016-10-29T07:43:06.16Z
+displayName                      : K-4 Japanese Tree Frog
+lastModifiedDateTime             : 2016-10-29T07:43:10.177Z
+isDefault                        : False
+pagesUrl                         : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665030/pages
+createdBy                        : @{user=}
+lastModifiedBy                   : @{user=}
+parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665030')/parentNotebook/$entity
+parentNotebook                   : @{id=0-816F7725BEF00A5F!665025; displayName=Real World Samples; self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025}
+parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665030')/parentSectionGroup/$entity
+parentSectionGroup               :
+```
+
+This command retrieves a specific Section based on its URL.
 
 ## PARAMETERS
 
 ### -uri
-The Uri of the section to be retreived.
+The Url of the section to be retreived.
 
 ```yaml
 Type: String

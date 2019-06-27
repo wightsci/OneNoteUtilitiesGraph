@@ -29,10 +29,21 @@ Creates a new OneNote Section.
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-ONSection -DisplayName 'Monday' -Id 0-816F7725BEF00A5F!731581 -SectionGroup
+
+@odata.context       : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731581')/sections/$entity
+id                   : 0-816F7725BEF00A5F!731583
+self                 : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!731583
+createdDateTime      : 2019-06-27T14:06:46.343Z
+displayName          : Monday
+lastModifiedDateTime : 2019-06-27T14:06:46.507Z
+isDefault            : False
+pagesUrl             : https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!731583/pages
+createdBy            : @{user=}
+lastModifiedBy       : @{user=}
 ```
 
-{{ Add example description here }}
+This command creates a new Section  named 'Monday' in the SectionGroup with the listed ID.
 
 ## PARAMETERS
 
@@ -52,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -uri
-{{ Fill uri Description }}
+The URL at which the new Section will be created.
 
 ```yaml
 Type: String
@@ -67,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{ Fill Id Description }}
+The ID of the destination container. If this is a SectionGroup, then the SectionGroup switch must also be used.
 
 ```yaml
 Type: String
@@ -82,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -SectionGroup
-{{ Fill SectionGroup Description }}
+Switch to identify that the ID parameter referrs to a SectionGroup, not a NoteBook.
 
 ```yaml
 Type: SwitchParameter

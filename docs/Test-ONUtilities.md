@@ -8,7 +8,7 @@ schema: 2.0.0
 # Test-ONUtilities
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+A Test suite that will excercise the capabilities of the module. Tied to the structure of the Author's NoteBooks :(
 
 ## SYNTAX
 
@@ -17,16 +17,14 @@ Test-ONUtilities [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+A Test suite that will excercise the capabilities of the module. Tied to the structure of the Author's NoteBooks :( . Running with the -Verbose switch provides diagnostic information.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Test-ONUtilities
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 

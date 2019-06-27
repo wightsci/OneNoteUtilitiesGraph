@@ -13,7 +13,7 @@ Gets configuration information from a file.
 ## SYNTAX
 
 ```
-Get-Config [[-path] <String>] [<CommonParameters>]
+Get-Config [-path <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,6 +67,34 @@ Position: 1
 Default value: "$HOME\.config\OneNoteUtilities.config"
 Accept pipeline input: False
 Accept wildcard characters: False
+
+
+
+
+yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
+
+
+
+yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ```yaml
@@ -75,7 +103,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

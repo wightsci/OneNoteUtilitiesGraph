@@ -23,10 +23,25 @@ Creates a new OneNote NoteBook.
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-ONNoteBook -DisplayName 'Class NoteBook'
+
+@odata.context       : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/notebooks/$entity
+id                   : 0-816F7725BEF00A5F!731579
+self                 : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!731579
+createdDateTime      : 2019-06-27T13:47:17.66Z
+displayName          : Class NoteBook
+lastModifiedDateTime : 2019-06-27T13:47:17.66Z
+isDefault            : False
+userRole             : Owner
+isShared             : False
+sectionsUrl          : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!731579/sections
+sectionGroupsUrl     : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!731579/sectionGroups
+createdBy            : @{user=}
+lastModifiedBy       : @{user=}
+links                : @{oneNoteClientUrl=; oneNoteWebUrl=}
 ```
 
-{{ Add example description here }}
+This command creates a new NoteBook named 'Class NoteBook'
 
 ## PARAMETERS
 
