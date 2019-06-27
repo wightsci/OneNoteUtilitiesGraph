@@ -31,7 +31,6 @@ Returns notebook metadata.
 ### EXAMPLE 1
 ```
 Get-ONNoteBook -Id 0-816F7725BEF00A5F!665025
-```
 
 @odata.context       : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/notebooks/$entity
 id                   : 0-816F7725BEF00A5F!665025
@@ -47,7 +46,7 @@ sectionGroupsUrl     : https://graph.microsoft.com/v1.0/users/me/onenote/noteboo
 createdBy            : @{user=}
 lastModifiedBy       : @{user=}
 links                : @{oneNoteClientUrl=; oneNoteWebUrl=}
-
+```
 ## PARAMETERS
 
 ### -uri

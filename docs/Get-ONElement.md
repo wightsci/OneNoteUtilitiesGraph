@@ -25,7 +25,6 @@ Returned as an XML element.
 ### EXAMPLE 1
 ```
 $page = Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML
-```
 
 Get-ONElement -page $page -id 'p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35}'
 
@@ -33,7 +32,7 @@ id                                           style                            #t
 --                                           -----                            -----
 p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35} margin-top:0pt;margin-bottom:0pt For quizzes and tests, you can track the items that students either get consistently wrong or consistently correct.
 You can eve...
-
+```
 This command obtains the content of a Page and stores it in the variable $page.
 Get-ONElement is then used to return a particular paragraph element.
 

@@ -26,10 +26,21 @@ If no filter is supplied then all NoteBooks are returned.
 ### EXAMPLE 1
 ```
 Get-ONNotebooks "displayname eq 'Real World Samples'"
+
+id                   : 0-816F7725BEF00A5F!665025
+self                 : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025
+createdDateTime      : 2016-10-29T07:43:00.693Z
+displayName          : Real World Samples
+lastModifiedDateTime : 2016-10-29T07:44:42.977Z
+isDefault            : False
+userRole             : Owner
+isShared             : False
+sectionsUrl          : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025/sections
+sectionGroupsUrl     : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025/sectionGroups
+createdBy            : @{user=}
+lastModifiedBy       : @{user=}
+links                : @{oneNoteClientUrl=; oneNoteWebUrl=}
 ```
-
-id                   : 0-816F7725BEF00A5F!665025 self                 : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025 createdDateTime      : 2016-10-29T07:43:00.693Z displayName          : Real World Samples lastModifiedDateTime : 2016-10-29T07:44:42.977Z isDefault            : False userRole             : Owner isShared             : False sectionsUrl          : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025/sections sectionGroupsUrl     : https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!665025/sectionGroups createdBy            : @{user=} lastModifiedBy       : @{user=} links                : @{oneNoteClientUrl=; oneNoteWebUrl=}
-
 ## PARAMETERS
 
 ### -Filter
