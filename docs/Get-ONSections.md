@@ -13,7 +13,7 @@ Gets a list of OneNote Sections matching the supplied filter.
 ## SYNTAX
 
 ```
-Get-ONSections [[-Filter] <String>]
+Get-ONSections [[-Filter] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +43,7 @@ parentNotebook                   : @{id=0-816F7725BEF00A5F!665025; displayName=R
 parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sections('0-816F7725BEF00A5F%21665031')/parentSectionGroup/$entity
 parentSectionGroup               :
 ```
+
 ## PARAMETERS
 
 ### -Filter
@@ -59,6 +60,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

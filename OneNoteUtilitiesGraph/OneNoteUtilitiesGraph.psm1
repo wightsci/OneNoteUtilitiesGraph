@@ -186,6 +186,23 @@ Function Get-ONSections {
     Get-ONItems -List -ItemType 'sections' -Filter $filter
 }
 
+# Get a OneNote Notebook
+Function Get-ONNoteBook { 
+        Param(
+            [Parameter(ParameterSetName='uri')]
+            [string]$uri,
+            [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true)]
+            [string]$Id
+            )
+    
+            if ($uri) {
+                Get-ONItem -uri $uri
+            }
+    
+            if ($Id) {
+                Get-ONItem -ItemType 'noteBooks' -Id $Id
+            }
+}
 
 # Get a list of OneNote Notebooks
 Function Get-ONNoteBooks {

@@ -53,6 +53,20 @@ A typical file would look something like this:
         <setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" />
         <setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/> 
     </settings>
+
+
+
+
+yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: "$HOME\.config\OneNoteUtilities.config"
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ```yaml
@@ -62,7 +76,7 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: "$HOME\.config\OneNoteUtilities.config"
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
