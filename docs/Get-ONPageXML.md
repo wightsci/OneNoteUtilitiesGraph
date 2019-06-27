@@ -48,6 +48,7 @@ You can even keep copies of the student's completed quizzes or tests in case you
         </body>
 </html>
 ```
+
 This command pipes a Page object to Get-ONPageXML.
 Expanding the 'html' property displays the full XHTML of the page.
 
@@ -56,10 +57,14 @@ Expanding the 'html' property displays the full XHTML of the page.
 $page = Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML
 $page.GetElementsByTagName('p')
 
-id                                           style                            #text --                                           -----                            ----- p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{34} margin-top:0pt;margin-bottom:0pt {OneNote makes it easy to ,  in one notebook.
-You can easily track items like , , , , and ...} p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35} margin-top:0pt;margin-bottom:0pt For quizzes and tests, you can track the items that students either get consistently wrong or consistently correct.
+id                                           style                            #text
+--                                           -----                            ----- 
+p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{34} margin-top:0pt;margin-bottom:0pt {OneNote makes it easy to ,  in one notebook.
+You can easily track items like , , , , and ...} 
+p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35} margin-top:0pt;margin-bottom:0pt For quizzes and tests, you can track the items that students either get consistently wrong or consistently correct.
 You can eve...
 ```
+
 This command pipes a Page object to Get-ONPageXML and stores the result in the variable $page.
 $page can then be accessed as an XMLDocument object.
 

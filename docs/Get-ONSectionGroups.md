@@ -25,15 +25,28 @@ The filter must be  vaild OData.
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
-```
+PS C:\> Get-ONSectiongroups -Filter "displayname eq 'Work'"
 
-{{ Add example description here }}
+id                               : 0-816F7725BEF00A5F!731386
+self                             : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386
+createdDateTime                  : 2019-02-28T10:50:52.52Z
+displayName                      : Work
+lastModifiedDateTime             : 2019-06-27T10:14:26.947Z
+sectionsUrl                      : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sections
+sectionGroupsUrl                 : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sectionGroups
+createdBy                        : @{user=}
+lastModifiedBy                   : @{user=}
+parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('stuart_squibb%40hotmail.co.uk')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentNotebook/$entity
+parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stuart's Notebook; self=https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/notebooks/0-816F7725BEF00A5F!1273}
+parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('stuart_squibb%40hotmail.co.uk')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
+parentSectionGroup               :
+```
+This command gets the SectionGroup whose name is 'Work'.
 
 ## PARAMETERS
 
 ### -Filter
-{{ Fill Filter Description }}
+The filter to be used. Must be valid OData
 
 ```yaml
 Type: String

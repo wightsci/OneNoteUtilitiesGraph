@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SessionVariables
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets a set of useful variable values.
 
 ## SYNTAX
 
@@ -17,16 +17,7 @@ Get-SessionVariables [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
-
-## EXAMPLES
-
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
+Gets some useful variable value. Useful in monitoring/debugging.
 
 ## PARAMETERS
 

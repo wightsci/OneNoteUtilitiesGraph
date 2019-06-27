@@ -19,7 +19,7 @@ Get-TokenStatus [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This function maintains a valid set of Graph credntials, comprising an Authorization Code and an Access Token.
+This function maintains a valid set of Graph credentials, comprising an Authorization Code and an Access Token.
 
 TYpically this function is called before any access is attempted to the Graph API itself.
 
@@ -27,10 +27,8 @@ TYpically this function is called before any access is attempted to the Graph AP
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-TokenStatus
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 

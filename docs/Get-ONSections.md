@@ -46,7 +46,7 @@ parentSectionGroup               :
 ## PARAMETERS
 
 ### -Filter
-{{ Fill Filter Description }}
+The filter to be used. OData.
 
 ```yaml
 Type: String

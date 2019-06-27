@@ -40,16 +40,13 @@ id                                                            title
 0-8d3847e53f7d452aaddc4f63814b8d59!11-816F7725BEF00A5F!1079   OneNote Clipper Installation
 0-bf55e9873b624c5c98d779f0e9f6e6d1!21-816F7725BEF00A5F!665031 OneNote and Learning Styles
 ```
+
 This command gets a list of pages whose Title starts with 'OneNote'.
 
 ### EXAMPLE 2
 ```
 Get-ONPages -Uri 'https://graph.microsoft.com/v1.0/users/me/onenote/sections/0-816F7725BEF00A5F!665031/pages' | Select-Object Id,Title
 
-<<<<<<< HEAD
-id                                                            title --                                                            ----- 0-bf55e9873b624c5c98d779f0e9f6e6d1!44-816F7725BEF00A5F!665031 Other Learning Activities 0-bf55e9873b624c5c98d779f0e9f6e6d1!60-816F7725BEF00A5F!665031 Facilitator Guides 0-bf55e9873b624c5c98d779f0e9f6e6d1!54-816F7725BEF00A5F!665031 Self-Paced Teacher Development 0-bf55e9873b624c5c98d779f0e9f6e6d1!49-816F7725BEF00A5F!665031 Courses Delivered in OneNote 0-bf55e9873b624c5c98d779f0e9f6e6d1!57-816F7725BEF00A5F!665031 New Teacher Orientation 0-bf55e9873b624c5c98d779f0e9f6e6d1!28-816F7725BEF00A5F!665031 Teacher Workbooks 0-bf55e9873b624c5c98d779f0e9f6e6d1!17-816F7725BEF00A5F!665031 Example Lesson Plans 0-bf55e9873b624c5c98d779f0e9f6e6d1!63-816F7725BEF00A5F!665031 How OneNote Enhances Different Learning Styles 0-bf55e9873b624c5c98d779f0e9f6e6d1!21-816F7725BEF00A5F!665031 OneNote and Learning Styles 0-bf55e9873b624c5c98d779f0e9f6e6d1!46-816F7725BEF00A5F!665031 Variety of Education and Learning Examples 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031 ePortfolio
-
-=======
 id                                                            title
 --                                                            -----
 0-bf55e9873b624c5c98d779f0e9f6e6d1!44-816F7725BEF00A5F!665031 Other Learning Activities
@@ -64,7 +61,7 @@ id                                                            title
 0-bf55e9873b624c5c98d779f0e9f6e6d1!46-816F7725BEF00A5F!665031 Variety of Education and Learning Examples
 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031 ePortfolio
 ```
->>>>>>> 28aea29324a50223c7cecce35a7cd02beb6a1c9b
+
 This command gets a list of Pages found at a specific URL.
 
 ## PARAMETERS

@@ -163,9 +163,9 @@ Function Get-ONPage {
 # Get a OneNote Section
 Function Get-ONSection {
     Param(
-        [Parameter(ParameterSetName='uri')]
+        [Parameter(ParameterSetName='uri',Mandatory=$true)]
         [string]$uri,
-        [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true)]
+        [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
         [string]$Id
         )
 
@@ -307,6 +307,7 @@ Function Get-ONSectionGroup {
 # Gets a list of OneNote Section Groups matching the supplied filter
 Function Get-ONSectionGroups {
     Param(
+        [Parameter(Mandatory=$true)]
     [string]$Filter
     )
     Get-ONItems -List -ItemType 'sectionGroups' -Filter $filter
@@ -322,6 +323,11 @@ Function Get-ONResources {
 
 # Gets the default OneNote Section for new content creation
 Function Get-ONDefaultSection {
+Get-ONSections -filter "isDefault eq true"
+}
+
+# Get an element on a page - returned as an XML element
+Function Get-ONElement {
     Param(
         [string]$id,
         [Parameter(Mandatory=$true,ValueFromPipeline=$true)]

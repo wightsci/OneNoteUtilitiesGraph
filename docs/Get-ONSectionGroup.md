@@ -47,6 +47,7 @@ parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stu
 parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
 parentSectionGroup               :
 ```
+
 ## PARAMETERS
 
 ### -uri
