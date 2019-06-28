@@ -14,7 +14,7 @@ Creates a new OneNote SectionGroup.
 
 ### ByUri
 ```
-New-ONSectionGroup -DisplayName <String> -uri <String> [<CommonParameters>]
+New-ONSectionGroup -DisplayName <String> -Uri <String> [<CommonParameters>]
 ```
 
 ### ByID
@@ -62,12 +62,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -uri
-The URL at which the new SectionGroup will be created.
+### -Id
+The ID of the container in which the SectionGroup will be created.
 
 ```yaml
 Type: String
-Parameter Sets: ByUri
+Parameter Sets: ByID
 Aliases:
 
 Required: True
@@ -77,12 +77,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-The ID of the container in which the SectionGroup will be created.
+### -Uri
+The URL at which the new SectionGroup will be created.
 
 ```yaml
 Type: String
-Parameter Sets: ByID
+Parameter Sets: ByUri
 Aliases:
 
 Required: True

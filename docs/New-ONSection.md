@@ -14,7 +14,7 @@ Creates a new OneNote Section.
 
 ### ByUri
 ```
-New-ONSection -DisplayName <String> -uri <String> [<CommonParameters>]
+New-ONSection -DisplayName <String> -Uri <String> [<CommonParameters>]
 ```
 
 ### ByID
@@ -62,21 +62,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -uri
-The URL at which the new Section will be created.
-
-```yaml
-Type: String
-Parameter Sets: ByUri
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Id
 The ID of the destination container. If this is a SectionGroup, then the SectionGroup switch must also be used.
 
@@ -103,6 +88,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Uri
+The URL at which the new Section will be created.
+
+```yaml
+Type: String
+Parameter Sets: ByUri
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

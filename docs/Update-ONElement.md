@@ -13,8 +13,8 @@ Updates a specified element on a OneNote Page.
 ## SYNTAX
 
 ```
-Update-ONElement [-Id] <String> [-targetId] <String> [-action] <String> [-content] <String>
- [[-position] <String>] [<CommonParameters>]
+Update-ONElement [-Id] <String> [-TargetId] <String> [-Action] <String> [-Content] <String>
+ [[-Position] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,22 +78,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -targetId
-The ID of the Page element to be updated, or the 'body' or 'title' keyword.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -action
+### -Action
 The action to be undertaked.
 Possible values: 
 replace, append, delete, insert, or prepend
@@ -110,7 +95,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -content
+### -Content
 The XHTML content for the Action.
 
 ```yaml
@@ -125,7 +110,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -position
+### -Position
 The location of the content in relation to the target.
 Possible values:
 after (default) or before
@@ -137,6 +122,21 @@ Aliases:
 
 Required: False
 Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetId
+The ID of the Page element to be updated, or the 'body' or 'title' keyword.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

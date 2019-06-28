@@ -14,7 +14,7 @@ Invokes the default OneNote application and loads a page.
 
 ### page
 ```
-Invoke-ONApp -page <Object> [<CommonParameters>]
+Invoke-ONApp -Page <Object> [<CommonParameters>]
 ```
 
 ### id
@@ -44,12 +44,12 @@ This command uses opens a Page based on its ID.
 
 ## PARAMETERS
 
-### -page
-A OneNote Page object.
+### -Id
+The Id of a OneNote Page.
 
 ```yaml
-Type: Object
-Parameter Sets: page
+Type: String
+Parameter Sets: id
 Aliases:
 
 Required: True
@@ -59,12 +59,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Id
-The Id of a OneNote Page.
+### -Page
+A OneNote Page object.
 
 ```yaml
-Type: String
-Parameter Sets: id
+Type: Object
+Parameter Sets: page
 Aliases:
 
 Required: True

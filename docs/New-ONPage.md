@@ -14,12 +14,12 @@ Creates a new OneNote Page.
 
 ### page
 ```
-New-ONPage [-URI <String>] -Page <Object> [<CommonParameters>]
+New-ONPage [-Uri <String>] -Page <Object> [<CommonParameters>]
 ```
 
 ### html
 ```
-New-ONPage [-URI <String>] -html <String> [<CommonParameters>]
+New-ONPage [-Uri <String>] -Html <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,24 +47,22 @@ This example shows the creation of an XHTML page using `New-ONPageXML` that is t
 
 ## PARAMETERS
 
-### -URI
-The location to create the new Page.
-
-If no location is specified then the default location for new content is used.
+### -Page
+A Page object.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: Object
+Parameter Sets: page
 Aliases:
 
-Required: False
+Required: True
 Position: Named
-Default value: (Get-ONDefaultSection).pagesUrl
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -html
+### -Html
 The page content as valid XHTML.
 
 ```yaml
@@ -79,17 +77,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Page
-A Page object.
+### -Uri
+The location to create the new Page.
+
+If no location is specified then the default location for new content is used.
 
 ```yaml
-Type: Object
-Parameter Sets: page
+Type: String
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: (Get-ONDefaultSection).pagesUrl
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
