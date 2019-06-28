@@ -14,12 +14,12 @@ Gets a OneNote Page.
 
 ### uri
 ```
-Get-ONPage -uri <String> [<CommonParameters>]
+Get-ONPage -Uri <String> [<CommonParameters>]
 ```
 
 ### id
 ```
-Get-ONPage -id <String> [<CommonParameters>]
+Get-ONPage -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,22 +67,7 @@ This command gets a specific page by its Id.
 
 ## PARAMETERS
 
-### -uri
-The Uri of the page to be retreived.
-
-```yaml
-Type: String
-Parameter Sets: uri
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -id
+### -Id
 The Id of the page to be retreived.
 
 ```yaml
@@ -94,6 +79,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Uri
+The Uri of the page to be retreived.
+
+```yaml
+Type: String
+Parameter Sets: uri
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
