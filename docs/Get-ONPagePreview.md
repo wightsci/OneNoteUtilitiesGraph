@@ -13,7 +13,7 @@ Gets the Graph-generated preview content for a Page.
 ## SYNTAX
 
 ```
-Get-ONPagePreview [[-id] <String>] [<CommonParameters>]
+Get-ONPagePreview [-id] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +41,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)

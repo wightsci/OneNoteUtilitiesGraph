@@ -13,7 +13,7 @@ Creates a new OneNote page element.
 ## SYNTAX
 
 ```
-New-ONElement [[-Type] <String>] [[-Document] <Object>] [<CommonParameters>]
+New-ONElement [-Type] <String> [-Document] <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +41,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -56,7 +56,7 @@ Type: Object
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 2
 Default value: None
 Accept pipeline input: False

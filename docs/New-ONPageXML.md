@@ -13,7 +13,7 @@ Creates the XHTML source for a new OneNote Page.
 ## SYNTAX
 
 ```
-New-ONPageXML [[-Title] <String>] [<CommonParameters>]
+New-ONPageXML [-Title] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +42,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False

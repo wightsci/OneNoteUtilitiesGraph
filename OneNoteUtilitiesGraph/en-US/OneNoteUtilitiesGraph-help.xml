@@ -75,7 +75,12 @@
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-AccessToken</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
@@ -96,19 +101,14 @@
           <maml:name>path</maml:name>
           <maml:Description>
             <maml:para>The path to the file. Default value:</maml:para>
-            <maml:para>"$HOME\.config\OneNoteUtilities.config"</maml:para>
-            <maml:para>A typical file would look something like this:</maml:para>
-            <maml:para></maml:para>
-            <maml:para></maml:para>
-            <maml:para>&lt;?xml version="1.0"?&gt;      &lt;settings&gt;
-&lt;setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /&gt;         &lt;setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/&gt;      &lt;/settings&gt;</maml:para>
+            <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
-          <dev:defaultValue>"$HOME\.config\OneNoteUtilities.config"</dev:defaultValue>
+          <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -117,19 +117,14 @@
         <maml:name>path</maml:name>
         <maml:Description>
           <maml:para>The path to the file. Default value:</maml:para>
-          <maml:para>"$HOME\.config\OneNoteUtilities.config"</maml:para>
-          <maml:para>A typical file would look something like this:</maml:para>
-          <maml:para></maml:para>
-          <maml:para></maml:para>
-          <maml:para>&lt;?xml version="1.0"?&gt;      &lt;settings&gt;
-&lt;setting name="clientid" value="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /&gt;         &lt;setting name="scope" value="https://graph.microsoft.com/Notes.ReadWrite https://graph.microsoft.com/Notes.Create"/&gt;      &lt;/settings&gt;</maml:para>
+          <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
-        <dev:defaultValue>"$HOME\.config\OneNoteUtilities.config"</dev:defaultValue>
+        <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
       </command:parameter>
     </command:parameters>
     <command:inputTypes />
@@ -155,7 +150,12 @@
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Save-Config</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
@@ -371,7 +371,7 @@ You can eve...</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ONNoteBook</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>uri</maml:name>
           <maml:Description>
             <maml:para>The Uri of the NoteBook to be retreived.</maml:para>
@@ -386,7 +386,7 @@ You can eve...</dev:code>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Get-ONNoteBook</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
             <maml:para>The Id of the NoteBook to be retreived.</maml:para>
@@ -401,7 +401,7 @@ You can eve...</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>uri</maml:name>
         <maml:Description>
           <maml:para>The Uri of the NoteBook to be retreived.</maml:para>
@@ -413,7 +413,7 @@ You can eve...</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
           <maml:para>The Id of the NoteBook to be retreived.</maml:para>
@@ -741,7 +741,7 @@ parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other 
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ONPagePreview</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="1" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="1" aliases="none">
           <maml:name>id</maml:name>
           <maml:Description>
             <maml:para>The ID of the Page</maml:para>
@@ -756,7 +756,7 @@ parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other 
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="1" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="1" aliases="none">
         <maml:name>id</maml:name>
         <maml:Description>
           <maml:para>The ID of the Page</maml:para>
@@ -1379,7 +1379,12 @@ parentSectionGroup               :</dev:code>
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-ONSections</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
@@ -1786,7 +1791,16 @@ parentSectionGroup               :</dev:code>
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-AuthCode</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-AccessToken</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
@@ -1881,7 +1895,12 @@ parentSectionGroup               :</dev:code>
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Invoke-ONWeb</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
@@ -1976,7 +1995,12 @@ parentSectionGroup               :</dev:code>
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Invoke-ONApp</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
@@ -1993,7 +2017,7 @@ parentSectionGroup               :</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-ONElement</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Type</maml:name>
           <maml:Description>
             <maml:para>The type of element to create. Possible values:</maml:para>
@@ -2006,7 +2030,7 @@ parentSectionGroup               :</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
           <maml:name>Document</maml:name>
           <maml:Description>
             <maml:para>The document object in which to create the new element.</maml:para>
@@ -2021,7 +2045,7 @@ parentSectionGroup               :</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Type</maml:name>
         <maml:Description>
           <maml:para>The type of element to create. Possible values:</maml:para>
@@ -2034,7 +2058,7 @@ parentSectionGroup               :</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
         <maml:name>Document</maml:name>
         <maml:Description>
           <maml:para>The document object in which to create the new element.</maml:para>
@@ -2291,7 +2315,7 @@ contentUrl           : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0
 lastModifiedDateTime : 2019-06-27T15:17:35.9924696Z
 links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
         <dev:remarks>
-          <maml:para>This example shows the creation of an XHTML page using New-ONPageXML that is then passed to New-ONPage for creation in the Graph service.</maml:para>
+          <maml:para>This example shows the creation of an XHTML page using `New-ONPageXML` that is then passed to `New-ONPage` for creation in the Graph service.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -2321,7 +2345,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-ONPageXML</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Title</maml:name>
           <maml:Description>
             <maml:para>The title for the new Page.</maml:para>
@@ -2336,7 +2360,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Title</maml:name>
         <maml:Description>
           <maml:para>The title for the new Page.</maml:para>
@@ -2395,7 +2419,7 @@ html</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-ONSection</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>DisplayName</maml:name>
           <maml:Description>
             <maml:para>The name for the new Section.</maml:para>
@@ -2407,7 +2431,7 @@ html</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>uri</maml:name>
           <maml:Description>
             <maml:para>The URL at which the new Section will be created.</maml:para>
@@ -2422,7 +2446,7 @@ html</dev:code>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>New-ONSection</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>DisplayName</maml:name>
           <maml:Description>
             <maml:para>The name for the new Section.</maml:para>
@@ -2434,7 +2458,7 @@ html</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
             <maml:para>The ID of the destination container. If this is a SectionGroup, then the SectionGroup switch must also be used.</maml:para>
@@ -2460,7 +2484,7 @@ html</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>DisplayName</maml:name>
         <maml:Description>
           <maml:para>The name for the new Section.</maml:para>
@@ -2472,7 +2496,7 @@ html</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>uri</maml:name>
         <maml:Description>
           <maml:para>The URL at which the new Section will be created.</maml:para>
@@ -2484,7 +2508,7 @@ html</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
           <maml:para>The ID of the destination container. If this is a SectionGroup, then the SectionGroup switch must also be used.</maml:para>
@@ -2571,7 +2595,7 @@ lastModifiedBy       : @{user=}</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-ONSectionGroup</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>DisplayName</maml:name>
           <maml:Description>
             <maml:para>The name for the new SectionGroup.</maml:para>
@@ -2583,7 +2607,7 @@ lastModifiedBy       : @{user=}</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>uri</maml:name>
           <maml:Description>
             <maml:para>The URL at which the new SectionGroup will be created.</maml:para>
@@ -2598,7 +2622,7 @@ lastModifiedBy       : @{user=}</dev:code>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>New-ONSectionGroup</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>DisplayName</maml:name>
           <maml:Description>
             <maml:para>The name for the new SectionGroup.</maml:para>
@@ -2610,7 +2634,7 @@ lastModifiedBy       : @{user=}</dev:code>
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
             <maml:para>The ID of the container in which the SectionGroup will be created.</maml:para>
@@ -2625,7 +2649,7 @@ lastModifiedBy       : @{user=}</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>DisplayName</maml:name>
         <maml:Description>
           <maml:para>The name for the new SectionGroup.</maml:para>
@@ -2637,7 +2661,7 @@ lastModifiedBy       : @{user=}</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>uri</maml:name>
         <maml:Description>
           <maml:para>The URL at which the new SectionGroup will be created.</maml:para>
@@ -2649,7 +2673,7 @@ lastModifiedBy       : @{user=}</dev:code>
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
           <maml:para>The ID of the container in which the SectionGroup will be created.</maml:para>
@@ -2728,14 +2752,14 @@ lastModifiedBy       : @{user=}</dev:code>
           <maml:name>path</maml:name>
           <maml:Description>
             <maml:para>Defines the path to save the settings file to. Defaults to;</maml:para>
-            <maml:para>"$HOME\.config\OneNoteUtilities.config"</maml:para>
+            <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
-          <dev:defaultValue>"$HOME\.config\OneNoteUtilities.config"</dev:defaultValue>
+          <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Force</maml:name>
@@ -2755,14 +2779,14 @@ lastModifiedBy       : @{user=}</dev:code>
         <maml:name>path</maml:name>
         <maml:Description>
           <maml:para>Defines the path to save the settings file to. Defaults to;</maml:para>
-          <maml:para>"$HOME\.config\OneNoteUtilities.config"</maml:para>
+          <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
-        <dev:defaultValue>"$HOME\.config\OneNoteUtilities.config"</dev:defaultValue>
+        <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Force</maml:name>
@@ -2793,7 +2817,12 @@ lastModifiedBy       : @{user=}</dev:code>
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-Config</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
@@ -2880,7 +2909,12 @@ lastModifiedBy       : @{user=}</dev:code>
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Get-ONPage</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>

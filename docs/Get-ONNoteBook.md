@@ -14,12 +14,12 @@ Gets a OneNote NoteBook.
 
 ### uri
 ```
-Get-ONNoteBook [-uri <String>] [<CommonParameters>]
+Get-ONNoteBook -uri <String> [<CommonParameters>]
 ```
 
 ### id
 ```
-Get-ONNoteBook [-Id <String>] [<CommonParameters>]
+Get-ONNoteBook -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +57,7 @@ Type: String
 Parameter Sets: uri
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -72,7 +72,7 @@ Type: String
 Parameter Sets: id
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

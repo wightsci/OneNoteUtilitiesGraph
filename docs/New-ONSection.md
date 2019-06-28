@@ -14,12 +14,12 @@ Creates a new OneNote Section.
 
 ### ByUri
 ```
-New-ONSection [-DisplayName <String>] [-uri <String>] [<CommonParameters>]
+New-ONSection -DisplayName <String> -uri <String> [<CommonParameters>]
 ```
 
 ### ByID
 ```
-New-ONSection [-DisplayName <String>] [-Id <String>] [-SectionGroup] [<CommonParameters>]
+New-ONSection -DisplayName <String> -Id <String> [-SectionGroup] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,7 +55,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -70,7 +70,7 @@ Type: String
 Parameter Sets: ByUri
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -85,7 +85,7 @@ Type: String
 Parameter Sets: ByID
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
