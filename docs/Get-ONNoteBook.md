@@ -14,7 +14,7 @@ Gets a OneNote NoteBook.
 
 ### uri
 ```
-Get-ONNoteBook -uri <String> [<CommonParameters>]
+Get-ONNoteBook -Uri <String> [<CommonParameters>]
 ```
 
 ### id
@@ -49,21 +49,6 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}
 
 ## PARAMETERS
 
-### -uri
-The Uri of the NoteBook to be retreived.
-
-```yaml
-Type: String
-Parameter Sets: uri
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Id
 The Id of the NoteBook to be retreived.
 
@@ -76,6 +61,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Uri
+The Uri of the NoteBook to be retreived.
+
+```yaml
+Type: String
+Parameter Sets: uri
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

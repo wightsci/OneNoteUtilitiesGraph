@@ -189,7 +189,7 @@ Function Get-ONSections {
 Function Get-ONNoteBook { 
         Param(
             [Parameter(ParameterSetName='uri',Mandatory=$true)]
-            [string]$uri,
+            [string]$Uri,
             [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
             [string]$Id
             )
