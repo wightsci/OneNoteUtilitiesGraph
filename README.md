@@ -44,9 +44,46 @@ This module provides the following functions:
 
 ## Installation
 
-Before installing the module, ensure that you have a client ID for the Microsoft Graph service.
+Before installing the module, ensure that you have a client ID for the Microsoft Graph service. See the following for more information [https://docs.microsoft.com/en-us/graph/auth-register-app-v2](https://docs.microsoft.com/en-us/graph/auth-register-app-v2).
 
 Create a config XML file containing your client ID and security scope information, named OneNoteUtilities.config and place it in you .config folder.
-There is a [template file](https://raw.githubusercontent.com/wightsci/OneNoteUtilitiesGraph/master/OneNoteUtilities.config) on GitHub.
+There is a [template file](https://raw.githubusercontent.com/wightsci/OneNoteUtilitiesGraph/master/OneNoteUtilities.config) in this repo on GitHub.
 
 Download the module, extract it to a location in your modules path and use ```Import-Module```. The process of importing will trigger an attempt to connect to Microsoft Graph. *This will fail if you haven't set up the config file*. 
+
+## Use Case - Creating Structure
+
+Suppose that you need to create a new Notebook, create Sections for the months of the year and create a Page for each day of each month. You would like the title of each page to look like 'Friday, 26th June 2019' in format. With OneNoteUtiliesGraph you can do this:
+
+```powershell
+Import-Module OneNoteUtilitiesGraph
+#Create NoteBook
+$NoteBook = New-ONNoteBook -DisplayName (Get-Date).Year
+#Create Section per Month
+(1..12) | % {
+    $month = $_; 
+    $monthName = (Get-Date -Month $_).ToString('MMMM')
+    $Section = New-ONSection -Id $NoteBook.Id -DisplayName $monthName
+    #Create Page per Day 
+    (1..$([DateTime]::DaysInMonth((Get-Date).Year,$month))) | % {
+            $Page = New-ONPageXML -Title $((Get-Date -Year (Get-Date).Year -Month $month -Day $_).toString("dddd dd MMMM yyyy"))
+            New-ONPage -URI $Section.pagesURL -Page $Page
+    }
+}
+```
+It takes a couple of minutes, but that's much shorter than creating 12 month Sections and 365 day Pages by hand.
+
+This could just as easily be applied to lists of staff, students or objects in Active Directory.
+
+## Use Case - Querying
+
+
+```powershell
+Get-ONPages -Filter "parentNoteBook/displayname eq '2019' and startswith(title,'Monday')"
+```
+
+## Future Developments
+
+* Support for Tags
+* HTML Templates for Pages
+* New Graph REST features as they are relased
