@@ -188,9 +188,9 @@ Function Get-ONSections {
 # Get a OneNote Notebook
 Function Get-ONNoteBook { 
         Param(
-            [Parameter(ParameterSetName='uri')]
+            [Parameter(ParameterSetName='uri',Mandatory=$true)]
             [string]$uri,
-            [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true)]
+            [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
             [string]$Id
             )
     
@@ -381,12 +381,12 @@ Function New-ONNoteBook {
 # Create a new OneNote Section Group
 Function New-ONSectionGroup {
     Param(
-        [Parameter(ParameterSetName='ByID')]
-        [Parameter(ParameterSetName='ByUri')]
+        [Parameter(ParameterSetName='ByID',Mandatory=$true)]
+        [Parameter(ParameterSetName='ByUri',Mandatory=$true)]
         [string]$DisplayName,
-        [Parameter(ParameterSetName='ByUri')]
+        [Parameter(ParameterSetName='ByUri',Mandatory=$true)]
         [string]$uri,
-        [Parameter(ParameterSetName='ByID')]
+        [Parameter(ParameterSetName='ByID',Mandatory=$true)]
         [string]$Id
     )
     if ($id) {
@@ -403,12 +403,12 @@ Function New-ONSectionGroup {
 # Create a new OneNote Section
 Function New-ONSection {
     Param(
-        [Parameter(ParameterSetName='ByID')]
-        [Parameter(ParameterSetName='ByUri')]
+        [Parameter(ParameterSetName='ByID',Mandatory=$true)]
+        [Parameter(ParameterSetName='ByUri',Mandatory=$true)]
         [string]$DisplayName,
-        [Parameter(ParameterSetName='ByUri')]
+        [Parameter(ParameterSetName='ByUri',Mandatory=$true)]
         [string]$uri,
-        [Parameter(ParameterSetName='ByID')]
+        [Parameter(ParameterSetName='ByID',Mandatory=$true)]
         [string]$Id,
         [Parameter(ParameterSetName="ByID")]
         [switch]$SectionGroup
@@ -466,13 +466,14 @@ Function New-ONHTMLItem {
 
 }
 
-
 Function New-ONElement {
     Param(
+    [Parameter(Mandatory=$true)]
     [ValidateSet(
-    "head","body","title","meta","h1","h2","h3","h4","h5","h6","p","ul","ol","li","pre","b","i","table","tr","td","div","span","img","br","cite"
+        "head","body","title","meta","h1","h2","h3","h4","h5","h6","p","ul","ol","li","pre","b","i","table","tr","td","div","span","img","br","cite"
     )]
     [string]$Type,
+    [Parameter(Mandatory=$true)]
     [object]$Document
     )
 
@@ -483,7 +484,8 @@ Function New-ONElement {
 # Creates a new XHTML page with Title and appropriate metadata
 Function New-ONPageXML {
     Param(
-    [string]$Title
+        [Parameter(Mandatory=$true)]
+        [string]$Title
     )
 
 <#
@@ -703,7 +705,7 @@ Function Get-TokenStatus {
 Function Get-ONPagePreview {
     [CmdletBinding()]
     Param(
-        [Parameter(ValueFromPipelineByPropertyName=$true)]
+        [Parameter(ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
         [string]$id
     )
     $workuri = "{0}pages/{1}/preview" -f $ONuri, $id

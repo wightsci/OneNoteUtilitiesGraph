@@ -34,7 +34,7 @@ This command saves the current configuration to the default location, overwritin
 Defines the path to save the settings file to.
 Defaults to;
 
-"$HOME\.config\OneNoteUtilities.config"
+`$HOME\.config\OneNoteUtilities.config`
 
 ```yaml
 Type: String
@@ -43,7 +43,7 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: "$HOME\.config\OneNoteUtilities.config"
+Default value: '$HOME\.config\OneNoteUtilities.config'
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
