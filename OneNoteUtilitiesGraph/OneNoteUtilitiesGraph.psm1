@@ -163,7 +163,7 @@ Function Get-ONPage {
 Function Get-ONSection {
     Param(
         [Parameter(ParameterSetName='uri',Mandatory=$true)]
-        [string]$uri,
+        [string]$Uri,
         [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
         [string]$Id
         )
@@ -313,7 +313,7 @@ Function Get-ONItems {
 Function Get-ONSectionGroup {    
     Param(
         [Parameter(ParameterSetName='uri',Mandatory=$true)]
-        [string]$uri,
+        [string]$Uri,
         [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
         [string]$Id
         )
