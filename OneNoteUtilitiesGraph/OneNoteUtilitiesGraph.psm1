@@ -144,9 +144,9 @@ Function Get-ONPages {
 Function Get-ONPage {
     Param(
     [Parameter(ParameterSetName='uri',Mandatory=$true)]
-    [string]$uri,
+    [string]$Uri,
     [Parameter(ParameterSetName='id',ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
-    [string]$id
+    [string]$Id
     )
 
     if ($uri) {
