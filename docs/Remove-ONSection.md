@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-ONResources
+# Remove-ONSection
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
@@ -13,7 +13,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-ONResources
+Remove-ONSection
 ```
 
 ## DESCRIPTION
@@ -22,7 +22,7 @@ Get-ONResources
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> {{ Add example code here }}
 ```
 
@@ -33,6 +33,7 @@ PS C:\> {{ Add example code here }}
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object

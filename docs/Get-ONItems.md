@@ -5,21 +5,21 @@ online version:
 schema: 2.0.0
 ---
 
-# Invoke-ONWeb
+# Get-ONItems
 
 ## SYNOPSIS
 {{ Fill in the Synopsis }}
 
 ## SYNTAX
 
-### page
+### uri
 ```
-Invoke-ONWeb -Page <Object> [<CommonParameters>]
+Get-ONItems [-List] [-Filter <String>] [-uri <String>] [<CommonParameters>]
 ```
 
-### Id
+### type
 ```
-Invoke-ONWeb -Id <Object> [<CommonParameters>]
+Get-ONItems [-List] [-ItemType <String>] [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,30 +36,61 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -Id
-{{ Fill Id Description }}
+### -Filter
+{{ Fill Filter Description }}
 
 ```yaml
-Type: Object
-Parameter Sets: Id
+Type: String
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Page
-{{ Fill Page Description }}
+### -ItemType
+{{ Fill ItemType Description }}
 
 ```yaml
-Type: Object
-Parameter Sets: page
+Type: String
+Parameter Sets: type
+Aliases:
+Accepted values: notebooks, sectiongroups, sections, pages
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -List
+{{ Fill List Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -uri
+{{ Fill uri Description }}
+
+```yaml
+Type: String
+Parameter Sets: uri
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -13,7 +13,7 @@ Gets the Graph-generated preview content for a Page.
 ## SYNTAX
 
 ```
-Get-ONPagePreview [-id] <String> [<CommonParameters>]
+Get-ONPagePreview [-Id] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +33,7 @@ https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Im
 
 ## PARAMETERS
 
-### -id
+### -Id
 The ID of the Page
 
 ```yaml
@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONPages](Get-ONPages.md)
+[Get-ONPages]()
 
-[Get-ONPage](Get-ONPage.md)
+[Get-ONPage]()
 

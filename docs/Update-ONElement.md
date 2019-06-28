@@ -80,8 +80,7 @@ Accept wildcard characters: False
 
 ### -Action
 The action to be undertaked.
-Possible values: 
-replace, append, delete, insert, or prepend
+Possible values:  replace, append, delete, insert, or prepend
 
 ```yaml
 Type: String
@@ -112,8 +111,7 @@ Accept wildcard characters: False
 
 ### -Position
 The location of the content in relation to the target.
-Possible values:
-after (default) or before
+Possible values: after (default) or before
 
 ```yaml
 Type: String
@@ -153,9 +151,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONPageXML](Get-ONPageXML.md)
+[Get-ONPageXML]()
 
-[Get-ONPages](Get-ONPage.md)
+[Get-ONPages]()
 
-[Get-ONPage](Get-ONPage.md)
+[Get-ONPage]()
 

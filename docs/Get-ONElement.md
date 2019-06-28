@@ -13,7 +13,7 @@ Gets an element from a OneNote Page.
 ## SYNTAX
 
 ```
-Get-ONElement [-id] <String> [-page] <Object> [<CommonParameters>]
+Get-ONElement [-Id] <String> [-Page] <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,7 @@ Get-ONElement is then used to return a particular paragraph element.
 
 ## PARAMETERS
 
-### -id
+### -Id
 The Id of the page element.
 
 ```yaml
@@ -53,7 +53,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -page
+### -Page
 The page object hosting the element.
 
 ```yaml
@@ -81,9 +81,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONPage](Get-ONPage.md)
+[Get-ONPage]()
 
-[Get-ONPageXML](Get-ONPageXML.md)
+[Get-ONPageXML]()
 
-[Get-ONPages](Get-ONPages.md)
+[Get-ONPages]()
 

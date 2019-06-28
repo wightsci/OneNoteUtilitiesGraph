@@ -63,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-The ID of the destination container. If this is a SectionGroup, then the SectionGroup switch must also be used.
+The ID of the destination container.
+If this is a SectionGroup, then the SectionGroup switch must also be used.
 
 ```yaml
 Type: String

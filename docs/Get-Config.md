@@ -13,7 +13,7 @@ Gets configuration information from a file.
 ## SYNTAX
 
 ```
-Get-Config [-path <String>] [<CommonParameters>]
+Get-Config [-Path <String>]
 ```
 
 ## DESCRIPTION
@@ -38,10 +38,11 @@ This command loads settings from a file at the specified location.
 
 ## PARAMETERS
 
-### -path
-The path to the file. Default value:
+### -Path
+The path to the file.
+Default value:
 
-`$HOME\.config\OneNoteUtilities.config`
+\`$HOME\.config\OneNoteUtilities.config\`
 
 ```yaml
 Type: String
@@ -55,9 +56,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
 ## INPUTS
 
 ## OUTPUTS
@@ -66,4 +64,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Save-Config](Save-Config.md)
+[Save-Config]()
+

@@ -98,9 +98,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONPage](Get-ONPage.md)
+[Get-ONPage]()
 
-[Get-ONPages](Get-ONPages.md)
+[Get-ONPages]()
 
-[Get-ONElement](Get-ONElement.md)
+[Get-ONElement]()
 

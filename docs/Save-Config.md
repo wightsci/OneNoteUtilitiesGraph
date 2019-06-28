@@ -34,7 +34,7 @@ This command saves the current configuration to the default location, overwritin
 Defines the path to save the settings file to.
 Defaults to;
 
-`$HOME\.config\OneNoteUtilities.config`
+\`$HOME\.config\OneNoteUtilities.config\`
 
 ```yaml
 Type: String
@@ -74,4 +74,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Config](Get-Config.md)
+[Get-Config]()
+

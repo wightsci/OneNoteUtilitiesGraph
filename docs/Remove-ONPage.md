@@ -5,37 +5,33 @@ online version:
 schema: 2.0.0
 ---
 
-# New-ONPageXML
+# Remove-ONPage
 
 ## SYNOPSIS
-Creates the XHTML source for a new OneNote Page.
+{{ Fill in the Synopsis }}
 
 ## SYNTAX
 
 ```
-New-ONPageXML [-Title] <String> [<CommonParameters>]
+Remove-ONPage [-Id] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates the XHTML source for a new OneNote Page.
+{{ Fill in the Description }}
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> New-ONPageXML -Title 'Timetable'
-
-html
-----
-html
+```powershell
+PS C:\> {{ Add example code here }}
 ```
 
-This command outputs an XHTML object for an empty page with the title 'Timetable'
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -Title
-The title for the new Page.
+### -Id
+{{ Fill Id Description }}
 
 ```yaml
 Type: String
@@ -43,7 +39,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -54,9 +50,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### XMLDocument object.
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

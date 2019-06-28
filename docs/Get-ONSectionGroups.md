@@ -47,7 +47,8 @@ This command gets the SectionGroup whose name is 'Work'.
 ## PARAMETERS
 
 ### -Filter
-The filter to be used. Must be valid OData
+The filter to be used.
+Must be valid OData
 
 ```yaml
 Type: String
@@ -74,9 +75,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONSectionGroup](Get-ONSectionGroup.md)
+[Get-ONSectionGroup]()
 
-[Get-ONSections](Get-ONSections.md)
+[Get-ONSections]()
 
-[Get-ONSection](Get-ONSection.md)
+[Get-ONSection]()
 

@@ -92,7 +92,6 @@ Accept wildcard characters: False
 ### -Id
 The ID of the section to be retrieved.
 
-
 ```yaml
 Type: String
 Parameter Sets: id
@@ -118,4 +117,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONSections](Get-ONSections.md)
+[Get-ONSections]()
+

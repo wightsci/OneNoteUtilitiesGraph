@@ -43,6 +43,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AuthCode](Get-AuthCode.md)
+[Get-AuthCode]()
 
-[Get-AccessToken](Get-AccessToken.md)
+[Get-AccessToken]()
+

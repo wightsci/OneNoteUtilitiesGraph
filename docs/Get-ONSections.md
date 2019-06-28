@@ -13,13 +13,12 @@ Gets a list of OneNote Sections matching the supplied filter.
 ## SYNTAX
 
 ```
-Get-ONSections [[-Filter] <String>] [<CommonParameters>]
+Get-ONSections [[-Filter] <String>]
 ```
 
 ## DESCRIPTION
 Gets a list of OneNote Sections matching the supplied filter.
-If no filter is supplied then all 
-Sections are returned.
+If no filter is supplied then all  Sections are returned.
 The filter must be valid OData syntax.
 
 ## EXAMPLES
@@ -47,7 +46,8 @@ parentSectionGroup               :
 ## PARAMETERS
 
 ### -Filter
-The filter to be used. OData.
+The filter to be used.
+OData.
 
 ```yaml
 Type: String
@@ -61,9 +61,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
 ## INPUTS
 
 ## OUTPUTS
@@ -73,5 +70,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONSection](Get-ONSection.md)
+[Get-ONSection]()
 

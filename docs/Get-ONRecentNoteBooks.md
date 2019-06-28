@@ -13,7 +13,7 @@ Gets the list of most recently accessed OneNote Notebooks.
 ## SYNTAX
 
 ```
-Get-ONRecentNoteBooks [<CommonParameters>]
+Get-ONRecentNoteBooks
 ```
 
 ## DESCRIPTION
@@ -40,9 +40,6 @@ Class Notebook      2016-01-21T15:15:31Z OneDrive      @{oneNoteClientUrl=; oneN
 This command displays the most recently accessed NoteBooks for the logged-on user.
 
 ## PARAMETERS
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

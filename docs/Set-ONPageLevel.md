@@ -27,7 +27,8 @@ Not applicable to the first Page in a Section.
 PS C:\> Set-ONPageLevel -ID '0-b9b9988092b24ac0bb14d4953f88ca2f!61-816F7725BEF00A5F!731583' -Level 1
 ```
 
-This command indents the PageLevel of the given Page to level 1. This will only succeed if the Page is not the first one in the Section.
+This command indents the PageLevel of the given Page to level 1.
+This will only succeed if the Page is not the first one in the Section.
 
 ## PARAMETERS
 
@@ -75,4 +76,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONPage](Get-ONPage.md)
+[Get-ONPage]()
+
