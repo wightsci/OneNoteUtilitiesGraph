@@ -46,7 +46,7 @@ This module provides the following functions:
 
 Before installing the module, ensure that you have a client ID for the Microsoft Graph service. See the following for more information [https://docs.microsoft.com/en-us/graph/auth-register-app-v2](https://docs.microsoft.com/en-us/graph/auth-register-app-v2).
 
-Create a config XML file containing your client ID and security scope information, named OneNoteUtilities.config and place it in you .config folder.
+Create a config XML file containing your client ID and security scope information, named OneNoteUtilities.config and place it in your .config folder.
 There is a [template file](https://raw.githubusercontent.com/wightsci/OneNoteUtilitiesGraph/master/OneNoteUtilities.config) in this repo on GitHub.
 
 Download the module, extract it to a location in your modules path and use ```Import-Module```. The process of importing will trigger an attempt to connect to Microsoft Graph. *This will fail if you haven't set up the config file*. 
