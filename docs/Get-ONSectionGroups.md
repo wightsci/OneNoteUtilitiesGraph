@@ -74,9 +74,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONSectionGroup]()
+[Get-ONSectionGroup](Get-ONSectionGroup.md)
 
-[Get-ONSections]()
+[Get-ONSections](Get-ONSections.md)
 
-[Get-ONSection]()
+[Get-ONSection](Get-ONSection.md)
 

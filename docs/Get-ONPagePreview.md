@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONPages]()
+[Get-ONPages](Get-ONPages.md)
 
-[Get-ONPage]()
+[Get-ONPage](Get-ONPage.md)
 

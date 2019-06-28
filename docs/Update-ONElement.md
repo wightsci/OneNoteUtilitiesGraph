@@ -153,9 +153,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONPageXML]()
+[Get-ONPageXML](Get-ONPageXML.md)
 
-[Get-ONPages]()
+[Get-ONPages](Get-ONPage.md)
 
-[Get-ONPage]()
+[Get-ONPage](Get-ONPage.md)
 

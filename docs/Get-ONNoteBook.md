@@ -23,8 +23,7 @@ Get-ONNoteBook [-Id <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets a OneNote NoteBook.
-Returns notebook metadata.
+Gets a OneNote NoteBook. Returns notebook metadata.
 
 ## EXAMPLES
 
@@ -93,5 +92,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONNoteBooks]()
+[Get-ONNoteBooks](Get-ONNoteBooks.md)
 
