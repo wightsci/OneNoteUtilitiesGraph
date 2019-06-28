@@ -14,7 +14,7 @@ Gets a OneNote Section.
 
 ### uri
 ```
-Get-ONSection -uri <String> [<CommonParameters>]
+Get-ONSection -Uri <String> [<CommonParameters>]
 ```
 
 ### id
@@ -74,21 +74,6 @@ This command retrieves a specific Section based on its URL.
 
 ## PARAMETERS
 
-### -uri
-The Url of the section to be retreived.
-
-```yaml
-Type: String
-Parameter Sets: uri
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Id
 The ID of the section to be retrieved.
 
@@ -101,6 +86,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Uri
+The Url of the section to be retreived.
+
+```yaml
+Type: String
+Parameter Sets: uri
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

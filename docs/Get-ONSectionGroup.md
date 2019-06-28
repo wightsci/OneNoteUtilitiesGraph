@@ -14,7 +14,7 @@ Gets a OneNote SectionGroup.
 
 ### uri
 ```
-Get-ONSectionGroup -uri <String> [<CommonParameters>]
+Get-ONSectionGroup -Uri <String> [<CommonParameters>]
 ```
 
 ### id
@@ -50,21 +50,6 @@ parentSectionGroup               :
 
 ## PARAMETERS
 
-### -uri
-The Uri of the SectionGroup to be retreived.
-
-```yaml
-Type: String
-Parameter Sets: uri
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Id
 The Id of the SectionGroup to be retreived.
 
@@ -77,6 +62,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Uri
+The Uri of the SectionGroup to be retreived.
+
+```yaml
+Type: String
+Parameter Sets: uri
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
