@@ -3,7 +3,7 @@ Param()
 
 Function Get-Config {
     Param(
-        [string]$path="$HOME\.config\OneNoteUtilities.config"
+        [string]$Path="$HOME\.config\OneNoteUtilities.config"
     )
     $Global:settings = @{}
     if (Test-Path $path) {
@@ -355,9 +355,9 @@ Get-ONSections -filter "isDefault eq true"
 Function Get-ONElement {
     Param(
         [Parameter(Mandatory=$true)]
-        [string]$id,
+        [string]$Id,
         [Parameter(Mandatory=$true,ValueFromPipeline=$true)]
-        [object]$page
+        [object]$Page
     )
     $workelement = $page.SelectSingleNode("/html/body//*[@id='$($id)']")
     Return $workelement
@@ -385,7 +385,7 @@ Function New-ONSectionGroup {
         [Parameter(ParameterSetName='ByUri',Mandatory=$true)]
         [string]$DisplayName,
         [Parameter(ParameterSetName='ByUri',Mandatory=$true)]
-        [string]$uri,
+        [string]$Uri,
         [Parameter(ParameterSetName='ByID',Mandatory=$true)]
         [string]$Id
     )
@@ -407,7 +407,7 @@ Function New-ONSection {
         [Parameter(ParameterSetName='ByUri',Mandatory=$true)]
         [string]$DisplayName,
         [Parameter(ParameterSetName='ByUri',Mandatory=$true)]
-        [string]$uri,
+        [string]$Uri,
         [Parameter(ParameterSetName='ByID',Mandatory=$true)]
         [string]$Id,
         [Parameter(ParameterSetName="ByID")]
@@ -435,9 +435,9 @@ Function New-ONPage {
     Param(
     [Parameter(ParameterSetName='html')]
     [Parameter(ParameterSetName='page')]    
-    [string]$URI=(Get-ONDefaultSection).pagesUrl,
+    [string]$Uri=(Get-ONDefaultSection).pagesUrl,
     [Parameter(ParameterSetName='html',Mandatory=$true)]
-    [string]$html,
+    [string]$Html,
     [Parameter(ParameterSetName='page',Mandatory=$true)]
     [object]$Page
     )
@@ -456,7 +456,7 @@ Function New-ONPage {
 
 Function New-ONJSONItem {
     Param(
-        $hashtable
+        $Hashtable
     )
     $workJSOn = $hashtable | ConvertTo-Json
     Return $workJSON
@@ -531,7 +531,7 @@ Function Get-ONPageXML {
 Function Invoke-ONApp {
     Param(
         [parameter(ParameterSetName="page",Mandatory=$true)]
-        [object]$page,
+        [object]$Page,
         [parameter(ParameterSetName="id",Mandatory=$true)]
         [string]$Id
     )
@@ -545,7 +545,7 @@ Function Invoke-ONApp {
 Function Invoke-ONWeb {   
     Param(
     [Parameter(ParameterSetName='page',Mandatory=$true)]
-    [object]$page,
+    [object]$Page,
     [Parameter(ParameterSetName='Id',Mandatory=$true)]
     [object]$Id
     )
@@ -592,12 +592,12 @@ Function Remove-ONElement {
 Function Copy-ONPage {
     Param(
         [parameter(ParameterSetName='page')]
-        [object]$page,
+        [object]$Page,
         [parameter(ParameterSetName='id')]
         [string]$Id,
         [parameter(ParameterSetName='page')]
         [parameter(ParameterSetName='id')]
-        [string]$destinationId=(Get-ONDefaultSection).Id
+        [string]$DestinationId=(Get-ONDefaultSection).Id
     )
     
     if ($page) {
@@ -621,7 +621,7 @@ Function Copy-ONPage {
 # Copy a OneNote Section -- Not Implemented for consumer OneNote
 Function Copy-ONSection {
     Param(
-    [string]$destinationId,
+    [string]$DestinationId,
     [string]$Id
     )
     $body =  New-ONJSONItem -hashtable @{ 'id' = "$destinationId" }
@@ -665,15 +665,15 @@ Function Update-ONElement {
         [Parameter(Mandatory=$true)]
         [string]$Id,
         [Parameter(Mandatory=$true)]
-        [string]$targetId,
+        [string]$TargetId,
         [Parameter(Mandatory=$true)]
         [ValidateSet('replace','append','delete','prepend')]
-        [string]$action,
+        [string]$Action,
         [Parameter(Mandatory=$true)]
-        [string]$content,
+        [string]$Content,
         [Parameter(Mandatory=$false)]
         [ValidateSet('after','before')]
-        [string]$position
+        [string]$Position
     )
     Get-TokenStatus
     $uri = "{0}{1}/{2}/content" -f $ONuri, 'pages', $Id
@@ -706,7 +706,7 @@ Function Get-ONPagePreview {
     [CmdletBinding()]
     Param(
         [Parameter(ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
-        [string]$id
+        [string]$Id
     )
     $workuri = "{0}pages/{1}/preview" -f $ONuri, $id
     Write-Verbose $workuri
