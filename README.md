@@ -82,6 +82,10 @@ This could just as easily be applied to lists of staff, students or objects in A
 Get-ONPages -Filter "parentNoteBook/displayname eq '2019' and startswith(title,'Monday')"
 ```
 
+## More use cases - see the Wiki
+
+[https://github.com/wightsci/OneNoteUtilitiesGraph/wiki](https://github.com/wightsci/OneNoteUtilitiesGraph/wiki)
+
 ## Future Developments
 
 * Support for Tags
