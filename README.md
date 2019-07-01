@@ -86,4 +86,6 @@ Get-ONPages -Filter "parentNoteBook/displayname eq '2019' and startswith(title,'
 
 * Support for Tags
 * HTML Templates for Pages
-* New Graph REST features as they are relased
+* Merge-to-OneNote
+* Out-ONPage
+* New Graph REST features as they are released
