@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsText
-A sitch parameter, that if supplied, tells the cmdlet to output the page content a text, rather than an XMLDocument object.
+A switch parameter, that if supplied, tells the cmdlet to output the page content a text, rather than an XMLDocument object.
 
 ```yaml
 Type: SwitchParameter
