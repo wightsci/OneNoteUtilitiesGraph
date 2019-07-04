@@ -137,6 +137,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Object representing a Page resource. Must have a 'contentURL' property.
 ## OUTPUTS
 
+### XMLDocument object
+### String
+
 ## NOTES
 
 ## RELATED LINKS
