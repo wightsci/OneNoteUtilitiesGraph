@@ -84,5 +84,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Invoke-ONWeb](docs/Invoke-ONWeb.md)
+[Invoke-ONWeb](Invoke-ONWeb.md)
 

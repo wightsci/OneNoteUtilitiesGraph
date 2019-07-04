@@ -117,5 +117,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONSections](docs/Get-ONSections.md)
+[Get-ONSections](Get-ONSections.md)
 
