@@ -12,9 +12,9 @@ Invokes the default OneNote application and loads a page.
 
 ## SYNTAX
 
-### page
+### page (Default)
 ```
-Invoke-ONApp -Page <Object> [<CommonParameters>]
+Invoke-ONApp -Page <PSObject> [<CommonParameters>]
 ```
 
 ### id
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 A OneNote Page object.
 
 ```yaml
-Type: Object
+Type: PSObject
 Parameter Sets: page
 Aliases:
 

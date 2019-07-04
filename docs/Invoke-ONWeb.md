@@ -12,7 +12,7 @@ schema: 2.0.0
 
 ## SYNTAX
 
-### page
+### page (Default)
 ```
 Invoke-ONWeb -Page <Object> [<CommonParameters>]
 ```

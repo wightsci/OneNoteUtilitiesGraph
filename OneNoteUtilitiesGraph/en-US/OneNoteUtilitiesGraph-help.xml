@@ -1289,7 +1289,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
-        <dev:code>Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031'
+        <dev:code>Get-ONPage -Uri 'https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031'
 
 @odata.context              : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/pages/$entity
 id                          : 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031 
@@ -1600,6 +1600,17 @@ id                                                            title
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>AsText</maml:name>
+          <maml:Description>
+            <maml:para>A sitch parameter, that if supplied, tells the cmdlet to output the page content a text, rather than an XMLDocument object.</maml:para>
+          </maml:Description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
@@ -1614,6 +1625,18 @@ id                                                            title
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>AsText</maml:name>
+        <maml:Description>
+          <maml:para>A sitch parameter, that if supplied, tells the cmdlet to output the page content a text, rather than an XMLDocument object.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
       </command:parameter>
     </command:parameters>
     <command:inputTypes>
@@ -1675,6 +1698,34 @@ p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35} margin-top:0pt;margin-bottom:0pt Fo
 You can eve...</dev:code>
         <dev:remarks>
           <maml:para>This command pipes a Page object to Get-ONPageXML and stores the result in the variable $page. $page can then be accessed as an XMLDocument object.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 3 --------------------------</maml:title>
+        <dev:code>Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML -AsText
+    &lt;html lang="en-US"&gt;
+            &lt;head&gt;
+                    &lt;title&gt;ePortfolio&lt;/title&gt;
+                    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+            &lt;/head&gt;
+            &lt;body data-absolute-enabled="true" style="font-family:Calibri;font-size:11pt"&gt;
+                    &lt;div id="div:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{36}" style="position:absolute;left:48px;top:115px;width:590px"&gt;
+                            &lt;p id="p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{34}" style="margin-top:0pt;margin-bottom:0pt"&gt;OneNote makes it easy to &lt;span style="font-weight:bold"&gt;track student&lt;/span&gt; &lt;span
+    style="font-weight:bold"&gt;progress&lt;/span&gt; in one notebook. You can easily track items like &lt;span style="font-weight:bold"&gt;homework&lt;/span&gt;, &lt;span style="font-weight:bold"&gt;quizzes&lt;/span&gt;, and &lt;span
+    style="font-weight:bold"&gt;tests&lt;/span&gt; for all your students.  Some teachers create a notebook for each student in the class.  Then they can put homework, quizzes, tests and even a copies of a group project
+    into this ePortfolio. &lt;/p&gt;
+                            &lt;br /&gt;
+                            &lt;p id="p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35}" style="margin-top:0pt;margin-bottom:0pt"&gt;For quizzes and tests, you can track the items that students either get consistently
+    wrong or consistently correct. You can even keep copies of the student's completed quizzes or tests in case you want to refer to them later. &lt;/p&gt;
+                            &lt;br /&gt;
+                            &lt;img id="img:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{40}" width="708" height="418"
+    src="https://graph.microsoft.com/v1.0/users('me')/onenote/resources/0-d0b17facd3c241aa886959406a8c352c!1-816F7725BEF00A5F!665031/$value" data-src-type="image/png"
+    data-fullres-src="https://graph.microsoft.com/v1.0/users('me')/onenote/resources/0-d0b17facd3c241aa886959406a8c352c!1-816F7725BEF00A5F!665031/$value" data-fullres-src-type="image/png" /&gt;
+                    &lt;/div&gt;
+            &lt;/body&gt;
+    &lt;/html&gt;</dev:code>
+        <dev:remarks>
+          <maml:para>This command pipes a page object to Get-ONPageXML. The -AsText switch means that the output is a string rather than an XML document.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -2456,9 +2507,9 @@ parentSectionGroup               :</dev:code>
           <maml:Description>
             <maml:para>A OneNote Page object.</maml:para>
           </maml:Description>
-          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">PSObject</command:parameterValue>
           <dev:type>
-            <maml:name>Object</maml:name>
+            <maml:name>PSObject</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
@@ -2483,9 +2534,9 @@ parentSectionGroup               :</dev:code>
         <maml:Description>
           <maml:para>A OneNote Page object.</maml:para>
         </maml:Description>
-        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false">PSObject</command:parameterValue>
         <dev:type>
-          <maml:name>Object</maml:name>
+          <maml:name>PSObject</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -2637,7 +2688,7 @@ parentSectionGroup               :</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Creates a new OneNote page element.</maml:para>
+      <maml:para>Creates a new OneNote page element. This cmdlet can be used to create elements for new Pages generated by ``New-ONPageXML``.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -2646,7 +2697,31 @@ parentSectionGroup               :</dev:code>
           <maml:name>Type</maml:name>
           <maml:Description>
             <maml:para>The type of element to create. Possible values:</maml:para>
-            <maml:para>"head","body","title","meta","h1","h2","h3","h4","h5","h6","p","ul","ol","li","pre","b","i","table","tr","td","div","span","img","br","cite"</maml:para>
+            <maml:para>- head</maml:para>
+            <maml:para>- body</maml:para>
+            <maml:para>- title</maml:para>
+            <maml:para>- meta</maml:para>
+            <maml:para>- h1</maml:para>
+            <maml:para>- h2</maml:para>
+            <maml:para>- h3</maml:para>
+            <maml:para>- h4</maml:para>
+            <maml:para>- h5</maml:para>
+            <maml:para>- h6</maml:para>
+            <maml:para>- p</maml:para>
+            <maml:para>- ul</maml:para>
+            <maml:para>- ol</maml:para>
+            <maml:para>- li</maml:para>
+            <maml:para>- pre</maml:para>
+            <maml:para>- b</maml:para>
+            <maml:para>- i</maml:para>
+            <maml:para>- table</maml:para>
+            <maml:para>- tr</maml:para>
+            <maml:para>- td</maml:para>
+            <maml:para>- div</maml:para>
+            <maml:para>- span</maml:para>
+            <maml:para>- img</maml:para>
+            <maml:para>- br</maml:para>
+            <maml:para>- cite</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -2674,7 +2749,31 @@ parentSectionGroup               :</dev:code>
         <maml:name>Type</maml:name>
         <maml:Description>
           <maml:para>The type of element to create. Possible values:</maml:para>
-          <maml:para>"head","body","title","meta","h1","h2","h3","h4","h5","h6","p","ul","ol","li","pre","b","i","table","tr","td","div","span","img","br","cite"</maml:para>
+          <maml:para>- head</maml:para>
+          <maml:para>- body</maml:para>
+          <maml:para>- title</maml:para>
+          <maml:para>- meta</maml:para>
+          <maml:para>- h1</maml:para>
+          <maml:para>- h2</maml:para>
+          <maml:para>- h3</maml:para>
+          <maml:para>- h4</maml:para>
+          <maml:para>- h5</maml:para>
+          <maml:para>- h6</maml:para>
+          <maml:para>- p</maml:para>
+          <maml:para>- ul</maml:para>
+          <maml:para>- ol</maml:para>
+          <maml:para>- li</maml:para>
+          <maml:para>- pre</maml:para>
+          <maml:para>- b</maml:para>
+          <maml:para>- i</maml:para>
+          <maml:para>- table</maml:para>
+          <maml:para>- tr</maml:para>
+          <maml:para>- td</maml:para>
+          <maml:para>- div</maml:para>
+          <maml:para>- span</maml:para>
+          <maml:para>- img</maml:para>
+          <maml:para>- br</maml:para>
+          <maml:para>- cite</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>

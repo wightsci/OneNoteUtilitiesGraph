@@ -482,6 +482,8 @@ Function New-ONElement {
     }
     else {
         $workelement = $Document.CreateElement($Type)
+        $workelement.setAttribute("lang","en-GB")
+        #$workElement.load(([String]$workelement).replace('"',"'"))
     }
     
     Return $workelement
@@ -524,21 +526,29 @@ coerce the page to a string and add the "<DOCTYPE html>" to the top before passi
 Function Get-ONPageXML {
     Param(
     [Parameter(Mandatory=$true,ValueFromPipeline=$true)]
-    [object]$Page
+    [object]$Page,
+    [Parameter()]
+    [Switch]$AsText
     )
     $workuri = "{0}{1}" -f "$($Page.contenturl)" , '?includeIDS=true'
     Write-Verbose $workuri
     #$html = New-Object System.Xml.XmlDocument
-    $html = (Get-ONItem -uri $workuri)
+    if ($ASText.IsPresent) {
+        $html = (Get-ONItem -uri $workuri).OuterXML
+    }
+    else {
+        $html = (Get-ONItem -uri $workuri)
+    }
     Return $html
 }
 
 # Invoke the default OneNote application and load a page
 Function Invoke-ONApp {
+    [CmdletBinding(DefaultParameterSetName='page')]
     Param(
-        [parameter(ParameterSetName="page",Mandatory=$true)]
-        [object]$Page,
-        [parameter(ParameterSetName="id",Mandatory=$true)]
+        [parameter(Position=0,ParameterSetName="page",Mandatory=$true)]
+        [PSCustomObject]$Page,
+        [parameter(Position=0,ParameterSetName="id",Mandatory=$true)]
         [string]$Id
     )
     If ($Id) {
@@ -548,11 +558,12 @@ Function Invoke-ONApp {
 }
 
 # Invoke the OneNote web app and load a page
-Function Invoke-ONWeb {   
+Function Invoke-ONWeb {
+    [CmdletBinding(DefaultParameterSetName='page')]   
     Param(
-    [Parameter(ParameterSetName='page',Mandatory=$true)]
+    [Parameter(Position=0,ParameterSetName='page',Mandatory=$true)]
     [object]$Page,
-    [Parameter(ParameterSetName='Id',Mandatory=$true)]
+    [Parameter(Position=0,ParameterSetName='Id',Mandatory=$true)]
     [object]$Id
     )
     If ($Id) {
@@ -679,12 +690,11 @@ Function Update-ONElement {
         [string]$Content,
         [Parameter(Mandatory=$false)]
         [ValidateSet('after','before')]
-        [string]$Position
+        [string]$Position='before'
     )
     Get-TokenStatus
     $uri = "{0}{1}/{2}/content" -f $ONuri, 'pages', $Id
-    $body = ConvertTo-Json @(@{ 'target' =  "$targetId"; 'action' = "$action"; 'content' = "--contenthere--"; 'position' = "$position"})
-    $body = $body.replace('--contenthere--',$content)
+    $body = ConvertTo-Json @(@{ 'target' =  "$targetId"; 'action' = "$action"; 'content' = "$content"; 'position' = "$position"})
     Write-Verbose $body
     Get-TokenStatus
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method Patch -ContentType 'application/json' -body $body
