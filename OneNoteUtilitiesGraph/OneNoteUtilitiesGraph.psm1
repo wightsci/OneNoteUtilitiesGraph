@@ -120,6 +120,23 @@ Param()
     Write-Verbose "Token Expires at: $((Get-Date).AddSeconds($Authorization.expires_in).ToFileTimeUtc())"
 }
 
+Function Get-TokenStatus {
+    [cmdletbinding()]
+    Param()
+    Write-Verbose "Token Expires:   $tokenExpires"
+    Write-Verbose "Curent DateTime: $((Get-Date).ToFileTimeUtc())"
+    Write-Verbose "Current Auth Code: $authCode"
+    if (("$((Get-Date).ToFileTimeUtc())" -ge "$tokenExpires") -or !$authcode ) {
+        Get-AuthCode
+        # Extract Access token from the returned URI
+        $Global:authQuery -match '\?code=(.*)' | Out-Null
+        $Global:authCode = $matches[1]
+        Write-Verbose "Received an authCode, $authCode"
+        Get-AccessToken 
+    }
+}
+
+
 # Get a list of OneNote Pages matching the given Filter
 Function Get-ONPages {
 [cmdletbinding()]
@@ -700,22 +717,6 @@ Function Update-ONElement {
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method Patch -ContentType 'application/json' -body $body
     Return $response
 
-}
-
-Function Get-TokenStatus {
-    [cmdletbinding()]
-    Param()
-    Write-Verbose "Token Expires:   $tokenExpires"
-    Write-Verbose "Curent DateTime: $((Get-Date).ToFileTimeUtc())"
-    Write-Verbose "Current Auth Code: $authCode"
-    if (("$((Get-Date).ToFileTimeUtc())" -ge "$tokenExpires") -or !$authcode ) {
-        Get-AuthCode
-        # Extract Access token from the returned URI
-        $authQuery -match '\?code=(.*)' | Out-Null
-        $Global:authCode = $matches[1]
-        Write-Verbose "Received an authCode, $authCode"
-        Get-AccessToken 
-    }
 }
 
 Function Get-ONPagePreview {
