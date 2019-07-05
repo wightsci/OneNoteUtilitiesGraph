@@ -44,7 +44,7 @@ This command opens a Page based on its ID.
 ## PARAMETERS
 
 ### -Id
-{{ Fill Id Description }}
+The ID of the Page to be loaded.
 
 ```yaml
 Type: String
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Page
-{{ Fill Page Description }}
+A Page object to be loaded.
 
 ```yaml
 Type: Object
@@ -82,7 +82,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
+### None
 ## NOTES
 
 ## RELATED LINKS
