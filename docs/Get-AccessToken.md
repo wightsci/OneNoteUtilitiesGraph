@@ -39,5 +39,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AuthCode]()
+[Get-AuthCode](Get-AuthCode.md)
 

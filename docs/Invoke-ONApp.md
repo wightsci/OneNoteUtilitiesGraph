@@ -39,7 +39,7 @@ This command uses Get-ONPages to obtain a Page object matching the filter, and t
 PS C:\> Invoke-ONApp -ID ' 0-634cb14d92da4a1c85ca21fccb057cf7!40-816F7725BEF00A5F!665030'
 ```
 
-This command uses opens a Page based on its ID.
+This command opens a Page based on its ID.
 
 ## PARAMETERS
 

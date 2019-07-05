@@ -40,5 +40,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AccessToken]()
+[Get-AccessToken](Get-AccessToken.md)
 

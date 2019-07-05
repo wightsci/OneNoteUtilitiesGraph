@@ -55,7 +55,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-ONPage]()
+[New-ONPage](New-ONPage.md)
 
-[New-ONPageXML]()
+[New-ONPageXML](New-ONPageXML)
 

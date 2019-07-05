@@ -547,7 +547,7 @@ Function Invoke-ONApp {
     [CmdletBinding(DefaultParameterSetName='page')]
     Param(
         [parameter(Position=0,ParameterSetName="page",Mandatory=$true)]
-        [PSCustomObject]$Page,
+        [objectt]$Page,
         [parameter(Position=0,ParameterSetName="id",Mandatory=$true)]
         [string]$Id
     )
@@ -564,7 +564,7 @@ Function Invoke-ONWeb {
     [Parameter(Position=0,ParameterSetName='page',Mandatory=$true)]
     [object]$Page,
     [Parameter(Position=0,ParameterSetName='Id',Mandatory=$true)]
-    [object]$Id
+    [string]$Id
     )
     If ($Id) {
         $page = Get-ONItem -ItemType 'pages' -Id $id
