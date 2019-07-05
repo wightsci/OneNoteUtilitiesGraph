@@ -1603,7 +1603,7 @@ id                                                            title
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>AsText</maml:name>
           <maml:Description>
-            <maml:para>A sitch parameter, that if supplied, tells the cmdlet to output the page content a text, rather than an XMLDocument object.</maml:para>
+            <maml:para>A switch parameter, that if supplied, tells the cmdlet to output the page content a text, rather than an XMLDocument object.</maml:para>
           </maml:Description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
@@ -1629,7 +1629,7 @@ id                                                            title
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>AsText</maml:name>
         <maml:Description>
-          <maml:para>A sitch parameter, that if supplied, tells the cmdlet to output the page content a text, rather than an XMLDocument object.</maml:para>
+          <maml:para>A switch parameter, that if supplied, tells the cmdlet to output the page content a text, rather than an XMLDocument object.</maml:para>
         </maml:Description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
@@ -1649,7 +1649,24 @@ id                                                            title
         </maml:description>
       </command:inputType>
     </command:inputTypes>
-    <command:returnValues />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>XMLDocument object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
     <maml:alertSet>
       <maml:alert>
         <maml:para></maml:para>
@@ -2474,74 +2491,24 @@ parentSectionGroup               :</dev:code>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Invoke-ONApp</command:name>
-      <command:verb>Invoke</command:verb>
-      <command:noun>ONApp</command:noun>
+      <command:name>Get-TokenStatus</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>TokenStatus</command:noun>
       <maml:description>
-        <maml:para>Invokes the default OneNote application and loads a page.</maml:para>
+        <maml:para>Checks for presence of Auth Code and Access Token.</maml:para>
+        <maml:para>If not present or expired then requests new.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Invokes the default application for handling onenote: urls and passes it the URL of a page to load, based on an ID or a Page object.</maml:para>
+      <maml:para>This function maintains a valid set of Graph credentials, comprising an Authorization Code and an Access Token.</maml:para>
+      <maml:para>TYpically this function is called before any access is attempted to the Graph API itself.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Invoke-ONApp</maml:name>
-        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-          <maml:name>Id</maml:name>
-          <maml:Description>
-            <maml:para>The Id of a OneNote Page.</maml:para>
-          </maml:Description>
-          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
-          <dev:type>
-            <maml:name>String</maml:name>
-            <maml:uri />
-          </dev:type>
-          <dev:defaultValue>None</dev:defaultValue>
-        </command:parameter>
-      </command:syntaxItem>
-      <command:syntaxItem>
-        <maml:name>Invoke-ONApp</maml:name>
-        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-          <maml:name>Page</maml:name>
-          <maml:Description>
-            <maml:para>A OneNote Page object.</maml:para>
-          </maml:Description>
-          <command:parameterValue required="true" variableLength="false">PSObject</command:parameterValue>
-          <dev:type>
-            <maml:name>PSObject</maml:name>
-            <maml:uri />
-          </dev:type>
-          <dev:defaultValue>None</dev:defaultValue>
-        </command:parameter>
+        <maml:name>Get-TokenStatus</maml:name>
       </command:syntaxItem>
     </command:syntax>
-    <command:parameters>
-      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-        <maml:name>Id</maml:name>
-        <maml:Description>
-          <maml:para>The Id of a OneNote Page.</maml:para>
-        </maml:Description>
-        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
-        <dev:type>
-          <maml:name>String</maml:name>
-          <maml:uri />
-        </dev:type>
-        <dev:defaultValue>None</dev:defaultValue>
-      </command:parameter>
-      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-        <maml:name>Page</maml:name>
-        <maml:Description>
-          <maml:para>A OneNote Page object.</maml:para>
-        </maml:Description>
-        <command:parameterValue required="true" variableLength="false">PSObject</command:parameterValue>
-        <dev:type>
-          <maml:name>PSObject</maml:name>
-          <maml:uri />
-        </dev:type>
-        <dev:defaultValue>None</dev:defaultValue>
-      </command:parameter>
-    </command:parameters>
+    <command:parameters />
     <command:inputTypes />
     <command:returnValues />
     <maml:alertSet>
@@ -2552,22 +2519,19 @@ parentSectionGroup               :</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Invoke-ONApp -Page (Get-ONPages -Filter "title eq '2 - Life Cycle of Tree Frog'")</dev:code>
+        <dev:code>PS C:\&gt; Get-TokenStatus</dev:code>
         <dev:remarks>
-          <maml:para>This command uses Get-ONPages to obtain a Page object matching the filter, and this is passed to Invoke-ONApp</maml:para>
-        </dev:remarks>
-      </command:example>
-      <command:example>
-        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Invoke-ONApp -ID ' 0-634cb14d92da4a1c85ca21fccb057cf7!40-816F7725BEF00A5F!665030'</dev:code>
-        <dev:remarks>
-          <maml:para>This command uses opens a Page based on its ID.</maml:para>
+          <maml:para></maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
     <command:relatedLinks>
       <maml:navigationLink>
-        <maml:linkText>Invoke-ONApp</maml:linkText>
+        <maml:linkText>Get-AuthCode</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-AccessToken</maml:linkText>
         <maml:uri></maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
@@ -2578,11 +2542,11 @@ parentSectionGroup               :</dev:code>
       <command:verb>Invoke</command:verb>
       <command:noun>ONWeb</command:noun>
       <maml:description>
-        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+        <maml:para>Invokes the default web browser application and loads a page.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>{{ Fill in the Description }}</maml:para>
+      <maml:para>Invokes the default application for handling web pages and passes it the URL of a page to load, based on an ID or a Page object.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -2592,9 +2556,9 @@ parentSectionGroup               :</dev:code>
           <maml:Description>
             <maml:para>{{ Fill Id Description }}</maml:para>
           </maml:Description>
-          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
-            <maml:name>Object</maml:name>
+            <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
@@ -2622,9 +2586,9 @@ parentSectionGroup               :</dev:code>
         <maml:Description>
           <maml:para>{{ Fill Id Description }}</maml:para>
         </maml:Description>
-        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
-          <maml:name>Object</maml:name>
+          <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -2670,13 +2634,25 @@ parentSectionGroup               :</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; Invoke-ONWeb -Page (Get-ONPages -Filter "title eq '2 - Life Cycle of Tree Frog'")</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para>This command uses Get-ONPages to obtain a Page object matching the filter, and this is passed to Invoke-ONWeb</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Invoke-ONWeb -ID ' 0-634cb14d92da4a1c85ca21fccb057cf7!40-816F7725BEF00A5F!665030'</dev:code>
+        <dev:remarks>
+          <maml:para>This command opens a Page based on its ID.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Invoke-ONApp</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>

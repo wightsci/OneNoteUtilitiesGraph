@@ -547,7 +547,7 @@ Function Invoke-ONApp {
     [CmdletBinding(DefaultParameterSetName='page')]
     Param(
         [parameter(Position=0,ParameterSetName="page",Mandatory=$true)]
-        [objectt]$Page,
+        [object]$Page,
         [parameter(Position=0,ParameterSetName="id",Mandatory=$true)]
         [string]$Id
     )

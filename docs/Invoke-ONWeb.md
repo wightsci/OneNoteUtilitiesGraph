@@ -19,7 +19,7 @@ Invoke-ONWeb -Page <Object> [<CommonParameters>]
 
 ### Id
 ```
-Invoke-ONWeb -Id <Object> [<CommonParameters>]
+Invoke-ONWeb -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +47,7 @@ This command opens a Page based on its ID.
 {{ Fill Id Description }}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: Id
 Aliases:
 
@@ -86,4 +86,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
 [Invoke-ONApp](Invoke-ONApp.md)
