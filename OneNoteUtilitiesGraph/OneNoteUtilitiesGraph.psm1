@@ -44,6 +44,12 @@ $clientID = $settings["clientid"]
 $scope = $settings["scope"]
 
 #Some Microsoft Graph URIs
+#https://graph.microsoft.com/{version}/users/{userPrincipalName}/onenote/
+#https://graph.microsoft.com/{version}/users/{id}/onenote/
+#https://graph.microsoft.com/{version}/groups/{id}/onenote/
+#https://graph.microsoft.com/{version}/sites/{id}/onenote/
+#https://graph.microsoft.com/v1.0/me/onenote
+
 $MSGraphRoot='https://graph.microsoft.com/v1.0/me/'
 $ONRoot = 'onenote/'
 $ONuri = "$MSGraphRoot$ONRoot"
