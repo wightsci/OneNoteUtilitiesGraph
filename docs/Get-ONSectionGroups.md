@@ -28,17 +28,17 @@ The filter must be  vaild OData.
 PS C:\> Get-ONSectiongroups -Filter "displayname eq 'Work'"
 
 id                               : 0-816F7725BEF00A5F!731386
-self                             : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386
+self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386
 createdDateTime                  : 2019-02-28T10:50:52.52Z
 displayName                      : Work
 lastModifiedDateTime             : 2019-06-27T10:14:26.947Z
-sectionsUrl                      : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sections
-sectionGroupsUrl                 : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sectionGroups
+sectionsUrl                      : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sections
+sectionGroupsUrl                 : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sectionGroups
 createdBy                        : @{user=}
 lastModifiedBy                   : @{user=}
-parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('stuart_squibb%40hotmail.co.uk')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentNotebook/$entity
-parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stuart's Notebook; self=https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/notebooks/0-816F7725BEF00A5F!1273}
-parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('stuart_squibb%40hotmail.co.uk')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
+parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentNotebook/$entity
+parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stuart's Notebook; self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!1273}
+parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
 parentSectionGroup               :
 ```
 
