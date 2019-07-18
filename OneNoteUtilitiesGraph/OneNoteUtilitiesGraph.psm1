@@ -1,7 +1,11 @@
 ﻿[CmdletBinding()]
 Param()
 
-Function Get-Config {
+# Loader for external modules
+$ScriptRoot = Split-Path $Script:MyInvocation.MyCommand.$Path
+Get-ChildItem $ScriptRoot *.ps1 | Foreach-Object { Import-Module $_.FullName }
+
+Function Get-ONConfig {
     Param(
         [string]$Path="$HOME\.config\OneNoteUtilities.config"
     )
@@ -13,9 +17,13 @@ Function Get-Config {
             $Global:settings[$node.Name] = $value
         }
     }
+    Else {
+        Write-Error "No config file found. Please create one."
+        Exit
+    }
 }
 
-Function Save-Config {
+Function Save-ONConfig {
 [CmdletBinding()]
     Param(
         [string]$path="$HOME\.config\OneNoteUtilities.config",
@@ -37,7 +45,7 @@ Function Save-Config {
 }
 
 # Get settings from config file
-Get-Config
+Get-ONConfig
 
 # Settings we don't want hard coded
 $clientID = $settings["clientid"]
