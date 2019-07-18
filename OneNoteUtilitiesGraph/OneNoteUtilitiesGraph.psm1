@@ -96,7 +96,7 @@ $defaultstyles = @{
 #$tokenExpires = $((Get-Date).ToFileTimeUtc())
 
 # Get a Graph Authcode, using a web form if required
-Function Get-AuthCode {
+Function Get-ONAuthCode {
 [cmdletbinding()]
 Param()
     Add-Type -AssemblyName System.Windows.Forms  
@@ -121,7 +121,7 @@ Param()
 }
 
 # Get a Graph Access Token
-Function Get-AccessToken {
+Function Get-ONAccessToken {
 [cmdletbinding()]
 Param()
     $body = "grant_type=authorization_code&redirect_uri=$redirectUriEncoded&client_id=$clientIdEncoded&code=$authCode"
@@ -134,19 +134,19 @@ Param()
     Write-Verbose "Token Expires at: $((Get-Date).AddSeconds($Authorization.expires_in).ToFileTimeUtc())"
 }
 
-Function Get-TokenStatus {
+Function Get-ONTokenStatus {
     [cmdletbinding()]
     Param()
     Write-Verbose "Token Expires:   $tokenExpires"
     Write-Verbose "Curent DateTime: $((Get-Date).ToFileTimeUtc())"
     Write-Verbose "Current Auth Code: $authCode"
     if (("$((Get-Date).ToFileTimeUtc())" -ge "$tokenExpires") -or !$authcode ) {
-        Get-AuthCode
+        Get-ONAuthCode
         # Extract Access token from the returned URI
         $Global:authQuery -match '\?code=(.*)' | Out-Null
         $Global:authCode = $matches[1]
         Write-Verbose "Received an authCode, $authCode"
-        Get-AccessToken 
+        Get-ONAccessToken 
     }
 }
 
@@ -745,7 +745,7 @@ Function Get-ONPagePreview {
 }
 
 
-Function Get-SessionVariables {
+Function Get-ONSessionVariables {
     [CmdletBinding()]
     Param()
     Write-Host ("OneNote URI      : {0}" -f "$ONuri")
@@ -789,4 +789,4 @@ Write-Verbose "_-Testing Paging-_"
 
 }
 
-Get-TokenStatus
+Get-ONTokenStatus
