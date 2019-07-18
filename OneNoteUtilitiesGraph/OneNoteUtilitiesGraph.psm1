@@ -2,7 +2,7 @@
 Param()
 
 # Loader for external modules
-$ScriptRoot = Split-Path $Script:MyInvocation.MyCommand.$Path
+$ScriptRoot = Split-Path $Script:MyInvocation.MyCommand.Path
 Get-ChildItem $ScriptRoot *.ps1 | Foreach-Object { Import-Module $_.FullName }
 
 Function Get-ONConfig {
