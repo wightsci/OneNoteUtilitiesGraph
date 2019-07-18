@@ -264,7 +264,7 @@ Function Get-ONItem {
         $uri = '{0}{2}/{1}' -f $ONURI, $Id, $ItemType
         Write-Verbose $uri
     }
-    Get-TokenStatus
+    Get-ONTokenStatus
     $endloop  = $false
     [Int]$retrycount = 0
     do {
@@ -320,7 +320,7 @@ Function Get-ONItems {
         $workuri = '{0}{2}?$top=100{1}' -f $ONuri, $filter, $itemtype
     }
 
-    Get-TokenStatus
+    Get-ONTokenStatus
 
     # Use paging...
     do {
@@ -403,7 +403,7 @@ Function New-ONNoteBook {
     $uri = "{0}{1}" -f $ONuri, 'notebooks'
     $body = New-ONJSONItem -hashtable @{ 'displayname' = $DisplayName }
     Write-Verbose $body
-    Get-TokenStatus
+    Get-ONTokenStatus
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method post -Body $body -ContentType "application/json"
     Write-Verbose "NoteBook"
     Return $response
@@ -425,7 +425,7 @@ Function New-ONSectionGroup {
     }
     $body = New-ONJSONItem -hashtable @{ 'displayname' = $DisplayName }
     Write-Verbose $body
-    Get-TokenStatus
+    Get-ONTokenStatus
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method post -Body $body -ContentType "application/json"
     Write-Verbose "SectionGroup"
     Return $response
@@ -454,7 +454,7 @@ Function New-ONSection {
     }
     $body = New-ONJSONItem -hashtable @{ 'displayname' = $DisplayName }
     Write-Verbose $body
-    Get-TokenStatus
+    Get-ONTokenStatus
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method post -Body $body -ContentType "application/json"
     Write-Verbose "Section"
     Return $response
@@ -479,7 +479,7 @@ Function New-ONPage {
 
     $body = "{0}{1}" -f '<!DOCTYPE html>', $html
     Write-Verbose $body
-    Get-TokenStatus
+    Get-ONTokenStatus
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method post -Body $body -ContentType "text/html"
     Write-Verbose "Page"
     Return $response
@@ -625,7 +625,7 @@ Function Remove-ONPage {
         [string]$Id
     )
     $uri = "{0}{1}/{2}" -f $ONuri, 'pages', $Id
-    Get-TokenStatus
+    Get-ONTokenStatus
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method delete
     Write-Verbose "Page"
     Return $response
@@ -696,7 +696,7 @@ Function Set-ONPageLevel {
     )
     $uri = "{0}{1}/{2}" -f $ONuri, 'pages', $Id
     $body = ConvertTo-Json @{ 'level' =  "$Level"}
-    Get-TokenStatus
+    Get-ONTokenStatus
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method Patch -ContentType 'application/json' -body $body
     Return $response
 }
@@ -723,11 +723,11 @@ Function Update-ONElement {
         [ValidateSet('after','before')]
         [string]$Position='before'
     )
-    Get-TokenStatus
+    Get-ONTokenStatus
     $uri = "{0}{1}/{2}/content" -f $ONuri, 'pages', $Id
     $body = ConvertTo-Json @(@{ 'target' =  "$targetId"; 'action' = "$action"; 'content' = "$content"; 'position' = "$position"})
     Write-Verbose $body
-    Get-TokenStatus
+    Get-ONTokenStatus
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method Patch -ContentType 'application/json' -body $body
     Return $response
 
