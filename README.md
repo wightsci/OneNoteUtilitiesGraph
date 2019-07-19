@@ -5,7 +5,7 @@ Following on from OneNoteUtilities this module uses the Microsoft Graph API inst
 
 This module provides the following functions:
 
-* [Get-Config](docs/Get-Config.md)
+* [Get-ONConfig](docs/ONGet-Config.md)
 * [Get-ONDefaultSection](docs/Get-ONDefaultSection.md)
 * [Get-ONElement](docs/Get-ONElement.md)
 * [Get-ONNoteBook](docs/Get-ONNoteBook.md)
@@ -21,8 +21,8 @@ This module provides the following functions:
 * [Get-ONSectionGroup](docs/Get-ONSectionGroup.md)
 * [Get-ONSectionGroups](docs/Get-ONSectionGroups.md)
 * [Get-ONSections](docs/Get-ONSections.md)
-* [Get-SessionVariables](docs/Get-SessionVariables.md)
-* [Get-TokenStatus](docs/Get-TokenStatus.md)
+* [Get-ONSessionVariables](docs/ONGet-SessionVariables.md)
+* [Get-ONTokenStatus](docs/Get-ONTokenStatus.md)
 * [Invoke-ONApp](docs/Invoke-ONApp.md)
 * [Invoke-ONWeb](docs/Invoke-ONWeb.md)
 * [New-ONElement](docs/New-ONElement.md)
@@ -32,7 +32,7 @@ This module provides the following functions:
 * [New-ONSection](docs/New-ONSection.md)
 * [New-ONSectionGroup](docs/New-ONSectionGroup.md)
 * [Remove-ONPage](docs/Remove-ONPage.md)
-* [Save-Config ](docs/Save-Config.md)
+* [Save-ONConfig ](docs/ONSave-Config.md)
 * [Set-ONPageLevel](docs/Set-ONPageLevel.md)
 * [Test-ONUtilities](docs/Test-ONUtilities.md)
 * [Update-ONElement](docs/Update-ONElement.md)
