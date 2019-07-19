@@ -5,7 +5,7 @@ Following on from OneNoteUtilities this module uses the Microsoft Graph API inst
 
 This module provides the following functions:
 
-* [Get-ONConfig](docs/ONGet-Config.md)
+* [Get-ONConfig](docs/Get-ONConfig.md)
 * [Get-ONDefaultSection](docs/Get-ONDefaultSection.md)
 * [Get-ONElement](docs/Get-ONElement.md)
 * [Get-ONNoteBook](docs/Get-ONNoteBook.md)
