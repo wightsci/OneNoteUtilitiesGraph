@@ -5,29 +5,26 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-TokenStatus
+# Get-ONAuthCode
 
 ## SYNOPSIS
-Checks for presence of Auth Code and Access Token.
-
-If not present or expired then requests new.
+Gets an Authorization code from the Microsoft Graph API
 
 ## SYNTAX
 
 ```
-Get-TokenStatus [<CommonParameters>]
+Get-ONAuthCode [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This function maintains a valid set of Graph credentials, comprising an Authorization Code and an Access Token.
-
-TYpically this function is called before any access is attempted to the Graph API itself.
+Gets an Authorization code from the Microsoft Graph API.
+If necessary, displays a web form for the user to authorize access to OneNote
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```
-PS C:\> Get-TokenStatus
+Get-ONAuthCode
 ```
 
 ## PARAMETERS
@@ -43,7 +40,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AuthCode]()
-
-[Get-AccessToken]()
+[Get-ONAccessToken](Get-ONAccessToken.md)
 

@@ -3,7 +3,7 @@ Param()
 
 # Loader for external modules
 $ScriptRoot = Split-Path $Script:MyInvocation.MyCommand.Path
-Get-ChildItem $ScriptRoot *.ps1 | Foreach-Object { Import-Module $_.FullName }
+Get-ChildItem $ScriptRoot *.ps1  -Recurse | Foreach-Object { Import-Module $_.FullName }
 
 Function Get-ONConfig {
     Param(
@@ -243,52 +243,6 @@ Function Get-ONNoteBooks {
     Get-ONItems -List -ItemType 'noteBooks' -Filter $filter
 }
 
-# Generic call for OneNote Item. Creates a URI from an item type and ID
-# or uses a URI if provided. Returns metadata objects only if by ID. As a generic call
-# this should normally be accessed via one of the object specific wrapper
-# functions, such as Get-ONNoteBook
-Function Get-ONItem {
-    [cmdletbinding()]
-    Param(
-    [Parameter(ParameterSetName='uri')]
-    [string]$uri,
-    [Parameter(ParameterSetName='id')]
-    [string]$ItemType,
-    [Parameter(ParameterSetName='id')]
-    [string]$Id
-    )
-
-    if ($id) {
-        $id = [System.Uri]::EscapeURIString($id)
-        Write-Verbose $id
-        $uri = '{0}{2}/{1}' -f $ONURI, $Id, $ItemType
-        Write-Verbose $uri
-    }
-    Get-ONTokenStatus
-    $endloop  = $false
-    [Int]$retrycount = 0
-    do {
-        try { 
-            $workitem = Invoke-RestMethod  -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri #.html.InnerXML
-            $endloop = $true
-        }
-        catch {
-            if ($retrycount -gt 3) {
-                throw $_
-                $endloop = $true
-            }
-            else {
-                Start-Sleep -Seconds 1
-                Write-Verbose "Waiting..."
-                $Retrycount += 1
-            }
-        }
-        
-    } While ($endloop -eq $false)
-
-    return $workitem
-    
-}
 
 # Generic call for list of OneNote Items. The same notes apply
 # as for the singular Get-ONItem function.
@@ -685,29 +639,6 @@ Function Copy-ONSectionGroup {
 
 }
 
-# Set the level of a NoneNote Page
-Function Set-ONPageLevel {
-    Param(
-        [Parameter(Mandatory=$true)]
-        [string]$Id,
-        [Parameter(Mandatory=$true)]
-        [ValidateSet(0,1,2)]
-        $Level
-    )
-    $uri = "{0}{1}/{2}" -f $ONuri, 'pages', $Id
-    $body = ConvertTo-Json @{ 'level' =  "$Level"}
-    Get-ONTokenStatus
-    $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method Patch -ContentType 'application/json' -body $body
-    Return $response
-}
-
-# Get a list of recently accessed OneNote NoteBooks
-Function Get-ONRecentNoteBooks {
-    $uri = "{0}{1}" -f $ONuri, 'notebooks/getrecentnotebooks(includePersonalNotebooks=true)'
-    $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method Get
-    Return $response.value
-}
-
 Function Update-ONElement {
     Param(
         [Parameter(Mandatory=$true)]
@@ -732,18 +663,6 @@ Function Update-ONElement {
     Return $response
 
 }
-
-Function Get-ONPagePreview {
-    [CmdletBinding()]
-    Param(
-        [Parameter(ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
-        [string]$Id
-    )
-    $workuri = "{0}pages/{1}/preview" -f $ONuri, $id
-    Write-Verbose $workuri
-    Get-ONItem -uri $workuri
-}
-
 
 Function Get-ONSessionVariables {
     [CmdletBinding()]

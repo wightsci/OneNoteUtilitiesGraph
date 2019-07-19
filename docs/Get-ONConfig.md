@@ -5,34 +5,42 @@ online version:
 schema: 2.0.0
 ---
 
-# Save-Config
+# Get-ONConfig
 
 ## SYNOPSIS
-Saves the settings object to an XML file.
+Gets configuration information from a file.
 
 ## SYNTAX
 
 ```
-Save-Config [[-path] <String>] [-Force] [<CommonParameters>]
+Get-ONConfig [[-Path] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Saves the settings object to an XML file, allowing storage of information not suitable for embedding in a script or module.
+Gets configuration information for this module from a file. 
+The results are stored in the global $settings variable.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Save-Config -Force
+Get-ONConfig
 ```
 
-This command saves the current configuration to the default location, overwriting the existing file, if it exists.
+This command loads settings from a file at the default location.
+
+### EXAMPLE 2
+```
+Get-ONConfig -Path .\OneNoteUtilities.config
+```
+
+This command loads settings from a file at the specified location.
 
 ## PARAMETERS
 
-### -path
-Defines the path to save the settings file to.
-Defaults to;
+### -Path
+The path to the file.
+Default value:
 
 \`$HOME\.config\OneNoteUtilities.config\`
 
@@ -42,23 +50,8 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: 0
 Default value: '$HOME\.config\OneNoteUtilities.config'
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Switch parameter to allow overwriting an existing file.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -74,5 +67,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Config]()
+[Save-ONConfig](Save-ONConfig.md)
 

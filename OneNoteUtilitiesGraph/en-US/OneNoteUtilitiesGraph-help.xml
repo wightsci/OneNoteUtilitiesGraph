@@ -301,9 +301,9 @@
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Get-AccessToken</command:name>
+      <command:name>Get-ONAccessToken</command:name>
       <command:verb>Get</command:verb>
-      <command:noun>AccessToken</command:noun>
+      <command:noun>ONAccessToken</command:noun>
       <maml:description>
         <maml:para>Gets an Access Token from the Microsoft Graph API</maml:para>
       </maml:description>
@@ -313,7 +313,7 @@
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Get-AccessToken</maml:name>
+        <maml:name>Get-ONAccessToken</maml:name>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters />
@@ -327,7 +327,7 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
-        <dev:code>Get-AccessToken</dev:code>
+        <dev:code>Get-ONAccessToken</dev:code>
         <dev:remarks>
           <maml:para></maml:para>
         </dev:remarks>
@@ -335,16 +335,16 @@
     </command:examples>
     <command:relatedLinks>
       <maml:navigationLink>
-        <maml:linkText>Get-AuthCode</maml:linkText>
+        <maml:linkText>Get-ONAuthCode</maml:linkText>
         <maml:uri></maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Get-AuthCode</command:name>
+      <command:name>Get-ONAuthCode</command:name>
       <command:verb>Get</command:verb>
-      <command:noun>AuthCode</command:noun>
+      <command:noun>ONAuthCode</command:noun>
       <maml:description>
         <maml:para>Gets an Authorization code from the Microsoft Graph API</maml:para>
       </maml:description>
@@ -354,7 +354,7 @@
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Get-AuthCode</maml:name>
+        <maml:name>Get-ONAuthCode</maml:name>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters />
@@ -368,7 +368,7 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
-        <dev:code>Get-AuthCode</dev:code>
+        <dev:code>Get-ONAuthCode</dev:code>
         <dev:remarks>
           <maml:para></maml:para>
         </dev:remarks>
@@ -376,16 +376,16 @@
     </command:examples>
     <command:relatedLinks>
       <maml:navigationLink>
-        <maml:linkText>Get-AccessToken</maml:linkText>
+        <maml:linkText>Get-ONAccessToken</maml:linkText>
         <maml:uri></maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Get-Config</command:name>
+      <command:name>Get-ONConfig</command:name>
       <command:verb>Get</command:verb>
-      <command:noun>Config</command:noun>
+      <command:noun>ONConfig</command:noun>
       <maml:description>
         <maml:para>Gets configuration information from a file.</maml:para>
       </maml:description>
@@ -395,8 +395,8 @@
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Get-Config</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Get-ONConfig</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Path</maml:name>
           <maml:Description>
             <maml:para>The path to the file. Default value:</maml:para>
@@ -412,7 +412,7 @@
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Path</maml:name>
         <maml:Description>
           <maml:para>The path to the file. Default value:</maml:para>
@@ -436,14 +436,14 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
-        <dev:code>Get-Config</dev:code>
+        <dev:code>Get-ONConfig</dev:code>
         <dev:remarks>
           <maml:para>This command loads settings from a file at the default location.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
-        <dev:code>Get-Config -Path .\OneNoteUtilities.config</dev:code>
+        <dev:code>Get-ONConfig -Path .\OneNoteUtilities.config</dev:code>
         <dev:remarks>
           <maml:para>This command loads settings from a file at the specified location.</maml:para>
         </dev:remarks>
@@ -451,7 +451,7 @@
     </command:examples>
     <command:relatedLinks>
       <maml:navigationLink>
-        <maml:linkText>Save-Config</maml:linkText>
+        <maml:linkText>Save-ONConfig</maml:linkText>
         <maml:uri></maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
@@ -2266,17 +2266,17 @@ parentSectionGroup               :</dev:code>
         <dev:code>PS C:\&gt; Get-ONSectiongroups -Filter "displayname eq 'Work'"
 
 id                               : 0-816F7725BEF00A5F!731386
-self                             : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386
+self                             : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386
 createdDateTime                  : 2019-02-28T10:50:52.52Z
 displayName                      : Work
 lastModifiedDateTime             : 2019-06-27T10:14:26.947Z
-sectionsUrl                      : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sections
-sectionGroupsUrl                 : https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sectionGroups
+sectionsUrl                      : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sections
+sectionGroupsUrl                 : https://graph.microsoft.com/v1.0/users/me/onenote/sectionGroups/0-816F7725BEF00A5F!731386/sectionGroups
 createdBy                        : @{user=}
 lastModifiedBy                   : @{user=}
-parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('stuart_squibb%40hotmail.co.uk')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentNotebook/$entity
-parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stuart's Notebook; self=https://graph.microsoft.com/v1.0/users/stuart_squibb@hotmail.co.uk/onenote/notebooks/0-816F7725BEF00A5F!1273}
-parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('stuart_squibb%40hotmail.co.uk')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
+parentNotebook@odata.context     : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentNotebook/$entity
+parentNotebook                   : @{id=0-816F7725BEF00A5F!1273; displayName=Stuart's Notebook; self=https://graph.microsoft.com/v1.0/users/me/onenote/notebooks/0-816F7725BEF00A5F!1273}
+parentSectionGroup@odata.context : https://graph.microsoft.com/v1.0/$metadata#users('me')/onenote/sectionGroups('0-816F7725BEF00A5F%21731386')/parentSectionGroup/$entity
 parentSectionGroup               :</dev:code>
         <dev:remarks>
           <maml:para>This command gets the SectionGroup whose name is 'Work'.</maml:para>
@@ -2390,19 +2390,19 @@ parentSectionGroup               :</dev:code>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Get-SessionVariables</command:name>
+      <command:name>Get-ONSessionVariables</command:name>
       <command:verb>Get</command:verb>
-      <command:noun>SessionVariables</command:noun>
+      <command:noun>ONSessionVariables</command:noun>
       <maml:description>
         <maml:para>Gets a set of useful variable values.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Gets some useful variable value. Useful in monitoring/debugging.</maml:para>
+      <maml:para>Gets some variable values. Useful in monitoring/debugging.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Get-SessionVariables</maml:name>
+        <maml:name>Get-ONSessionVariables</maml:name>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters />
@@ -2434,9 +2434,9 @@ parentSectionGroup               :</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; {{ Add example code here }}</dev:code>
+        <dev:code>PS C:\&gt; Get-ONSessionVariables</dev:code>
         <dev:remarks>
-          <maml:para>{{ Add example description here }}</maml:para>
+          <maml:para></maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -2444,9 +2444,9 @@ parentSectionGroup               :</dev:code>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Get-TokenStatus</command:name>
+      <command:name>Get-ONTokenStatus</command:name>
       <command:verb>Get</command:verb>
-      <command:noun>TokenStatus</command:noun>
+      <command:noun>ONTokenStatus</command:noun>
       <maml:description>
         <maml:para>Checks for presence of Auth Code and Access Token.</maml:para>
         <maml:para>If not present or expired then requests new.</maml:para>
@@ -2458,7 +2458,7 @@ parentSectionGroup               :</dev:code>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Get-TokenStatus</maml:name>
+        <maml:name>Get-ONTokenStatus</maml:name>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters />
@@ -2472,7 +2472,7 @@ parentSectionGroup               :</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-TokenStatus</dev:code>
+        <dev:code>PS C:\&gt; Get-ONTokenStatus</dev:code>
         <dev:remarks>
           <maml:para></maml:para>
         </dev:remarks>
@@ -2480,11 +2480,11 @@ parentSectionGroup               :</dev:code>
     </command:examples>
     <command:relatedLinks>
       <maml:navigationLink>
-        <maml:linkText>Get-AuthCode</maml:linkText>
+        <maml:linkText>Get-ONAuthCode</maml:linkText>
         <maml:uri></maml:uri>
       </maml:navigationLink>
       <maml:navigationLink>
-        <maml:linkText>Get-AccessToken</maml:linkText>
+        <maml:linkText>Get-ONAccessToken</maml:linkText>
         <maml:uri></maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
@@ -2572,7 +2572,7 @@ parentSectionGroup               :</dev:code>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>System.Object</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
           <maml:para></maml:para>
@@ -2685,7 +2685,7 @@ parentSectionGroup               :</dev:code>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>System.Object</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
           <maml:para></maml:para>
@@ -3929,9 +3929,9 @@ lastModifiedBy       : @{user=}</dev:code>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Save-Config</command:name>
+      <command:name>Save-ONConfig</command:name>
       <command:verb>Save</command:verb>
-      <command:noun>Config</command:noun>
+      <command:noun>ONConfig</command:noun>
       <maml:description>
         <maml:para>Saves the settings object to an XML file.</maml:para>
       </maml:description>
@@ -3941,8 +3941,8 @@ lastModifiedBy       : @{user=}</dev:code>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Save-Config</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <maml:name>Save-ONConfig</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>path</maml:name>
           <maml:Description>
             <maml:para>Defines the path to save the settings file to. Defaults to;</maml:para>
@@ -3969,19 +3969,6 @@ lastModifiedBy       : @{user=}</dev:code>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
-        <maml:name>path</maml:name>
-        <maml:Description>
-          <maml:para>Defines the path to save the settings file to. Defaults to;</maml:para>
-          <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
-        </maml:Description>
-        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
-        <dev:type>
-          <maml:name>String</maml:name>
-          <maml:uri />
-        </dev:type>
-        <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
-      </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Force</maml:name>
         <maml:Description>
@@ -3994,6 +3981,19 @@ lastModifiedBy       : @{user=}</dev:code>
         </dev:type>
         <dev:defaultValue>False</dev:defaultValue>
       </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>path</maml:name>
+        <maml:Description>
+          <maml:para>Defines the path to save the settings file to. Defaults to;</maml:para>
+          <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
+      </command:parameter>
     </command:parameters>
     <command:inputTypes />
     <command:returnValues />
@@ -4005,7 +4005,7 @@ lastModifiedBy       : @{user=}</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
-        <dev:code>Save-Config -Force</dev:code>
+        <dev:code>Save-ONConfig -Force</dev:code>
         <dev:remarks>
           <maml:para>This command saves the current configuration to the default location, overwriting the existing file, if it exists.</maml:para>
         </dev:remarks>
@@ -4013,7 +4013,7 @@ lastModifiedBy       : @{user=}</dev:code>
     </command:examples>
     <command:relatedLinks>
       <maml:navigationLink>
-        <maml:linkText>Get-Config</maml:linkText>
+        <maml:linkText>Get-ONConfig</maml:linkText>
         <maml:uri></maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>

@@ -5,27 +5,26 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-SessionVariables
+# Get-ONAccessToken
 
 ## SYNOPSIS
-Gets a set of useful variable values.
+Gets an Access Token from the Microsoft Graph API
 
 ## SYNTAX
 
 ```
-Get-SessionVariables [<CommonParameters>]
+Get-ONAccessToken [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets some variable values. Useful in monitoring/debugging.
+Gets an Access Token from the Microsoft Graph API.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> Get-SessionVariables
+### EXAMPLE 1
 ```
-
+Get-ONAccessToken
+```
 
 ## PARAMETERS
 
@@ -34,10 +33,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ONAuthCode](Get-ONAuthCode.md)
+
