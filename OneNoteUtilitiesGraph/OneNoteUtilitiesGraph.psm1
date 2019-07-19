@@ -323,12 +323,15 @@ Function Get-ONSectionGroups {
     Get-ONItems -List -ItemType 'sectionGroups' -Filter $filter
 }
 
+# Gets the binary data of a file or image resource object
 Function Get-ONResource {
-
-}
-
-Function Get-ONResources {
-
+    Param(
+        [Parameter(Mandatory=$true)]
+        [string]$Uri,
+        [Parameter(Mandatory=$true)]
+        [string]$Path
+    )
+    Invoke-RestMethod  -Headers @{Authorization = "Bearer $accesstoken"} -uri $Uri -OutFile $Path
 }
 
 # Gets the default OneNote Section for new content creation

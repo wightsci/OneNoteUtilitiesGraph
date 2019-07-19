@@ -391,7 +391,7 @@
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Gets configuration information for this module from a file.  The results are store in the global $settings variable.</maml:para>
+      <maml:para>Gets configuration information for this module from a file.  The results are stored in the global $settings variable.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -399,8 +399,7 @@
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Path</maml:name>
           <maml:Description>
-            <maml:para>The path to the file. Default value:</maml:para>
-            <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
+            <maml:para>The path to the file.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -415,8 +414,7 @@
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Path</maml:name>
         <maml:Description>
-          <maml:para>The path to the file. Default value:</maml:para>
-          <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
+          <maml:para>The path to the file.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>

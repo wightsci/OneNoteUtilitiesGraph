@@ -40,9 +40,6 @@ This command loads settings from a file at the specified location.
 
 ### -Path
 The path to the file.
-Default value:
-
-\`$HOME\.config\OneNoteUtilities.config\`
 
 ```yaml
 Type: String
