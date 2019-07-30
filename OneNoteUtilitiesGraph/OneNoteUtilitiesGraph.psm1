@@ -5,8 +5,7 @@ Param()
 $ScriptRoot = Split-Path $Script:MyInvocation.MyCommand.Path
 $Public  = @( Get-ChildItem -Path $ScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue )
 $Private = @( Get-ChildItem -Path $ScriptRoot\Private\*.ps1 -ErrorAction SilentlyContinue )
-Write-Host $Public
-@($Public + $Private)  | Foreach-Object { $_.Fullname ;. $_.FullName }
+@($Public + $Private)  | Foreach-Object { . $_.FullName }
 Export-ModuleMember -Function $Public.Basename -Verbose
 
 # Get settings from config file
