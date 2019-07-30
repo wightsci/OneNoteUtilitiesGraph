@@ -1,9 +1,12 @@
 ﻿[CmdletBinding()]
 Param()
 
+
+Write-Verbose "Hello"
 # Loader for external modules
 $ScriptRoot = Split-Path $Script:MyInvocation.MyCommand.Path
-Get-ChildItem $ScriptRoot *.ps1  -Recurse | Foreach-Object { Import-Module $_.FullName }
+Write-Verbose $ScriptRoot
+Get-ChildItem $ScriptRoot *.ps1 | Foreach-Object { Write-Verbose $_.FullName; Import-Module $_.FullName -Verbose }
 
 Function Get-ONConfig {
     Param(
