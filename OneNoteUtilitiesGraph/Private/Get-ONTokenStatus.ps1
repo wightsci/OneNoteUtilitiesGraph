@@ -1,3 +1,6 @@
+# Auth code only valid for 1 hour
+# Refresh token valid for 14 days
+# Access token valid for 1 hour
 Function Get-ONTokenStatus {
     [cmdletbinding()]
     Param()
