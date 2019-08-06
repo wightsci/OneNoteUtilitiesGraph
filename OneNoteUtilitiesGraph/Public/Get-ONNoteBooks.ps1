@@ -1,9 +1,18 @@
 # Get a list of OneNote Notebooks
 Function Get-ONNoteBooks {
-    [CmdletBinding()]
-        Param(
-        [string]$Filter
+    [cmdletbinding()]
+    Param(
+        [parameter(ParameterSetName='filter',Mandatory=$true)]
+        [string]$Filter,
+        [parameter(ParameterSetName="uri",Mandatory=$false)]
+        [string]$Uri="$ONURI/notebooks"
         )
-        Get-ONItems -List -ItemType 'noteBooks' -Filter $filter
-    }
-    
+        if ($Filter) {
+            Get-ONItems -List -ItemType 'notebooks' -Filter $filter
+        }    
+        if ($uri) {
+            Write-Verbose $uri
+            Get-ONItems -List -uri $uri
+        }
+        
+}
