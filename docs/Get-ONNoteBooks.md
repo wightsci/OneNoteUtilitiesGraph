@@ -12,13 +12,19 @@ Gets a list of OneNote NoteBooks.
 
 ## SYNTAX
 
+### filter
 ```
-Get-ONNoteBooks [[-Filter] <String>] [<CommonParameters>]
+Get-ONNoteBooks [-Filter] <String> [<CommonParameters>]
+```
+
+### uri
+```
+Get-ONNoteBooks [-Uri <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets a list of OneNote NoteBooks matching the supplied filter.
-If no filter is supplied then all NoteBooks are returned.
+Gets a list of OneNote NoteBooks matching the supplied filter or at the given URL.
+If no filter is supplied then all NoteBooks will be returned.
 
 ## EXAMPLES
 
@@ -48,11 +54,26 @@ An OData filter used to determine which NoteBooks are returned.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: filter
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Uri
+{{ Fill Uri Description }}
+
+```yaml
+Type: String
+Parameter Sets: uri
 Aliases:
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

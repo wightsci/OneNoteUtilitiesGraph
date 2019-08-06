@@ -19,11 +19,12 @@ Get-ONPages -Filter <String> [<CommonParameters>]
 
 ### uri
 ```
-Get-ONPages -Uri <String> [<CommonParameters>]
+Get-ONPages [-Uri <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Gets a list of OneNote Pages matching the given Filter or found at the given URL.
+If no filter or URL is provided all Pages in all NoteBooks will be returned.
 The filter should be valid OData.
 The information returned is the standard set of Graph metadata for a Page object.
 
@@ -90,7 +91,7 @@ Type: String
 Parameter Sets: uri
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

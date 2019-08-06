@@ -12,13 +12,19 @@ Gets a list of OneNote Section Groups matching the supplied filter.
 
 ## SYNTAX
 
+### filter
 ```
 Get-ONSectionGroups [-Filter] <String> [<CommonParameters>]
 ```
 
+### uri
+```
+Get-ONSectionGroups [-Uri <String>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Gets a list of OneNote Section Groups matching the supplied filter.
-If no filter is supplied, all SectionGroups will be returned.
+Gets a list of OneNote Section Groups matching the supplied filter, or at the supplied URL.
+If no filter is supplied, all SectionGroups in all NoteBooks will be returned.
 The filter must be  vaild OData.
 
 ## EXAMPLES
@@ -52,11 +58,26 @@ Must be valid OData
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: filter
 Aliases:
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Uri
+{{ Fill Uri Description }}
+
+```yaml
+Type: String
+Parameter Sets: uri
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

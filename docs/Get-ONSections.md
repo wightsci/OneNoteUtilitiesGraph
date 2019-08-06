@@ -8,12 +8,19 @@ schema: 2.0.0
 # Get-ONSections
 
 ## SYNOPSIS
-Gets a list of OneNote Sections matching the supplied filter.
+Gets a list of OneNote Sections matching the supplied filter, or at the supplied URL.
+If no filter or URL is supplied then all Sections in all NoteBooks will be returned.
 
 ## SYNTAX
 
+### filter
 ```
-Get-ONSections [[-Filter] <String>] [<CommonParameters>]
+Get-ONSections [-Filter] <String> [<CommonParameters>]
+```
+
+### uri
+```
+Get-ONSections [-Uri <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,11 +58,26 @@ OData.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: filter
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Uri
+{{ Fill Uri Description }}
+
+```yaml
+Type: String
+Parameter Sets: uri
 Aliases:
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
