@@ -5,7 +5,7 @@ Function Get-ONPages {
             [parameter(ParameterSetName='filter',Mandatory=$true)]
             [string]$Filter,
             [parameter(ParameterSetName="uri",Mandatory=$false)]
-            [string]$Uri="$ONURI/pages"
+            [string]$Uri="$($ONURI)pages"
             )
             if ($Filter) {
                 Get-ONItems -List -ItemType 'pages' -Filter $filter

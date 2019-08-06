@@ -2,17 +2,13 @@
 Function Get-ONNoteBooks {
     [cmdletbinding()]
     Param(
-        [parameter(ParameterSetName='filter',Mandatory=$true)]
-        [string]$Filter,
-        [parameter(ParameterSetName="uri",Mandatory=$false)]
-        [string]$Uri="$ONURI/notebooks"
-        )
+        [parameter(ParameterSetName='filter',Mandatory=$False)]
+        [string]$Filter
+    )
         if ($Filter) {
             Get-ONItems -List -ItemType 'notebooks' -Filter $filter
-        }    
-        if ($uri) {
-            Write-Verbose $uri
-            Get-ONItems -List -uri $uri
         }
-        
+        else {
+            Get-ONItems -List -uri "$($ONURI)notebooks"
+        }
 }

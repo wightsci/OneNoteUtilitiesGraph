@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-The location to obtain the pages from.
+The URL from which to retieve Pages.
 
 ```yaml
 Type: String

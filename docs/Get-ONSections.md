@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-{{ Fill Uri Description }}
+The URL from which to retieve Sections.
 
 ```yaml
 Type: String

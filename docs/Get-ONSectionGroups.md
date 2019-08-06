@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-{{ Fill Uri Description }}
+The URL from which to retrieve SectionGroups.
 
 ```yaml
 Type: String

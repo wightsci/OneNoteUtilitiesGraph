@@ -5,7 +5,7 @@ Function Get-ONSectionGroups {
         [parameter(ParameterSetName='filter',Mandatory=$true)]
         [string]$Filter,
         [parameter(ParameterSetName="uri",Mandatory=$false)]
-        [string]$Uri="$ONURI/sectiongroups"
+        [string]$Uri="$($ONURI)sectiongroups"
         )
         if ($Filter) {
             Get-ONItems -List -ItemType 'sectiongroups' -Filter $filter

@@ -1101,7 +1101,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Gets a list of OneNote NoteBooks matching the supplied filter. If no filter is supplied then all NoteBooks are returned.</maml:para>
+      <maml:para>Gets a list of OneNote NoteBooks matching the supplied filter or at the given URL. If no filter is supplied then all NoteBooks will be returned.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -1438,7 +1438,7 @@ https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Im
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Gets a list of OneNote Pages matching the given Filter or found at the given URL. The filter should be valid OData. The information returned is the standard set of Graph metadata for a Page object.</maml:para>
+      <maml:para>Gets a list of OneNote Pages matching the given Filter or found at the given URL. If no filter or URL is provided all Pages in all NoteBooks will be returned. The filter should be valid OData. The information returned is the standard set of Graph metadata for a Page object.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -1458,10 +1458,10 @@ https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Im
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>Get-ONPages</maml:name>
-        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Uri</maml:name>
           <maml:Description>
-            <maml:para>The location to obtain the pages from.</maml:para>
+            <maml:para>The URL from which to retieve Pages.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1485,10 +1485,10 @@ https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Im
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Uri</maml:name>
         <maml:Description>
-          <maml:para>The location to obtain the pages from.</maml:para>
+          <maml:para>The URL from which to retieve Pages.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -2195,7 +2195,7 @@ parentSectionGroup               :</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Gets a list of OneNote Section Groups matching the supplied filter. If no filter is supplied, all SectionGroups will be returned. The filter must be  vaild OData.</maml:para>
+      <maml:para>Gets a list of OneNote Section Groups matching the supplied filter, or at the supplied URL. If no filter is supplied, all SectionGroups in all NoteBooks will be returned. The filter must be  vaild OData.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -2213,12 +2213,39 @@ parentSectionGroup               :</dev:code>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
       </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-ONSectionGroups</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Uri</maml:name>
+          <maml:Description>
+            <maml:para>The URL from which to retrieve SectionGroups.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
     </command:syntax>
     <command:parameters>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Filter</maml:name>
         <maml:Description>
           <maml:para>The filter to be used. Must be valid OData</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Uri</maml:name>
+        <maml:Description>
+          <maml:para>The URL from which to retrieve SectionGroups.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -2297,7 +2324,7 @@ parentSectionGroup               :</dev:code>
       <command:verb>Get</command:verb>
       <command:noun>ONSections</command:noun>
       <maml:description>
-        <maml:para>Gets a list of OneNote Sections matching the supplied filter.</maml:para>
+        <maml:para>Gets a list of OneNote Sections matching the supplied filter, or at the supplied URL. If no filter or URL is supplied then all Sections in all NoteBooks will be returned.</maml:para>
       </maml:description>
     </command:details>
     <maml:description>
@@ -2306,7 +2333,7 @@ parentSectionGroup               :</dev:code>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-ONSections</maml:name>
-        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Filter</maml:name>
           <maml:Description>
             <maml:para>The filter to be used. OData.</maml:para>
@@ -2319,12 +2346,39 @@ parentSectionGroup               :</dev:code>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
       </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-ONSections</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Uri</maml:name>
+          <maml:Description>
+            <maml:para>The URL from which to retieve Sections.</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Filter</maml:name>
         <maml:Description>
           <maml:para>The filter to be used. OData.</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Uri</maml:name>
+        <maml:Description>
+          <maml:para>The URL from which to retieve Sections.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
