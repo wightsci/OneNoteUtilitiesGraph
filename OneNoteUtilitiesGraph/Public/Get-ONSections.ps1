@@ -10,7 +10,7 @@ Function Get-ONSections {
         if ($Filter) {
             Get-ONItems -List -ItemType 'sections' -Filter $filter
         }
-        if ($uri) {
+        else {
             Write-Verbose $uri
             Get-ONItems -List -uri $uri
         }

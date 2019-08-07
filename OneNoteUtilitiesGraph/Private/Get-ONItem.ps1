@@ -18,8 +18,8 @@ Function Get-ONItem {
         $id = [System.Uri]::EscapeURIString($id)
         Write-Verbose $id
         $uri = '{0}{2}/{1}' -f $ONURI, $Id, $ItemType
-        Write-Verbose $uri
     }
+    Write-Verbose "URI: $uri"
     Get-ONTokenStatus
     $endloop  = $false
     [Int]$retrycount = 0

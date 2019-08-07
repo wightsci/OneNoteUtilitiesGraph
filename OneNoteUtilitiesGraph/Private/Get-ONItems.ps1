@@ -33,7 +33,10 @@ Function Get-ONItems {
     # Use paging...
     do {
         $onitemlist = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $workuri -Method Get
-        if ($onitemlist.'@odata.nextLink') { $workuri = $onitemlist.'@odata.nextLink' }
+        if ($onitemlist.'@odata.nextLink') { 
+            $workuri = $onitemlist.'@odata.nextLink'
+            Write-Verbose "Next: $workuri" 
+        }
         if ($list.isPresent) {
             $r += $onitemlist.value
         }

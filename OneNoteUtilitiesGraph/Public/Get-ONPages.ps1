@@ -10,7 +10,7 @@ Function Get-ONPages {
             if ($Filter) {
                 Get-ONItems -List -ItemType 'pages' -Filter $filter
             }    
-            if ($uri) {
+            else {
                 Write-Verbose $uri
                 Get-ONItems -List -uri $uri
             }
