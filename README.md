@@ -1,5 +1,5 @@
 # OneNoteUtilitiesGraph
-OneNote module for PowerShell using the Graph REST API
+PowerShell module for manipulating [Microsoft OneNote](https://www.onenote.com/) data using the Microsoft Graph REST API.
 
 Following on from OneNoteUtilities this module uses the Microsoft Graph API instead of the desktop COM objects.
 
