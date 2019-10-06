@@ -12,6 +12,6 @@ Function Get-ONConfig {
     }
     Else {
         Write-Error "No config file found. Please create one."
-        Exit
+        # Exit
     }
 }

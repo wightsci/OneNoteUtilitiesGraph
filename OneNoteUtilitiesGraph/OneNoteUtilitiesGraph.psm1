@@ -10,6 +10,16 @@ Export-ModuleMember -Function $Public.Basename
 
 # Get settings from config file
 Get-ONConfig
+if (!$global:settings.setting) {
+    # Write-Information "Would you like me to create a config file?"
+    $cid = Read-Host -Prompt "Please provide your Graph client id, or N to exit"
+    Write-Information "$cid*****"
+    if ($cid.toString().ToLower() -ne "n") {
+        Write-Information "$cid"
+        New-ONConfig -ClientID = $cid.ToString()
+        Get-ONConfig
+    }
+}
 
 # Settings we don't want hard coded
 $clientID = $settings["clientid"]
