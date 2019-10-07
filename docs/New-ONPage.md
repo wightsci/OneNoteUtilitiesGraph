@@ -43,7 +43,7 @@ lastModifiedDateTime : 2019-06-27T15:17:35.9924696Z
 links                : @{oneNoteClientUrl=; oneNoteWebUrl=}
 ```
 
-This example shows the creation of an XHTML page using \`New-ONPageXML\` that is then passed to \`New-ONPage\` for creation in the Graph service.
+This example shows the creation of an XHTML page using **New-ONPageXML** that is then passed to **New-ONPage** for creation in the Graph service.
 
 ## PARAMETERS
 
@@ -105,7 +105,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONDefaultSection]()
+[Get-ONDefaultSection](Get-ONDefaultSectionmd)
 
-[New-ONPageXML]()
+[New-ONPageXML](New-ONPageXML.md)
 

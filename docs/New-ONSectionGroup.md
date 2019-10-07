@@ -97,10 +97,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None. You cannot pipe to this cmdlet.
+### None
+You cannot pipe to this cmdlet.
 ## OUTPUTS
 
-### PSCustomObject representing the new Graph SectionGroup resource.
+### [PSCustomObject] 
+Representing the new Graph SectionGroup resource.
 ## NOTES
 
 ## RELATED LINKS

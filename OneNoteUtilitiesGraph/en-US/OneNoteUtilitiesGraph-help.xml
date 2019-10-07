@@ -406,7 +406,7 @@
             <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
-          <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
+          <dev:defaultValue>$HOME\.config\OneNoteUtilities.config</dev:defaultValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -421,7 +421,7 @@
           <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
-        <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
+        <dev:defaultValue>$HOME\.config\OneNoteUtilities.config</dev:defaultValue>
       </command:parameter>
     </command:parameters>
     <command:inputTypes />
@@ -475,20 +475,20 @@
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>None. You cannot pipe to this cmdlet.</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>You cannot pipe to this cmdlet.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>PSCustomObject representing a Graph Section resource.</maml:name>
+          <maml:name>PSCustomObject</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Representing a Graph Section resource.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -561,7 +561,7 @@ parentSectionGroup               :</dev:code>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="2" aliases="none">
           <maml:name>Page</maml:name>
           <maml:Description>
-            <maml:para>The page hosting the element. Can be a page metadata object returned by `Get-ONPage` or an XmlDocument object returned by `Get-ONPageXML`.</maml:para>
+            <maml:para>The page hosting the element. Can be a page metadata object returned by Get-ONPage or an XmlDocument object returned by Get-ONPageXML .</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
@@ -576,7 +576,7 @@ parentSectionGroup               :</dev:code>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="2" aliases="none">
           <maml:name>Page</maml:name>
           <maml:Description>
-            <maml:para>The page hosting the element. Can be a page metadata object returned by `Get-ONPage` or an XmlDocument object returned by `Get-ONPageXML`.</maml:para>
+            <maml:para>The page hosting the element. Can be a page metadata object returned by Get-ONPage or an XmlDocument object returned by Get-ONPageXML .</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
@@ -615,7 +615,7 @@ parentSectionGroup               :</dev:code>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="2" aliases="none">
         <maml:name>Page</maml:name>
         <maml:Description>
-          <maml:para>The page hosting the element. Can be a page metadata object returned by `Get-ONPage` or an XmlDocument object returned by `Get-ONPageXML`.</maml:para>
+          <maml:para>The page hosting the element. Can be a page metadata object returned by Get-ONPage or an XmlDocument object returned by Get-ONPageXML .</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
@@ -640,10 +640,10 @@ parentSectionGroup               :</dev:code>
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>You can pipe an XHTML Page resource to this cmdlet, such as the output from Get-ONPageXML,</maml:name>
+          <maml:name>[PSCustomObject], [XmlDocument]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para>or a page metadata object.</maml:para>
+          <maml:para>You can pipe an XHTML Page resource to this cmdlet, such as the output from Get-ONPageXML , or a page metadata object.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
@@ -665,7 +665,7 @@ parentSectionGroup               :</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
-        <dev:code>$page = Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML
+        <dev:code>$page = Get-ONPage -uri 'https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML
 Get-ONElement -page $page -id 'p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35}'
 
 id                                           style                            #text
@@ -1148,7 +1148,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Filter</maml:name>
           <maml:Description>
-            <maml:para>An OData filter used to determine which NoteBooks are returned.</maml:para>
+            <maml:para>An *OData * filter used to determine which NoteBooks are returned.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1163,7 +1163,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Filter</maml:name>
         <maml:Description>
-          <maml:para>An OData filter used to determine which NoteBooks are returned.</maml:para>
+          <maml:para>An *OData * filter used to determine which NoteBooks are returned.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1176,20 +1176,20 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>None. You cannot pipe to this cmdlet.</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>You cannot pipe to this cmdlet.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>A collection of PSCustomObjects representing Graph NoteBook resources.</maml:name>
+          <maml:name>[PSCustomObject[]]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>A collection of PSCustomObjects representing Graph NoteBook resources.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -1246,7 +1246,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
-            <maml:para>The Id of the page to be retreived.</maml:para>
+            <maml:para>The Id of the page to be retrieved.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1261,7 +1261,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Uri</maml:name>
           <maml:Description>
-            <maml:para>The Uri of the page to be retreived.</maml:para>
+            <maml:para>The Uri of the page to be retrieved.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1276,7 +1276,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
-          <maml:para>The Id of the page to be retreived.</maml:para>
+          <maml:para>The Id of the page to be retrieved.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1288,7 +1288,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Uri</maml:name>
         <maml:Description>
-          <maml:para>The Uri of the page to be retreived.</maml:para>
+          <maml:para>The Uri of the page to be retrieved.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1301,20 +1301,20 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>Any object with an 'ID' property.</maml:name>
+          <maml:name>[Object]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Any object with an 'ID' property.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>PSCustomObject representing a Graph Page resource.</maml:name>
+          <maml:name>PSCustomObject</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Representing a Graph Page resource.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -1420,20 +1420,20 @@ parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other 
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>None. You cannot pipe to this cmdlet.</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>You cannot pipe to this cmdlet.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>PSCustomObject containing preview text and a link to an image, if available</maml:name>
+          <maml:name>PSCustomObject</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Containing preview text and a link to an image, if available</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -1500,7 +1500,7 @@ https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Im
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Uri</maml:name>
           <maml:Description>
-            <maml:para>The URL from which to retieve Pages.</maml:para>
+            <maml:para>The URL from which to retrieve Pages.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -1527,7 +1527,7 @@ https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Im
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Uri</maml:name>
         <maml:Description>
-          <maml:para>The URL from which to retieve Pages.</maml:para>
+          <maml:para>The URL from which to retrieve Pages.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -1540,20 +1540,20 @@ https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.onenotePagePreview Im
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>None. You cannot pipe to this cmdlet.</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>You cannot pipe to this cmdlet.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>PSCustomObject collection representing Graph Page resources.</maml:name>
+          <maml:name>[PSCustomObject[]]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Collection representing Graph Page resources.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -1679,20 +1679,20 @@ id                                                            title
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>Object representing a Page resource. Must have a 'contentURL' property.</maml:name>
+          <maml:name>[PSCustomObject]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Representing a Page resource. Must have a 'contentURL' property.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>XMLDocument object</maml:name>
+          <maml:name>XMLDocument</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>XHTML document object</maml:para>
         </maml:description>
       </command:returnValue>
       <command:returnValue>
@@ -1736,7 +1736,7 @@ You can even keep copies of the student's completed quizzes or tests in case you
         &lt;/body&gt;
 &lt;/html&gt;</dev:code>
         <dev:remarks>
-          <maml:para>This command pipes a Page object to Get-ONPageXML. Expanding the 'html' property displays the full XHTML of the page.</maml:para>
+          <maml:para>This command pipes a Page object to Get-ONPageXML . Expanding the 'html' property displays the full XHTML of the page.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
@@ -1779,7 +1779,7 @@ You can eve...</dev:code>
             &lt;/body&gt;
     &lt;/html&gt;</dev:code>
         <dev:remarks>
-          <maml:para>This command pipes a page object to Get-ONPageXML. The -AsText switch means that the output is a string rather than an XML document.</maml:para>
+          <maml:para>This command pipes a page object to Get-ONPageXML . The -AsText switch means that the output is a string rather than an XML document.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -1855,7 +1855,7 @@ Class Notebook      2016-01-21T15:15:31Z OneDrive      @{oneNoteClientUrl=; oneN
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>This cmdlet retreives a binary resource (imge, file) from OneNote and saves it in a file.</maml:para>
+      <maml:para>This cmdlet retrieves a binary resource (image, file) from OneNote and saves it in a file.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -2021,20 +2021,20 @@ Class Notebook      2016-01-21T15:15:31Z OneDrive      @{oneNoteClientUrl=; oneN
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>Any object with an 'ID' property</maml:name>
+          <maml:name>[Object]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>With an 'ID' property</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>PSCustomObject representing a Graph Section resource.</maml:name>
+          <maml:name>PSCustomObject</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Representing a Graph 'Section' resource.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -2115,7 +2115,7 @@ parentSectionGroup               :</dev:code>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
-            <maml:para>The Id of the SectionGroup to be retreived.</maml:para>
+            <maml:para>The Id of the SectionGroup to be retrieved.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -2130,7 +2130,7 @@ parentSectionGroup               :</dev:code>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Uri</maml:name>
           <maml:Description>
-            <maml:para>The Uri of the SectionGroup to be retreived.</maml:para>
+            <maml:para>The Uri of the SectionGroup to be retrieved.</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
@@ -2145,7 +2145,7 @@ parentSectionGroup               :</dev:code>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName)" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
-          <maml:para>The Id of the SectionGroup to be retreived.</maml:para>
+          <maml:para>The Id of the SectionGroup to be retrieved.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -2157,7 +2157,7 @@ parentSectionGroup               :</dev:code>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Uri</maml:name>
         <maml:Description>
-          <maml:para>The Uri of the SectionGroup to be retreived.</maml:para>
+          <maml:para>The Uri of the SectionGroup to be retrieved.</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
@@ -2170,20 +2170,20 @@ parentSectionGroup               :</dev:code>
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>Any object with an 'ID' property.</maml:name>
+          <maml:name>[Object]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>With an 'ID' property.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>PSCustomObject representing a Graph SectionGroup resource.</maml:name>
+          <maml:name>PSCustomObject</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Representing a Graph 'SectionGroup' resource.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -2297,20 +2297,20 @@ parentSectionGroup               :</dev:code>
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>None. You cannot pipe to this cmdlet.</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>You cannot pipe to this cmdlet.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>Collection of PSCustomObjects representing Graph SectionGroup Resources.</maml:name>
+          <maml:name>[PSCustomObject[]]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Collection of PSCustomObjects representing Graph SectionGroup Resources.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -2431,10 +2431,10 @@ parentSectionGroup               :</dev:code>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>Collection of PSCustomObjects representing Graph Section resources.</maml:name>
+          <maml:name>[PSCustomObject[]]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Collection of PSCustomObjects representing Graph Section resources.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -2585,7 +2585,7 @@ parentSectionGroup               :</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Invokes the default application for handling onenote: URLs and passes it the URL of a page to load, based on an ID or a Page object.</maml:para>
+      <maml:para>Invokes the default application for handling 'onenote:' URLs and passes it the URL of a page to load, based on an ID or a Page object.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -2816,7 +2816,7 @@ parentSectionGroup               :</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Creates a new OneNote page element. This cmdlet can be used to create elements for new Pages generated by ``New-ONPageXML``. If no document object is supplied then a temporary System.XML.XMLDocument object is created.</maml:para>
+      <maml:para>Creates a new OneNote page element. This cmdlet can be used to create elements for new Pages generated by New-ONPageXML . If no document object is supplied then a temporary System.XML.XMLDocument object is created.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -3123,20 +3123,20 @@ PS C:\&gt; $div.OuterXML
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>None. You cannot pipe to this cmdlet.</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>You cannot pipe to this cmdlet.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>PSCustomObject representing the new Graph NoteBook resource.</maml:name>
+          <maml:name>[PSCustomObject]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Representing the new Graph NoteBook resource.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -3303,7 +3303,7 @@ contentUrl           : https://graph.microsoft.com/v1.0/users/me/onenote/pages/0
 lastModifiedDateTime : 2019-06-27T15:17:35.9924696Z
 links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
         <dev:remarks>
-          <maml:para>This example shows the creation of an XHTML page using `New-ONPageXML` that is then passed to `New-ONPage` for creation in the Graph service.</maml:para>
+          <maml:para>This example shows the creation of an XHTML page using New-ONPageXML that is then passed to New-ONPage for creation in the Graph service.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -3365,10 +3365,10 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}</dev:code>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>XMLDocument object.</maml:name>
+          <maml:name>XMLDocument</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Object representing the new page.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -3434,7 +3434,7 @@ html</dev:code>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>SectionGroup</maml:name>
           <maml:Description>
-            <maml:para>Switch to identify that the ID parameter referrs to a SectionGroup, not a Section.</maml:para>
+            <maml:para>Switch to identify that the ID parameter refers to a SectionGroup, not a Section.</maml:para>
           </maml:Description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
@@ -3499,7 +3499,7 @@ html</dev:code>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>SectionGroup</maml:name>
         <maml:Description>
-          <maml:para>Switch to identify that the ID parameter referrs to a SectionGroup, not a Section.</maml:para>
+          <maml:para>Switch to identify that the ID parameter refers to a SectionGroup, not a Section.</maml:para>
         </maml:Description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
@@ -3524,20 +3524,20 @@ html</dev:code>
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>None. You cannot pipe to this cmdlet.</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>You cannot pipe to this cmdlet.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>PSCustomObject representing the new Graph Section resource.</maml:name>
+          <maml:name>[PSCustomObject]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Representing the new Graph Section resource.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -3677,20 +3677,20 @@ lastModifiedBy       : @{user=}</dev:code>
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>None. You cannot pipe to this cmdlet.</maml:name>
+          <maml:name>None</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>You cannot pipe to this cmdlet.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
     <command:returnValues>
       <command:returnValue>
         <dev:type>
-          <maml:name>PSCustomObject representing the new Graph SectionGroup resource.</maml:name>
+          <maml:name>[PSCustomObject]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para></maml:para>
+          <maml:para>Representing the new Graph SectionGroup resource.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -4034,15 +4034,15 @@ lastModifiedBy       : @{user=}</dev:code>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>path</maml:name>
           <maml:Description>
-            <maml:para>Defines the path to save the settings file to. Defaults to;</maml:para>
-            <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
+            <maml:para>Defines the path to save the settings file to. Defaults to:</maml:para>
+            <maml:para>$HOME\.config\OneNoteUtilities.config</maml:para>
           </maml:Description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
-          <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
+          <dev:defaultValue>$HOME\.config\OneNoteUtilities.config</dev:defaultValue>
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Force</maml:name>
@@ -4073,15 +4073,15 @@ lastModifiedBy       : @{user=}</dev:code>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>path</maml:name>
         <maml:Description>
-          <maml:para>Defines the path to save the settings file to. Defaults to;</maml:para>
-          <maml:para>`$HOME\.config\OneNoteUtilities.config`</maml:para>
+          <maml:para>Defines the path to save the settings file to. Defaults to:</maml:para>
+          <maml:para>$HOME\.config\OneNoteUtilities.config</maml:para>
         </maml:Description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
-        <dev:defaultValue>'$HOME\.config\OneNoteUtilities.config'</dev:defaultValue>
+        <dev:defaultValue>$HOME\.config\OneNoteUtilities.config</dev:defaultValue>
       </command:parameter>
     </command:parameters>
     <command:inputTypes />

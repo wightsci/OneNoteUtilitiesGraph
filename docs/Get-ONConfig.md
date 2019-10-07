@@ -48,7 +48,7 @@ Aliases:
 
 Required: False
 Position: 0
-Default value: '$HOME\.config\OneNoteUtilities.config'
+Default value: $HOME\.config\OneNoteUtilities.config
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

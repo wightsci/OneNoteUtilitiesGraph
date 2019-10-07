@@ -53,15 +53,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None. You cannot pipe to this cmdlet.
+### None
+You cannot pipe to this cmdlet.
 ## OUTPUTS
 
-### PSCustomObject containing preview text and a link to an image, if available
+### PSCustomObject 
+Containing preview text and a link to an image, if available
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-ONPages]()
+[Get-ONPages](Get-ONPages.md)
 
-[Get-ONPage]()
+[Get-ONPage](Get-ONPage.md)
 

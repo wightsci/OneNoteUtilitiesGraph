@@ -47,9 +47,9 @@ Accept wildcard characters: False
 
 ### -path
 Defines the path to save the settings file to.
-Defaults to;
+Defaults to:
 
-\`$HOME\.config\OneNoteUtilities.config\`
+$HOME\.config\OneNoteUtilities.config
 
 ```yaml
 Type: String
@@ -58,7 +58,7 @@ Aliases:
 
 Required: False
 Position: 0
-Default value: '$HOME\.config\OneNoteUtilities.config'
+Default value: $HOME\.config\OneNoteUtilities.config
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -74,5 +74,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ONConfig]()
+[Get-ONConfig](Get-ONConfig.md)
 

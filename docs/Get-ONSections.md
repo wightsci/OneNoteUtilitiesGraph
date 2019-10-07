@@ -53,8 +53,7 @@ parentSectionGroup               :
 ## PARAMETERS
 
 ### -Filter
-The filter to be used.
-OData.
+The filter to be used. OData.
 
 ```yaml
 Type: String
@@ -90,10 +89,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Collection of PSCustomObjects representing Graph Section resources.
+### [PSCustomObject[]]
+Collection of PSCustomObjects representing Graph Section resources.
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-ONSection]()
+[Get-ONSection](Get-ONSection.md)
 

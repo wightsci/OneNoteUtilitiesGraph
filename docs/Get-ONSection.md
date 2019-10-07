@@ -109,10 +109,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Any object with an 'ID' property
+### [Object]
+With an 'ID' property
 ## OUTPUTS
 
-### PSCustomObject representing a Graph Section resource.
+### PSCustomObject
+Representing a Graph 'Section' resource.
 ## NOTES
 
 ## RELATED LINKS

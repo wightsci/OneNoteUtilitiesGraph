@@ -68,8 +68,7 @@ This command gets a list of Pages found at a specific URL.
 ## PARAMETERS
 
 ### -Filter
-The filter to use for the Page list.
-OData.
+The filter to use for the Page list. OData.
 
 ```yaml
 Type: String
@@ -84,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-The URL from which to retieve Pages.
+The URL from which to retrieve Pages.
 
 ```yaml
 Type: String
@@ -103,15 +102,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None. You cannot pipe to this cmdlet.
+### None
+You cannot pipe to this cmdlet.
 ## OUTPUTS
 
-### PSCustomObject collection representing Graph Page resources.
+### [PSCustomObject[]]
+Collection representing Graph Page resources.
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-ONPage]()
+[Get-ONPage](Get-ONPage.md)
 
-[Get-ONPageXML]()
+[Get-ONPageXML](Get-ONPageXML)
 

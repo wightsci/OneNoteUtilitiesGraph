@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -SectionGroup
-Switch to identify that the ID parameter referrs to a SectionGroup, not a Section.
+Switch to identify that the ID parameter refers to a SectionGroup, not a Section.
 
 ```yaml
 Type: SwitchParameter
@@ -113,10 +113,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None. You cannot pipe to this cmdlet.
+### None
+You cannot pipe to this cmdlet.
 ## OUTPUTS
 
-### PSCustomObject representing the new Graph Section resource.
+### [PSCustomObject]
+Representing the new Graph Section resource.
 ## NOTES
 
 ## RELATED LINKS

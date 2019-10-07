@@ -51,7 +51,7 @@ parentSectionGroup               :
 ## PARAMETERS
 
 ### -Id
-The Id of the SectionGroup to be retreived.
+The Id of the SectionGroup to be retrieved.
 
 ```yaml
 Type: String
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-The Uri of the SectionGroup to be retreived.
+The Uri of the SectionGroup to be retrieved.
 
 ```yaml
 Type: String
@@ -85,10 +85,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Any object with an 'ID' property.
+### [Object]
+With an 'ID' property.
 ## OUTPUTS
-
-### PSCustomObject representing a Graph SectionGroup resource.
+### PSCustomObject 
+Representing a Graph 'SectionGroup' resource.
 ## NOTES
 
 ## RELATED LINKS

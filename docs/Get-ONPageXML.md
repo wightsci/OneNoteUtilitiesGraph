@@ -49,7 +49,7 @@ You can even keep copies of the student's completed quizzes or tests in case you
 </html>
 ```
 
-This command pipes a Page object to Get-ONPageXML.
+This command pipes a Page object to **Get-ONPageXML**.
 Expanding the 'html' property displays the full XHTML of the page.
 
 ### EXAMPLE 2
@@ -65,7 +65,7 @@ p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35} margin-top:0pt;margin-bottom:0pt Fo
 You can eve...
 ```
 
-This command pipes a Page object to Get-ONPageXML and stores the result in the variable $page.
+This command pipes a Page object to **Get-ONPageXML** and stores the result in the variable $page.
 $page can then be accessed as an XMLDocument object.
 
 ### EXAMPLE 3
@@ -94,7 +94,7 @@ Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55
     </html>
 ```
 
-This command pipes a page object to Get-ONPageXML. The -AsText switch means that the output is a string rather than an XML document.
+This command pipes a page object to **Get-ONPageXML**. The -AsText switch means that the output is a string rather than an XML document.
 
 ## PARAMETERS
 
@@ -134,10 +134,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Object representing a Page resource. Must have a 'contentURL' property.
+### [PSCustomObject] 
+Representing a Page resource. Must have a 'contentURL' property.
 ## OUTPUTS
 
-### XMLDocument object
+### XMLDocument
+XHTML document object
 ### String
 
 ## NOTES

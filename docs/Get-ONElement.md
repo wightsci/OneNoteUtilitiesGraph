@@ -30,7 +30,7 @@ Returned as an XML element.
 
 ### EXAMPLE 1
 ```
-$page = Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML
+$page = Get-ONPage -uri 'https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML
 Get-ONElement -page $page -id 'p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35}'
 
 id                                           style                            #text
@@ -60,8 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### -Page
-The page hosting the element. Can be a page metadata object returned by `Get-ONPage`
-or an XmlDocument object returned by `Get-ONPageXML`.
+The page hosting the element. Can be a page metadata object returned by **Get-ONPage**
+or an XmlDocument object returned by **Get-ONPageXML**.
 
 ```yaml
 Type: Object
@@ -95,8 +95,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### You can pipe an XHTML Page resource to this cmdlet, such as the output from Get-ONPageXML,
-or a page metadata object. 
+### [PSCustomObject], [XmlDocument]
+You can pipe an XHTML Page resource to this cmdlet, such as the output from **Get-ONPageXML**, or a page metadata object. 
 
 ## OUTPUTS
 

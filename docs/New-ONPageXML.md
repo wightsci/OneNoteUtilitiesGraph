@@ -56,7 +56,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### XMLDocument object.
+### XMLDocument 
+Object representing the new page.
 ## NOTES
 
 ## RELATED LINKS

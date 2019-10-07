@@ -32,7 +32,7 @@ Invokes the default application for handling web pages and passes it the URL of 
 PS C:\> Invoke-ONWeb -Page (Get-ONPages -Filter "title eq '2 - Life Cycle of Tree Frog'")
 ```
 
-This command uses Get-ONPages to obtain a Page object matching the filter, and this is passed to Invoke-ONWeb
+This command uses **Get-ONPages** to obtain a Page object matching the filter, and this is passed to **Invoke-ONWeb**
 
 ### Example 2
 ```

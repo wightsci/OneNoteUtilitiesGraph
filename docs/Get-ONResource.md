@@ -17,7 +17,7 @@ Get-ONResource -Uri <String> -Path <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet retreives a binary resource (imge, file) from OneNote and saves it in a file.
+This cmdlet retrieves a binary resource (image, file) from OneNote and saves it in a file.
 
 ## EXAMPLES
 

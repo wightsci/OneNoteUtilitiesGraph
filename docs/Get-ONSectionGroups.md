@@ -88,17 +88,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None. You cannot pipe to this cmdlet.
+### None 
+You cannot pipe to this cmdlet.
 ## OUTPUTS
 
-### Collection of PSCustomObjects representing Graph SectionGroup Resources.
+### [PSCustomObject[]]
+Collection of PSCustomObjects representing Graph SectionGroup Resources.
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-ONSectionGroup]()
+[Get-ONSectionGroup](Get-ONSectionGroup.md)
 
-[Get-ONSections]()
+[Get-ONSections](Get-ONSections.md)
 
-[Get-ONSection]()
+[Get-ONSection](Get-ONSection.md)
 

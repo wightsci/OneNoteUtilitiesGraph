@@ -68,7 +68,7 @@ This command gets a specific page by its Id.
 ## PARAMETERS
 
 ### -Id
-The Id of the page to be retreived.
+The Id of the page to be retrieved.
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-The Uri of the page to be retreived.
+The Uri of the page to be retrieved.
 
 ```yaml
 Type: String
@@ -102,10 +102,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Any object with an 'ID' property.
+### [Object] 
+Any object with an 'ID' property.
 ## OUTPUTS
-
-### PSCustomObject representing a Graph Page resource.
+### PSCustomObject 
+Representing a Graph Page resource.
 ## NOTES
 
 ## RELATED LINKS

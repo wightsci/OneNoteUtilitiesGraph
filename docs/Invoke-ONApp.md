@@ -23,7 +23,7 @@ Invoke-ONApp [-Id] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Invokes the default application for handling onenote: URLs and passes it the URL of a page to load, based on an ID or a Page object.
+Invokes the default application for handling 'onenote:' URLs and passes it the URL of a page to load, based on an ID or a Page object.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ Invokes the default application for handling onenote: URLs and passes it the URL
 PS C:\>  Invoke-ONApp -Page (Get-ONPages -Filter "title eq '2 - Life Cycle of Tree Frog'")
 ```
 
-This command uses Get-ONPages to obtain a Page object matching the filter, and this is passed to Invoke-ONApp
+This command uses **Get-ONPages** to obtain a Page object matching the filter, and this is passed to **Invoke-ONApp**
 
 ### Example 2
 ```powershell

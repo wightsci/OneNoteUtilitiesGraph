@@ -44,7 +44,7 @@ links                : @{oneNoteClientUrl=; oneNoteWebUrl=}
 ## PARAMETERS
 
 ### -Filter
-An OData filter used to determine which NoteBooks are returned.
+An ***OData*** filter used to determine which NoteBooks are returned.
 
 ```yaml
 Type: String
@@ -63,13 +63,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None. You cannot pipe to this cmdlet.
+### None
+You cannot pipe to this cmdlet.
 ## OUTPUTS
 
-### A collection of PSCustomObjects representing Graph NoteBook resources.
+### [PSCustomObject[]]
+A collection of PSCustomObjects representing Graph NoteBook resources.
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-ONNoteBook]()
+[Get-ONNoteBook](Get-ONNoteBook.md)
 
