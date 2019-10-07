@@ -12,8 +12,14 @@ Gets an element from a OneNote Page.
 
 ## SYNTAX
 
+### data-id
 ```
-Get-ONElement [-Id] <String> [-Page] <Object> [<CommonParameters>]
+Get-ONElement [-Page] <Object> -DataId <String> [<CommonParameters>]
+```
+
+### id
+```
+Get-ONElement [-Page] <Object> [-Id] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +49,7 @@ The Id of the page element.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: id
 Aliases:
 
 Required: True
@@ -54,7 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### -Page
-The page object hosting the element.
+The page hosting the element. Can be a page metadata object returned by `Get-ONPage`
+or an XmlDocument object returned by `Get-ONPageXML`.
 
 ```yaml
 Type: Object
@@ -68,12 +75,29 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -DataId
+The data-id attribute of the element to be retrieved.
+
+```yaml
+Type: String
+Parameter Sets: data-id
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### You can pipe an XHTML Page resource to this cmdlet, such as the output from Get-ONPageXML
+### You can pipe an XHTML Page resource to this cmdlet, such as the output from Get-ONPageXML,
+or a page metadata object. 
+
 ## OUTPUTS
 
 ### An XMLElement object.
