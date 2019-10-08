@@ -65,10 +65,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 You cannot pipe to this cmdlet.
+
 ## OUTPUTS
 
 ### [PSCustomObject[]]
 A collection of PSCustomObjects representing Graph NoteBook resources.
+
 ## NOTES
 
 ## RELATED LINKS

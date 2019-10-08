@@ -134,12 +134,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### [PSCustomObject] 
+### [PSCustomObject]
 Representing a Page resource. Must have a 'contentURL' property.
+
 ## OUTPUTS
 
 ### XMLDocument
 XHTML document object
+
 ### String
 
 ## NOTES

@@ -87,9 +87,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### [Object]
 With an 'ID' property.
+
 ## OUTPUTS
-### PSCustomObject 
+
+### PSCustomObject
 Representing a Graph 'SectionGroup' resource.
+
 ## NOTES
 
 ## RELATED LINKS

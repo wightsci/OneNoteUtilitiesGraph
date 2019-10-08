@@ -88,12 +88,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None 
+### None
 You cannot pipe to this cmdlet.
+
 ## OUTPUTS
 
 ### [PSCustomObject[]]
 Collection of PSCustomObjects representing Graph SectionGroup Resources.
+
 ## NOTES
 
 ## RELATED LINKS

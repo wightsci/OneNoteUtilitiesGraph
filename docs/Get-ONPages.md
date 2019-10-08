@@ -104,10 +104,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 You cannot pipe to this cmdlet.
+
 ## OUTPUTS
 
 ### [PSCustomObject[]]
 Collection representing Graph Page resources.
+
 ## NOTES
 
 ## RELATED LINKS

@@ -91,6 +91,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### [PSCustomObject[]]
 Collection of PSCustomObjects representing Graph Section resources.
+
 ## NOTES
 
 ## RELATED LINKS
