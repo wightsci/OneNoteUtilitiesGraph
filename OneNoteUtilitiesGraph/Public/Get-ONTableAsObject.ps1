@@ -1,8 +1,8 @@
 function Get-ONTableAsObject {
     [CmdletBinding()]
     Param(
-        $table,
-        $tableHasHeaders=1
+        $Table,
+        [Switch]$NoHeaders
     )
     $cols = $t.tr[0].td.Count
     $rows = $t.tr.Count
@@ -12,19 +12,18 @@ function Get-ONTableAsObject {
     $tableObject = [System.Collections.ArrayList]@()
     $headers = @()
     
-    if ($tableHasHeaders) {
-            
-        for ( $h = 0; $h -lt $cols; $h++ ) {
-            $headers += ($table.tr[0].td[$h].InnerText)
+    if ($NoHeaders.IsPresent) {
+    for ( $h = 0; $h -lt $cols; $h++ ) {
+            $headers += ("Column $h")
         }
-
+    
     }
     else {
                
         for ( $h = 0; $h -lt $cols; $h++ ) {
-            $headers += ("Column $h")
+            $headers += ($table.tr[0].td[$h].InnerText)
         }
-    
+
     }
     
     
@@ -32,7 +31,7 @@ function Get-ONTableAsObject {
         
         $rowObject = New-Object PSCustomObject
         
-        if ($tableHasHeaders -and $i -eq 0) {
+        if (!$NoHeaders.IsPresent -and $i -eq 0) {
       
         }
         else {

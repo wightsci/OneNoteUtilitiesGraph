@@ -17,17 +17,20 @@ Function Get-ONItems {
     )
 
     if ($filter) {
-        $filter = "&`$filter=$filter"
+        $filter = [System.Net.WebUtility]::UrlEncode($filter)
+        $filter = "`&`$filter=$filter"
     }
-    
+
     if ($uri) {
         # $workuri ='{0}?top=20{1}' -f $uri, $filter
         $workuri = '{0}?{1}' -f $uri, $filter
     }
     else {
-        $workuri = '{0}{2}?$top=100{1}' -f $ONuri, $filter, $itemtype
+        $workuri = '{0}{2}?$top=100{1}&$orderby=createdDateTime' -f $ONuri, $filter, $itemtype
+        #$workuri = '{0}{2}?{1}' -f $ONuri, $filter, $itemtype
     }
 
+    
     Get-ONTokenStatus
 
     # Use paging...
