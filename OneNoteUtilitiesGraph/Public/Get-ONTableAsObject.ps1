@@ -1,11 +1,12 @@
 function Get-ONTableAsObject {
     [CmdletBinding()]
     Param(
+        [Parameter(Mandatory=$true,ValueFromPipeline=$true)]
         $Table,
         [Switch]$NoHeaders
     )
-    $cols = $t.tr[0].td.Count
-    $rows = $t.tr.Count
+    $cols = $table.tr[0].td.Count
+    $rows = $table.tr.Count
     
     Write-Debug "Rows: $rows, Columns: $cols"
     

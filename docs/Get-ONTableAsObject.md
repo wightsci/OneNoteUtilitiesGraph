@@ -13,7 +13,7 @@ Converts a Table from a OneNote Page into a PSCustomObject array
 ## SYNTAX
 
 ```
-Get-ONTableAsObject [[-Table] <Object>] [-NoHeaders] [<CommonParameters>]
+Get-ONTableAsObject [-Table] <Object> [-NoHeaders] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,16 +23,34 @@ Converts a Table from a OneNote Page into a PSCustomObject array. This would the
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-ONPages -Filter "title eq 'Data Page'" | Get-ONElement -DataId 'myTable' | Get-ONTableAsObject
+
+Alpha  Bravo  Charlie
+-----  -----  -------
+One    Two    Three
+Four   Five   Six
+...    ...    ...
 ```
 
-{{ Add example description here }}
+This example retrieves an XML table with the data id 'myTable' using  **Get-ONElement** and converts it into a PSCustomobject array 
+
+### Example 2
+```powershell
+PS C:\> Get-ONPages -Filter "title eq 'Data Page'" | Get-ONElement -DataId 'myTable' | Get-ONTableAsObject | Export-CSV -Path .\myTable.csv -NoTypeInformation
+PS C:\> Get-Content .\myTable.csv
+"Alpha","Bravo","Charlie"
+"One","Two","Three"
+"Four","Five","Six"
+" "," "," "
+```
+
+This example retrieves an XML table with the data id 'myTable' using  **Get-ONElement** and converts it into a PSCustomobject array and exports it to a CSV file using **Export-CSV**.
 
 ## PARAMETERS
 
 ### -NoHeaders
-Identifies that the tble does not contain a first row of column headings. The columns will be
-named Column 1 .. Column n as required.
+Identifies that the table does not contain a first row of column headings. The columns will be
+named Column 1 .. Column *n* as required.
 
 ```yaml
 Type: SwitchParameter
@@ -47,17 +65,17 @@ Accept wildcard characters: False
 ```
 
 ### -Table
-An XML representation of a table as returned by **Get-ONElement**.
+An XML representation of a table as returned by **Get-ONElement.**
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -66,13 +84,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### XMLElement
+Representing an HTML table as XML.
 
 ## OUTPUTS
 
 ### System.Object
 Representation of the table as a PSCustomObject array.
+
 ## NOTES
 
 ## RELATED LINKS
+
 [Get-ONElement](Get-ONElement.md)
