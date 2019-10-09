@@ -53,8 +53,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-You cannot pipe to this cmdlet.
+### [Object]
+Any object having an *ID* property.
 
 ## OUTPUTS
 

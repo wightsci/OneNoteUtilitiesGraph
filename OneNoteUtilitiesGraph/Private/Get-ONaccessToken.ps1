@@ -10,14 +10,10 @@ Function Get-ONAccessToken {
         }
         Write-Verbose $body
         $Authorization = Invoke-RestMethod -uri $tokenuri -Method Post -ContentType "application/x-www-form-urlencoded" -Body $body -ErrorAction STOP
-        Write-Verbose "1: $($Authorization.access_token)"
-        Write-Verbose "1: $($Authorization.expires_in)"
-        Write-Verbose "1: $($Authorization.refresh_token)"
         $Global:accesstoken = $Authorization.access_token
         $Global:refresh_token = $Authorization.refresh_token
         $Global:tokenExpires = "$((Get-Date).AddSeconds($Authorization.expires_in).ToFileTimeUtc())"
         Write-Verbose "Token Expires at: $((Get-Date).AddSeconds($Authorization.expires_in).ToFileTimeUtc())"
         Write-Verbose "Refresh Token: $refresh_token"
-        Write-Host $Authorization
     }
     

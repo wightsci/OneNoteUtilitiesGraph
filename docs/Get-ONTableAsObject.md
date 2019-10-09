@@ -32,7 +32,7 @@ Four   Five   Six
 ...    ...    ...
 ```
 
-This example retrieves an XML table with the data id 'myTable' using  **Get-ONElement** and converts it into a PSCustomobject array 
+This example retrieves an XML table with the data id 'myTable' using  **Get-ONElement** and converts it into a PSCustomobject array.
 
 ### Example 2
 ```powershell

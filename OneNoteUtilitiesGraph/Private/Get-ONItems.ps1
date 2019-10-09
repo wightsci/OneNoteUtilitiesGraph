@@ -45,9 +45,7 @@ Function Get-ONItems {
         }
         else { 
             $onitemlist.value | ForEach-Object {
-
                 Get-ONItem -uri $_.contenturl
-
             }
         }
     } While ($workuri -eq $onitemlist.'@odata.nextLink')
