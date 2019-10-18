@@ -3,9 +3,9 @@ Param()
 
 # Loader for external modules
 $ScriptRoot = Split-Path $Script:MyInvocation.MyCommand.Path
-$Public  = @( Get-ChildItem -Path $ScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue )
+$Public = @( Get-ChildItem -Path $ScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue )
 $Private = @( Get-ChildItem -Path $ScriptRoot\Private\*.ps1 -ErrorAction SilentlyContinue )
-@($Public + $Private)  | Foreach-Object { . $_.FullName }
+@($Public + $Private) | Foreach-Object { . $_.FullName }
 Export-ModuleMember -Function $Public.Basename
 
 # Get settings from config file
@@ -34,7 +34,7 @@ $scope = $settings["scope"]
 #https://graph.microsoft.com/{version}/sites/{id}/onenote/
 #https://graph.microsoft.com/v1.0/me/onenote
 
-$MSGraphRoot='https://graph.microsoft.com/v1.0/me/'
+$MSGraphRoot = 'https://graph.microsoft.com/v1.0/me/'
 $ONRoot = 'onenote/'
 $ONuri = "$MSGraphRoot$ONRoot"
 
@@ -47,7 +47,7 @@ $authorizeUri = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
 
 # UrlEncode the ClientID, scope and URLs for special characters 
 $clientIDEncoded = [System.Net.WebUtility]::UrlEncode($clientid)
-$redirectUriEncoded =  [System.Net.WebUtility]::UrlEncode($redirectUri)
+$redirectUriEncoded = [System.Net.WebUtility]::UrlEncode($redirectUri)
 $scopeEncoded = [System.Net.WebUtility]::UrlEncode($scope)
 
 # Build the URL for the authentication request
@@ -69,7 +69,7 @@ $defaultstyles = @{
 }
 
 # Stores the expiry of the Access Token
-#$tokenExpires = $((Get-Date).ToFileTimeUtc())
+# $tokenExpires = $((Get-Date).ToFileTimeUtc())
 
 Function New-ONHTMLItem {
 
@@ -99,23 +99,23 @@ Function Remove-ONElement {
 # Copy a OneNote Page -- Not Implemented for consumer OneNote
 Function Copy-ONPage {
     Param(
-        [parameter(ParameterSetName='page')]
+        [parameter(ParameterSetName = 'page')]
         [object]$Page,
-        [parameter(ParameterSetName='id')]
+        [parameter(ParameterSetName = 'id')]
         [string]$Id,
-        [parameter(ParameterSetName='page')]
-        [parameter(ParameterSetName='id')]
-        [string]$DestinationId=(Get-ONDefaultSection).Id
+        [parameter(ParameterSetName = 'page')]
+        [parameter(ParameterSetName = 'id')]
+        [string]$DestinationId = (Get-ONDefaultSection).Id
     )
     
     if ($page) {
         $id = $page.Id
     } 
-    $body =  New-ONJSONItem -hashtable @{ 'id' = "$destinationId" }
+    $body = New-ONJSONItem -hashtable @{ 'id' = "$destinationId" }
     Write-Verbose $body
     $uri = "{0}pages/{1}/copyToSection" -f $ONuri, $Id
     Write-Verbose $uri
-    $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method Post -Body $body -ContentType 'application/json'
+    $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken" } -uri $uri -Method Post -Body $body -ContentType 'application/json'
     <#
     do {
         $operationresponse  =  Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $operatiionuri -Method Get 
@@ -129,14 +129,14 @@ Function Copy-ONPage {
 # Copy a OneNote Section -- Not Implemented for consumer OneNote
 Function Copy-ONSection {
     Param(
-    [string]$DestinationId,
-    [string]$Id
+        [string]$DestinationId,
+        [string]$Id
     )
-    $body =  New-ONJSONItem -hashtable @{ 'id' = "$destinationId" }
+    $body = New-ONJSONItem -hashtable @{ 'id' = "$destinationId" }
     Write-Verbose $body
     $uri = "{0}sections/{1}/copyToSectionGroup" -f $ONuri, $Id
     Write-Verbose $uri
-    $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method Post -Body $body -ContentType 'application/json'
+    $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken" } -uri $uri -Method Post -Body $body -ContentType 'application/json'
     Return $response
 }
 

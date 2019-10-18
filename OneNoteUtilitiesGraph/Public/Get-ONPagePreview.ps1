@@ -1,10 +1,11 @@
+# Get the preview text for a OneNote Page
 Function Get-ONPagePreview {
     [CmdletBinding()]
     Param(
-        [Parameter(ValueFromPipelineByPropertyName=$true,Mandatory=$true)]
+        [Parameter(ValueFromPipelineByPropertyName = $true, Mandatory = $true)]
         [string]$Id
     )
     $workuri = "{0}pages/{1}/preview" -f $ONuri, $id
     Write-Verbose $workuri
-    Get-ONItem -uri $workuri
+    (Get-ONItem -uri $workuri).previewText
 }

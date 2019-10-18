@@ -1,7 +1,8 @@
+# Gets a table from a OneNote Page, as a custom object
 function Get-ONTableAsObject {
     [CmdletBinding()]
     Param(
-        [Parameter(Mandatory=$true,ValueFromPipeline=$true)]
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
         $Table,
         [Switch]$NoHeaders
     )
@@ -14,7 +15,7 @@ function Get-ONTableAsObject {
     $headers = @()
     
     if ($NoHeaders.IsPresent) {
-    for ( $h = 0; $h -lt $cols; $h++ ) {
+        for ( $h = 0; $h -lt $cols; $h++ ) {
             $headers += ("Column $h")
         }
     

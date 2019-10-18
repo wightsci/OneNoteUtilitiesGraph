@@ -4,7 +4,7 @@ Function Get-ONPageXML {
     [Parameter(ParameterSetName='page',Mandatory=$true,ValueFromPipeline=$true)]
     [object]$Page,
     [Parameter(ParameterSetName='id',Mandatory=$true,ValueFromPipeline=$true)]
-    [object]$Id,
+    [string]$Id,
     [Parameter()]
     [Switch]$AsText
     )

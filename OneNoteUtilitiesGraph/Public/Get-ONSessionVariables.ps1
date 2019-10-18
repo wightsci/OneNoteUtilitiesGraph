@@ -1,3 +1,4 @@
+# Gets some useful information about the OneNote session
 Function Get-ONSessionVariables {
     [CmdletBinding()]
     Param()
