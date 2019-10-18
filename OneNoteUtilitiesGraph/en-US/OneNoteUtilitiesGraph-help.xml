@@ -1420,10 +1420,10 @@ parentSection               : @{id=0-816F7725BEF00A5F!665031; displayName=Other 
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>None</maml:name>
+          <maml:name>[Object]</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para>You cannot pipe to this cmdlet.</maml:para>
+          <maml:para>Any object having an ID property.</maml:para>
         </maml:description>
       </command:inputType>
     </command:inputTypes>
@@ -1649,6 +1649,32 @@ id                                                            title
           <dev:defaultValue>False</dev:defaultValue>
         </command:parameter>
       </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Get-ONPageXML</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>AsText</maml:name>
+          <maml:Description>
+            <maml:para>A switch parameter, that if supplied, tells the cmdlet to output the page content a text, rather than an XMLDocument object.</maml:para>
+          </maml:Description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>Id</maml:name>
+          <maml:Description>
+            <maml:para>{{ Fill Id Description }}</maml:para>
+          </maml:Description>
+          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <dev:type>
+            <maml:name>Object</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
     </command:syntax>
     <command:parameters>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="1" aliases="none">
@@ -1674,6 +1700,18 @@ id                                                            title
           <maml:uri />
         </dev:type>
         <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>Id</maml:name>
+        <maml:Description>
+          <maml:para>{{ Fill Id Description }}</maml:para>
+        </maml:Description>
+        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <dev:type>
+          <maml:name>Object</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
     </command:parameters>
     <command:inputTypes>
@@ -2630,7 +2668,7 @@ One    Two    Three
 Four   Five   Six
 ...    ...    ...</dev:code>
         <dev:remarks>
-          <maml:para>This example retrieves an XML table with the data id 'myTable' using Get-ONElement and converts it into a PSCustomobject array</maml:para>
+          <maml:para>This example retrieves an XML table with the data id 'myTable' using Get-ONElement and converts it into a PSCustomobject array.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
@@ -4530,7 +4568,7 @@ lastModifiedBy       : @{user=}</dev:code>
         <dev:code>$page = Get-ONPages -Filter "title eq 'Project Zero Work List'" | Get-ONPageXML
 $page.OuterXML
 
- &lt;html lang="en-GB"&gt;
+&lt;html lang="en-GB"&gt;
     &lt;head&gt;
         &lt;title&gt;Project Zero Work List&lt;/title&gt;
         &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
@@ -4545,7 +4583,8 @@ $page.OuterXML
 
 Update-ONElement -TargetID 'p:{5071e2d9-b596-0397-0473-9e65c6a6ede6}{31}' -Id 0-3f5159c19028036127617e60b3e94771!1-816F7725BEF00A5F!1079 -action replace -content '&lt;p&gt;Implementation needs to be completed by 1st December 2019&lt;/p&gt;' 
 $page = Get-ONPages -Filter "title eq 'Project Zero Work List'" | Get-ONPageXML
-$page.OuterXML 
+$page.OuterXML
+
 &lt;html lang="en-GB"&gt;
     &lt;head&gt;                 
         &lt;title&gt;Project Zero Work List&lt;/title&gt; 

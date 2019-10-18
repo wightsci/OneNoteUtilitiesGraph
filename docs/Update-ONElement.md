@@ -27,8 +27,9 @@ Updates a specified element on a OneNote Page, identified by its ID.
 $page = Get-ONPages -Filter "title eq 'Project Zero Work List'" | Get-ONPageXML
 $page.OuterXML
 ```
+
 ```
- <html lang="en-GB">
+<html lang="en-GB">
     <head>
         <title>Project Zero Work List</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,12 +42,14 @@ $page.OuterXML
     </body> 
 </html>
 ```
+
 ```PowerShell
 Update-ONElement -TargetID 'p:{5071e2d9-b596-0397-0473-9e65c6a6ede6}{31}' -Id 0-3f5159c19028036127617e60b3e94771!1-816F7725BEF00A5F!1079 -action replace -content '<p>Implementation needs to be completed by 1st December 2019</p>' 
 $page = Get-ONPages -Filter "title eq 'Project Zero Work List'" | Get-ONPageXML
 $page.OuterXML
 ```
-``` 
+
+```
 <html lang="en-GB">
     <head>                 
         <title>Project Zero Work List</title> 
