@@ -16,7 +16,7 @@ Function Update-ONElement {
     )
     Get-ONTokenStatus
     $uri = "{0}{1}/{2}/content" -f $ONuri, 'pages', $Id
-    $body = ConvertTo-Json @(@{ 'target' =  "$targetId"; 'action' = "$action"; 'content' = "$content"; 'position' = "$position"})
+    $body = ConvertTo-Json @{ 'target' =  "$targetId"; 'action' = "$action"; 'content' = $content; 'position' = "$position"}
     Write-Verbose $body
     Get-ONTokenStatus
     $response = Invoke-RestMethod -Headers @{Authorization = "Bearer $accesstoken"} -uri $uri -Method Patch -ContentType 'application/json' -body $body

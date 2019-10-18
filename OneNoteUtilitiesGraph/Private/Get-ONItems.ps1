@@ -22,8 +22,9 @@ Function Get-ONItems {
     }
 
     if ($uri) {
-        # $workuri ='{0}?top=20{1}' -f $uri, $filter
+        #$workuri ='{0}?top=20{1}' -f $uri, $filter
         $workuri = '{0}?{1}' -f $uri, $filter
+        #$workuri = $uri
     }
     else {
         $workuri = '{0}{2}?$top=100{1}&$orderby=createdDateTime' -f $ONuri, $filter, $itemtype
