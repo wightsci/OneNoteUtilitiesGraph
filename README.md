@@ -3,6 +3,10 @@ PowerShell module for manipulating [Microsoft OneNote](https://www.onenote.com/)
 
 Following on from OneNoteUtilities this module uses the Microsoft Graph API instead of the desktop COM objects.
 
+### Update November 5, 2019
+Following Microsoft's decision to continue support for the desktop version of OneNote I have added an additional command (`Invoke-ONDesktop`) to open OneNote pages in the desktop application specifically, rather than whichever application has been registered as the handler for the `onenote:` protocol.
+<hr>
+
 This module provides the following functions:
 
 * [Get-ONConfig](docs/Get-ONConfig.md)
@@ -25,6 +29,7 @@ This module provides the following functions:
 * [Get-ONTableAsObject](docs/Get-ONTableAsObject.md)
 * [Get-ONTokenStatus](docs/Get-ONTokenStatus.md)
 * [Invoke-ONApp](docs/Invoke-ONApp.md)
+* [Invoke-ONDesktop](docs/Invoke-ONDesktop.md)
 * [Invoke-ONWeb](docs/Invoke-ONWeb.md)
 * [New-ONElement](docs/New-ONElement.md)
 * [New-ONNoteBook](docs/New-ONNoteBook.md)
