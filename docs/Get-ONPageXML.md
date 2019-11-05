@@ -13,15 +13,13 @@ Gets the XHTML source of a OneNote Page.
 ## SYNTAX
 
 ### page
-
-```PowerShell
+```
 Get-ONPageXML [-Page] <Object> [-AsText] [<CommonParameters>]
 ```
 
 ### id
-
-```powershell
-Get-ONPageXML -Id <Object> [-AsText] [<CommonParameters>]
+```
+Get-ONPageXML -Id <String> [-AsText] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -144,6 +142,7 @@ html
 ----
 html
 ```
+
 This command retrieves the content of a page using **Get-ONPageXML** and the Id parameter. The result is a System.Xml.XmlDocument object. You would normally store this in a variable for further processing.
 
 ## PARAMETERS
@@ -183,7 +182,7 @@ Accept wildcard characters: False
 The Id of the page you wish to retrieve the content of.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: id
 Aliases:
 

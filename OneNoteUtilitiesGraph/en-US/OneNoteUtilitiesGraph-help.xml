@@ -1665,11 +1665,11 @@ id                                                            title
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>Id</maml:name>
           <maml:Description>
-            <maml:para>{{ Fill Id Description }}</maml:para>
+            <maml:para>The Id of the page you wish to retrieve the content of.</maml:para>
           </maml:Description>
-          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
-            <maml:name>Object</maml:name>
+            <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
@@ -1704,11 +1704,11 @@ id                                                            title
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
         <maml:name>Id</maml:name>
         <maml:Description>
-          <maml:para>{{ Fill Id Description }}</maml:para>
+          <maml:para>The Id of the page you wish to retrieve the content of.</maml:para>
         </maml:Description>
-        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
-          <maml:name>Object</maml:name>
+          <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -1750,7 +1750,7 @@ id                                                            title
     <command:examples>
       <command:example>
         <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
-        <dev:code>Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML | Select-Object -Expand OuterXml
+        <dev:code>Get-ONPage -uri 'https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML | Select-Object -Expand OuterXml
 
 &lt;html lang="en-US"&gt;
         &lt;head&gt;
@@ -1818,6 +1818,49 @@ You can eve...</dev:code>
     &lt;/html&gt;</dev:code>
         <dev:remarks>
           <maml:para>This command pipes a page object to Get-ONPageXML . The -AsText switch means that the output is a string rather than an XML document.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 4 --------------------------</maml:title>
+        <dev:code>Get-ONPageXML -Id 0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' -AsText
+
+&lt;html lang="en-US"&gt;
+&lt;head&gt;
+    &lt;title&gt;ePortfolio&lt;/title&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;/head&gt;
+&lt;body data-absolute-enabled="true" style="font-family:Calibri;font-size:11pt"&gt;
+    &lt;div id="div:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{36}" style="position:absolute;left:48px;top:115px;width:590px"&gt;
+        &lt;p id="p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{34}" style="margin-top:0pt;margin-bottom:0pt"&gt;OneNote makes it
+            easy to &lt;span style="font-weight:bold"&gt;track student&lt;/span&gt; &lt;span style="font-weight:bold"&gt;progress&lt;/span&gt;
+            in one notebook. You can easily track items like &lt;span style="font-weight:bold"&gt;homework&lt;/span&gt;, &lt;span
+                style="font-weight:bold"&gt;quizzes&lt;/span&gt;, and &lt;span style="font-weight:bold"&gt;tests&lt;/span&gt; for all your
+            students. Some teachers create a notebook for each student in the class. Then they can put homework,
+            quizzes, tests and even a copies of a group project into this ePortfolio. &lt;/p&gt; &lt;br /&gt;
+        &lt;p id="p:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{35}" style="margin-top:0pt;margin-bottom:0pt"&gt;For quizzes and
+            tests, you can track the items that students either get consistently wrong or consistently correct. You can
+            even keep copies of the student's completed quizzes or tests in case you want to refer to them later. &lt;/p&gt;
+        &lt;br /&gt; &lt;img id="img:{ebb53e77-c34a-4a11-ad64-7c7fff9d7562}{40}" width="708" height="418"
+            src="https://graph.microsoft.com/v1.0/users('stuart_squibb@hotmail.co.uk')/onenote/resources/0-d0b17facd3c241aa886959406a8c352c!1-816F7725BEF00A5F!665031/$value"
+            data-src-type="image/png"
+            data-fullres-src="https://graph.microsoft.com/v1.0/users('stuart_squibb@hotmail.co.uk')/onenote/resources/0-d0b17facd3c241aa886959406a8c352c!1-816F7725BEF00A5F!665031/$value"
+            data-fullres-src-type="image/png" /&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</dev:code>
+        <dev:remarks>
+          <maml:para>This command retrieves the content of a page using Get-ONPageXML and the Id parameter. The -AsText switch means that the output is a string rather than an XML document.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 5 --------------------------</maml:title>
+        <dev:code>Get-ONPageXML -Id '0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031'          
+
+html
+----
+html</dev:code>
+        <dev:remarks>
+          <maml:para>This command retrieves the content of a page using Get-ONPageXML and the Id parameter. The result is a System.Xml.XmlDocument object. You would normally store this in a variable for further processing.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
