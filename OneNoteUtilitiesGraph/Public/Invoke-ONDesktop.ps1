@@ -10,5 +10,5 @@ Function Invoke-ONDesktop {
     If ($Id) {
         $page = Get-ONItem -ItemType 'pages' -Id $id
     }
-    Start-Process  'C:\Program Files (x86)\Microsoft Office\root\Office16\ONENOTE.EXE' -ArgumentList '/hyperlink', $page.links.oneNoteClientUrl
+    Start-Process  'C:\Program Files (x86)\Microsoft Office\root\Office16\ONENOTE.EXE' -ArgumentList '/hyperlink', $page.links.oneNoteClientUrl.href
 }
