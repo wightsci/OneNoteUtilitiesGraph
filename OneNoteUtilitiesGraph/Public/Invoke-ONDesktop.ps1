@@ -1,5 +1,5 @@
 # Invoke the Office 365 OneNote application and load a page
-Function Invoke-ONApp {
+Function Invoke-ONDesktop {
     [CmdletBinding(DefaultParameterSetName = 'page')]
     Param(
         [parameter(Position = 0, ParameterSetName = "page", Mandatory = $true)]
