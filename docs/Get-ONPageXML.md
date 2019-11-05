@@ -13,12 +13,14 @@ Gets the XHTML source of a OneNote Page.
 ## SYNTAX
 
 ### page
-```
+
+```PowerShell
 Get-ONPageXML [-Page] <Object> [-AsText] [<CommonParameters>]
 ```
 
 ### id
-```
+
+```powershell
 Get-ONPageXML -Id <Object> [-AsText] [<CommonParameters>]
 ```
 
@@ -30,7 +32,7 @@ This cmdlet automatically requests element IDs to aid in page updates.
 
 ### EXAMPLE 1
 ```
-Get-ONPage -uri ' https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML | Select-Object -Expand OuterXml
+Get-ONPage -uri 'https://graph.microsoft.com/v1.0/users/me/onenote/pages/0-bf55e9873b624c5c98d779f0e9f6e6d1!51-816F7725BEF00A5F!665031' | Get-ONPageXML | Select-Object -Expand OuterXml
 
 <html lang="en-US">
         <head>

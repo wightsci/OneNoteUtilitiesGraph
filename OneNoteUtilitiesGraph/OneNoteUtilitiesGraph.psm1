@@ -91,9 +91,18 @@ Function Remove-ONSection {
 }
 
 
-# Remove a OneNote Page Element
+# Remove a OneNote Page Element - $TargetId on Page $Id
 Function Remove-ONElement {
-
+Param(
+    [string]
+    $TargetId,
+    [string]
+    $Id
+)
+$page = Get-ONPageXML -Id $Id
+$element = $page.html.SelectSingleNode("//*[@id='$TargetId']")
+$element.RemoveAll()
+# To do - update the page content - could use Replace with nothing instead??
 }
 
 # Copy a OneNote Page -- Not Implemented for consumer OneNote
